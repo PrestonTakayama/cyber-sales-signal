@@ -1,4 +1,4 @@
-# insight-sourcing
+# cyber-sales-signal
 
 A small sourcing tool for growth equity. It starts from a list of private, venture-backed cybersecurity companies that raised a Series A, B or C in the last two years. It pulls every open role from their public job boards (Greenhouse, Lever and Ashby), tags each role by its title, and ranks the companies by how much sales hiring they're doing right now. Sales hiring is the signal because it's one of the clearest outside signs of product-market fit. A company adds account executives, sales engineers and channel managers only when its product sells repeatably, since each new rep is expensive and has to pay for themselves. A company still searching for fit hires mostly engineers. So a large and growing sales team, especially as a share of all open roles, suggests demand has shown up and the company is scaling to meet it.
 
