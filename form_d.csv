@@ -1,0 +1,41 @@
+searched_name,match,issuer_name,filing_date,form,state,industry_group,total_offering_amount,total_amount_sold,cik,accession
+7AI,exact,"7AI, Inc.",2025-12-04,D,MA,Other Technology,130599988,130599988,1997387,0001997387-25-000003
+Armadin,exact,"Armadin, Inc.",2026-01-14,D,CA,Other Technology,165199989,165199989,2094470,0002094470-26-000001
+Armadin,exact,"Armadin, Inc.",2026-10-15,D,CA,Other Technology,264999494,264999494,2094470,0002094470-26-000002
+BlueFlag Security,exact,BlueFlag Security Inc.,2026-02-19,D,CA,Other Technology,9999999,7499999,2112160,0002112160-26-000001
+Doppel,exact,Doppel Inc.,2025-11-21,D,CA,Other Technology,61518382,61220305,2006522,0002006522-25-000002
+Empirical Security,exact,"Empirical Security, Inc.",2026-08-03,D,IL,Other Technology,24999938,20818947,2049036,0001231919-26-000819
+Fable Security,exact,"Fable Security, Inc.",2025-11-25,D,CA,Other Technology,24499998,23999998,2090386,0002090386-25-000002
+Fable Security,exact,"Fable Security, Inc.",2025-11-25,D,CA,Other Technology,7500000,6796991,2090386,0002090386-25-000001
+Fleet,none,"POSITION IMAGING, INC",2026-02-12,D,NH,Other Technology,20000000,14353090,1380725,0001380725-26-000003
+Fleet,partial,Fleet Response Ultimate Parent LLC,2026-04-10,D,TX,Other,10000000,10000000,2126985,0002126985-26-000001
+Fleet,partial,"Fleet Robotics, Inc.",2026-07-01,D,MA,Other Technology,4244376,2443355,1937538,0001104659-26-079771
+Fleet,none,"Layu, Inc.",2026-08-12,D,NY,Other,Indefinite,8784000,2145835,0002145835-26-000001
+Fleet,partial,"Floating Fleet AI, Inc.",2026-08-13,D,NY,Other Technology,2500000,100000,2149164,0002149164-26-000001
+Fleet,none,Aponia Laboratories Inc,2026-09-24,D,NH,Other,Indefinite,0,1497705,0001497705-26-000003
+Fleet,partial,"Fleet Defender, Inc.",2026-10-21,D/A,NE,Other Technology,1746000,1246000,1938409,0001938409-26-000001
+Fleet,partial,"Oncology AI Fleet, Inc.",2026-10-28,D,DE,Other Health Care,500000,0,2161717,0002161717-26-000001
+Halcyon,partial,"Halcyon Carbon, Inc.",2026-03-11,D,CA,Other Technology,21027237,21027237,2118358,0002118358-26-000001
+Halcyon,partial,Gaingels Halcyon LLC,2026-03-17,D,VT,Other,176067,176067,2113919,0002113919-26-000001
+Halcyon,partial,Halcyon Wellness Inc.,2026-03-23,D,DE,Biotechnology,12000000,8000000,2123636,0002123636-26-000001
+Halcyon,partial,Halcyon Robotics Corp,2026-07-10,D,CA,Other Technology,8382659,6387665,2144337,0002144337-26-000002
+Halcyon,none,Three Bucks Two Bags One LLC,2026-09-25,D,NY,Other,22000000,250000,2157032,0002157032-26-000001
+Helmet Security,exact,"Helmet Security, Inc.",2025-12-30,D,DC,Other Technology,6700000,6700000,2102626,0001231919-25-000677
+MIND,partial,Doro Mind Inc.,2026-03-17,D,NY,Other Technology,4674990,4674990,2008487,0002008487-26-000003
+MIND,partial,Gentle Caring Mind Healthcare LLC,2026-08-03,D,MN,Other Health Care,200000,50000,2147822,0002147822-26-000001
+MIND,partial,"Optimize Mind Performance, Inc.",2026-09-22,D/A,NY,Other,Indefinite,2645883,1998001,0001998001-26-000001
+MIND,partial,"Mind Rhythms, Inc.",2026-10-09,D,VA,Other Technology,200000,110000,2155340,0002155340-26-000001
+Neo,partial,"NEO RE Investment III, LLC",2026-07-09,D,OH,Other,2500000,1750000,2142886,0002142886-26-000011
+Neo,partial,Neo Agent Inc.,2026-09-01,D,X0,Other Technology,2744996,2744996,2152778,0002152778-26-000001
+Obsidian Security,exact,"Obsidian Security, Inc.",2026-08-18,D,CA,Other Technology,109868667,81463045,2149647,0002149647-26-000001
+Overwatch Data,exact,"Overwatch Data, Inc.",2026-10-26,D,NY,Other Technology,15199984,14959986,2054765,0002054765-26-000003
+Phin Security,exact,"PHIN SECURITY, INC.",2026-04-21,D,DE,Other Technology,5974999,5974999,2018716,0002018716-26-000004
+Socket,partial,"SOCKET MOBILE, INC.",2026-04-23,D,CA,Manufacturing,500000,500000,944075,0000944075-26-000032
+Socket,exact,"Socket, Inc.",2026-05-29,D,DE,Other Technology,60003954,59371976,2127421,0001231919-26-000544
+Spur,none,"Granite Peak Holdings, LLC",2026-04-09,D,CO,Other,5000000,4545000,2127656,0002127656-26-000001
+Spur,partial,"Iron Spur Estate & Stables, LLC",2026-10-13,D,NE,Other,125000,0,2160045,0002160045-26-000001
+Vega,partial,Vega Health Inc.,2025-12-31,D/A,NC,Other,5000000,5000000,2083872,0002083872-25-000002
+Vega,none,"Salt Athletic, Inc.",2026-05-22,D,CO,Other,1000000,365000,2021463,0002021463-26-000003
+Vega,none,"Tagup, Inc.",2026-07-02,D,MA,Other Technology,14801363,14801288,2123153,0002123153-26-000003
+XBOW,partial,XBow Holding Inc.,2026-03-19,D,WA,Other Technology,180000400,120905123,2074263,0002074263-26-000001
+Xage Security,exact,"Xage Security, Inc.",2026-03-18,D,CA,Other,15072520,14847323,1749043,0001749043-26-000003
