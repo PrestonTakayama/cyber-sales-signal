@@ -62,3 +62,5 @@ Talent pool and general application postings (like "Don't see a role that fits? 
 Sales support roles (Sales Ops, Revenue Ops, Sales Enablement, Revenue Marketing) count as Sales, because companies only hire them once there are enough reps to support.
 
 Forward Deployed Engineers (FDEs) are tagged Engineering, not Sales. An FDE is usually an early-stage build hire, not a sales hire. `ranked.csv` counts them in a separate `fde_count` column as an early-stage signal, and they don't affect the score.
+
+The score is weighted toward count. A v2 could weight share more heavily, which would move focused companies like HiddenLayer up.
