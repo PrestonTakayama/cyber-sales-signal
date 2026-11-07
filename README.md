@@ -59,6 +59,23 @@ Each filing's issuer name is marked as an `exact`, `partial` or `none` match for
 | `candidates.csv` | Companies found by the "security" keyword search that aren't in `companies.csv` yet, one row per company (its latest filing) |
 | `ranked.csv` | One row per company: total_roles, sales_roles, sales_share, score, fde_count, raised_recently, sorted by score |
 
+## Current ranking
+
+Top 10 from `ranked.csv` as of November 7, 2026, in score order. Share is sales roles as a percentage of all open roles.
+
+| Company | Total roles | Sales roles | Share | Raised recently |
+|---|---|---|---|---|
+| Doppel | 27 | 18 | 67% | Yes |
+| 7AI | 45 | 19 | 42% | Yes |
+| Cogent Security | 52 | 21 | 40% | No |
+| HiddenLayer | 20 | 15 | 75% | No |
+| Zafran | 32 | 14 | 44% | No |
+| Endor Labs | 36 | 13 | 36% | No |
+| Armadin | 27 | 9 | 33% | Yes |
+| Socket | 27 | 8 | 30% | Yes |
+| Obsidian Security | 15 | 5 | 33% | Yes |
+| Fable Security | 8 | 4 | 50% | Yes |
+
 ## What it found
 
 ## Notes
