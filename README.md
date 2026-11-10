@@ -77,6 +77,11 @@ Top 10 from `ranked.csv` as of November 7, 2026, in score order. Share is sales 
 | Fable Security | 8 | 4 | 50% | Yes |
 
 ## What it found
+Doppel came first with 18 of its 26 openings in sales (69%), followed by 7AI with 20 of 45. I didn't know much about Doppel going in, but once I read up on it and saw it had raised a Series C a year ago, the result made sense. Of the 59 sales openings across Doppel, 7AI, and Cogent, 33 were for account executives, mostly covering U.S. regions, and just one was for an SDR. My guess is they already know who they're selling to and have leads coming in, so they need people who can close. Cogent had the most sales openings (21) and was the only one of the three hiring for sales ops (3), which suggests its sales team is already big enough to need more support.
+
+Halcyon came in 17th out of 28 with six openings, three of them for account executives in Chicago, Boston, and Charlotte, so it probably already has people covering other cities. That made me realize a company can rank low even if it already has a big sales team. I was surprised that only 28 of 56 companies could be ranked and that three of the five I picked to learn about were missing. The tool couldn't read Upwind's job board, Spur had no public board, and Sublime had nothing posted.
+
+Most of the top 10 lead with AI, but in a market this crowded it takes more than sticking AI into something to make it good. I'd start with 7AI, which has openings for 12 account executives and six sales engineers, because I think getting AI to do the work of an entire security operations team is harder than it sounds. I'd look at the competition and talk to customers about what they use 7AI for and whether they've kept paying for it.
 
 ## Notes
 
