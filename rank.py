@@ -28,6 +28,7 @@ SALES_PHRASES = [
     "revenue",  # also covers "Revenue Operations" and "Revenue Marketing"
     "go-to-market",
     "partnerships",
+    "alliances",  # the same kind of role as partnerships
     "channel",
     "demand generation",
     "growth marketing",
@@ -42,6 +43,7 @@ NOT_SALES_PHRASES = [
     "brand marketing",
     "content marketing",
     "product marketing",
+    "technical marketing",
 ]
 
 # Post-sales roles look after existing customers, so they're always Other,

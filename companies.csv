@@ -1,7 +1,7 @@
 name,website,board_type,slug
 7AI,7ai.com,ashby,sevenai
 Adaptive Security,adaptivesecurity.com,ashby,adaptivesecurity
-AegisAI,aegisai.ai,,
+AegisAI,aegisai.ai,ashby,aegis-ai
 Armadin,armadin.com,ashby,armadin
 Aurascape,aurascape.ai,,
 Bedrock Data,bedrockdata.ai,,
@@ -25,7 +25,7 @@ Keycard,keycard.ai,ashby,keycard-labs
 Linx Security,linx.security,,
 Method Security,method.security,ashby,method.security
 MIND,mind.io,,
-Neo,neo.security,,
+Neo,neo.ai,greenhouse,neosecurityinc
 Noma Security,noma.security,,
 Nucleus Security,nucleussec.com,,
 Nudge Security,nudgesecurity.com,ashby,nudgesecurity
@@ -35,8 +35,8 @@ Oligo Security,oligo.security,none,
 Onyx Security,onyx.security,none,
 Overwatch Data,overwatchdata.ai,greenhouse,overwatch
 Phin Security,phinsecurity.com,,
-Prophet Security,prophetsecurity.ai,,
-RAD Security,rad.security,,
+Prophet Security,prophetsecurity.ai,ashby,prophet-security
+RAD Security,radsecurity.ai,,
 Reach Security,reach.security,ashby,reach
 Realm Security,realm.security,,
 Reco,reco.ai,,
@@ -46,7 +46,7 @@ Silent Push,silentpush.com,,
 Socket,socket.dev,ashby,socket
 Spur,spur.us,none,
 Straiker,straiker.ai,,
-Sublime Security,sublime.security,,
+Sublime Security,sublime.security,ashby,sublime-security
 Upwind,upwind.io,,
 Vega,vega.io,none,
 VulnCheck,vulncheck.com,greenhouse,vulncheck
