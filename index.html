@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cyber Sales Signal</title>
+<meta name="description" content="A look at which private cybersecurity companies are hiring for sales.">
+<link rel="icon" href="data:,">
+<style>
+  :root {
+    color-scheme: light;
+    --paper: #ffffff;
+    --ink: #16181d;
+    --muted: #555b66;
+    --rule: #dfe2e8;
+    --rule-strong: #b3b9c4;
+    --blue: #1a4fd6;
+    --blue-dark: #123a9e;
+    --soft: #eef3fd;
+    --soft-rule: #cbd7ef;
+    --hover: #f5f7fb;
+    --bar-rest: #cfd6e4;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    --serif: Georgia, "Times New Roman", serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: 16px; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 16px/1.5 var(--sans);
+  }
+  a { color: var(--blue); text-underline-offset: .2em; }
+  a:hover { color: var(--blue-dark); text-decoration-thickness: 2px; }
+  :focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+  .mono { font-family: var(--mono); }
+  [hidden] { display: none !important; }
+  .hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 clamp(18px, 4vw, 48px) 72px; }
+
+  /* Buttons. Every one of these does something when pressed. */
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 18px;
+    border: 1px solid var(--blue);
+    border-radius: 6px;
+    background: var(--blue);
+    color: #fff;
+    font: 600 15px/1.2 var(--sans);
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .btn:hover { background: var(--blue-dark); border-color: var(--blue-dark); color: #fff; }
+  .btn.ghost { background: #fff; color: var(--blue); }
+  .btn.ghost:hover { background: var(--soft); color: var(--blue-dark); }
+  .btn.small { min-height: 38px; padding: 0 14px; font-size: 14px; }
+
+  /* Header */
+
+  .app-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px 24px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule-strong);
+  }
+  .brand { font-weight: 650; }
+  .app-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 4px; }
+  .app-nav a.link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 0 12px;
+    color: var(--ink);
+    font-size: 15px;
+    text-decoration: none;
+  }
+  .app-nav a.link:hover { background: var(--hover); text-decoration: underline; }
+  .app-nav .btn { margin-left: 8px; }
+
+  /* Top of the page: what this is, the headline numbers, and the pick */
+
+  .intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(300px, .75fr);
+    align-items: stretch;
+    gap: 28px 48px;
+    padding: 40px 0 40px;
+  }
+  h1 {
+    margin: 0;
+    font: 400 clamp(40px, 5.4vw, 68px)/1 var(--serif);
+    letter-spacing: -.045em;
+  }
+  .desc { max-width: 44ch; margin: 14px 0 0; color: var(--muted); font-size: 19px; line-height: 1.45; }
+  .stats { display: flex; flex-wrap: wrap; gap: 14px 44px; margin: 30px 0 0; }
+  .stats div { display: flex; flex-direction: column; }
+  .stats dd { order: -1; margin: 0; font: 400 40px/1.05 var(--serif); letter-spacing: -.03em; }
+  .stats dt { color: var(--muted); font-size: 14px; }
+  .snapshot { margin: 16px 0 0; color: var(--muted); font-size: 13px; }
+
+  .lead { display: flex; flex-direction: column; justify-content: center; padding: 26px 28px; background: var(--soft); }
+  .lead h2 { margin: 0; color: var(--muted); font: 600 14px/1.3 var(--sans); }
+  .pick { margin: 4px 0 8px; font: 400 46px/1.05 var(--serif); letter-spacing: -.04em; }
+  .lead p { margin: 0 0 18px; }
+  .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; }
+
+  /* Ranking */
+
+  .toolbar { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 14px 28px; padding-bottom: 16px; }
+  .toolbar h2 { margin: 0; font: 400 34px/1.1 var(--serif); letter-spacing: -.035em; }
+  .howto { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 18px; margin: 8px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: 15px; }
+  .howto li { display: flex; align-items: center; gap: 8px; }
+  .swatch { width: 22px; height: 10px; }
+  .swatch.sales { background: var(--blue); }
+  .swatch.rest { background: var(--bar-rest); }
+
+  .sort { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; color: var(--muted); font-size: 14px; }
+  .seg { display: inline-flex; border: 1px solid var(--rule-strong); border-radius: 6px; overflow: hidden; }
+  .seg button {
+    min-height: 40px;
+    padding: 0 16px;
+    border: 0;
+    border-right: 1px solid var(--rule-strong);
+    background: #fff;
+    color: var(--ink);
+    font: 500 14px/1.2 var(--sans);
+    cursor: pointer;
+  }
+  .seg button:last-child { border-right: 0; }
+  .seg button:hover { background: var(--hover); }
+  .seg button[aria-pressed="true"] { background: var(--blue); color: #fff; }
+
+  table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  thead th {
+    padding: 10px 12px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--rule-strong);
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+    text-align: right;
+    white-space: nowrap;
+  }
+  thead th a { color: inherit; }
+  thead th a:hover { color: var(--blue); }
+  tbody td { height: 54px; padding: 0 12px; border-bottom: 1px solid var(--rule); font-size: 15px; text-align: right; white-space: nowrap; }
+  .c-rank { width: 44px; color: var(--muted); }
+  .c-name, .c-bar, .c-fund { text-align: left; }
+  td.c-name { font-size: 16px; font-weight: 600; white-space: normal; }
+  td.c-bar { width: 30%; min-width: 140px; }
+  td.c-sales { color: var(--blue); font-weight: 700; }
+  td.c-total { color: var(--muted); }
+  td.c-score { font-family: var(--mono); font-size: 14px; }
+  .c-open { width: 1%; }
+  td.c-open { padding-right: 0; }
+  .sub { display: none; color: var(--muted); font-size: 13px; font-weight: 400; }
+  .bar { display: flex; height: 10px; background: var(--bar-rest); }
+  .bar span { background: var(--blue); }
+
+  tr.row { cursor: pointer; }
+  tr.row:hover td { background: var(--hover); }
+  tr.row.is-open td { background: var(--soft); border-bottom-color: var(--soft); }
+
+  tr.detail td { height: auto; padding: 6px 16px 28px 56px; border-bottom: 1px solid var(--rule-strong); background: var(--soft); text-align: left; white-space: normal; }
+  .detail-grid { display: grid; grid-template-columns: minmax(220px, 300px) minmax(0, 1fr); gap: 20px 44px; }
+  .detail h3 { margin: 0; font: 400 30px/1.1 var(--serif); letter-spacing: -.035em; overflow-wrap: anywhere; }
+  .sum { margin: 6px 0 12px; }
+  .facts { display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; margin: 0 0 16px; font-size: 14px; }
+  .facts dt { color: var(--muted); }
+  .facts dd { margin: 0; font-weight: 600; }
+  .roles-title { margin: 4px 0 6px; color: var(--muted); font: 600 14px/1.3 var(--sans); }
+  .roles { margin: 0; padding: 0; list-style: none; columns: 2; column-gap: 40px; font-size: 14px; line-height: 1.35; }
+  .roles li { break-inside: avoid; padding: 7px 0; border-bottom: 1px solid var(--soft-rule); overflow-wrap: anywhere; }
+  .where { display: block; color: var(--muted); font-size: 13px; }
+  .state { padding: 14px 12px; color: var(--muted); }
+
+  /* Research notes */
+
+  .note { margin-top: 56px; }
+  .note-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 20px; padding-bottom: 10px; border-bottom: 2px solid var(--ink); }
+  .note-head h2 { margin: 0; font: 400 34px/1.1 var(--serif); letter-spacing: -.035em; }
+  .note-head p { margin: 0; color: var(--muted); font-size: 13px; }
+  .note-row { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 8px 28px; padding: 22px 0; border-bottom: 1px solid var(--rule); }
+  .note-row > h3 { margin: 0; font: 400 23px/1.25 var(--serif); }
+  .note-body { font-size: 16px; line-height: 1.55; }
+  .note-body p { max-width: 72ch; margin: 0 0 10px; }
+  .note-body p:last-child { margin-bottom: 0; }
+  .note-body ul { max-width: 72ch; margin: 0; padding-left: 20px; }
+  .note-body li { margin-bottom: 8px; }
+  .note-body li:last-child { margin-bottom: 0; }
+  .split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 36px; }
+  .note-body h4 { margin: 0 0 6px; color: var(--muted); font-size: 14px; }
+  .note-body h4:not(:first-child) { margin-top: 16px; }
+  .formula { max-width: 69ch; margin: 0 0 10px; padding: 10px 14px; background: var(--hover); border: 1px solid var(--rule); font: 13px/1.65 var(--mono); overflow-x: auto; }
+  .foot { margin-top: 20px; color: var(--muted); font-size: 14px; }
+
+  @media (max-width: 900px) {
+    .intro { grid-template-columns: minmax(0, 1fr); padding: 28px 0 32px; }
+    td.c-bar { width: 22%; min-width: 90px; }
+    .detail-grid { grid-template-columns: minmax(0, 1fr); }
+    tr.detail td { padding-left: 16px; }
+  }
+
+  /* Phones: each company becomes a block with its bar underneath */
+
+  @media (max-width: 700px) {
+    .app-nav { margin-left: -12px; }
+    .app-nav .btn { margin-left: 12px; }
+    .desc { font-size: 17px; }
+    .stats { gap: 12px 28px; }
+    .stats dd { font-size: 32px; }
+    .lead { padding: 20px; }
+    .pick { font-size: 38px; }
+    .seg button { padding: 0 12px; }
+
+    thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+    tbody tr.row { display: grid; grid-template-columns: 26px minmax(0, 1fr) auto; align-items: center; gap: 0 8px; padding: 10px 4px 12px; border-bottom: 1px solid var(--rule); }
+    tbody td { height: auto; padding: 0; border: 0; white-space: normal; }
+    tr.row:hover td, tr.row.is-open td { background: none; }
+    tr.row.is-open { background: var(--soft); border-bottom-color: var(--soft); }
+    td.c-rank { grid-area: 1 / 1; width: auto; text-align: left; }
+    td.c-name { grid-area: 1 / 2; }
+    td.c-open { grid-area: 1 / 3; width: auto; }
+    td.c-bar { grid-area: 2 / 2 / 3 / 4; width: auto; min-width: 0; padding-top: 8px; }
+    td.c-sales, td.c-total, td.c-share, td.c-fund, td.c-score { display: none; }
+    .sub { display: block; }
+    tr.detail, tr.detail td { display: block; }
+    tr.detail td { padding: 4px 12px 22px; }
+    .roles { columns: 1; }
+    .note-row, .split { grid-template-columns: minmax(0, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap" id="top">
+  <header class="app-header">
+    <div class="brand">Preston Takayama</div>
+    <nav class="app-nav" aria-label="Sections">
+      <a class="link" href="#ranking">Ranking</a>
+      <a class="link" href="#findings">Findings</a>
+      <a class="link" href="#methodology">Method</a>
+      <a class="btn ghost small" href="https://github.com/PrestonTakayama/cyber-sales-signal">Code on GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="intro">
+      <div>
+        <h1>Cyber Sales Signal</h1>
+        <p class="desc">A look at which private cybersecurity companies are hiring for sales.</p>
+        <dl class="stats" id="meta">
+          <div><dt>open roles counted</dt><dd id="m-total">...</dd></div>
+          <div><dt>of them in sales</dt><dd id="m-sales">...</dd></div>
+          <div><dt>companies ranked</dt><dd id="m-companies">...</dd></div>
+        </dl>
+        <p class="snapshot">Data snapshot <time class="mono" id="m-date"></time><span id="saved-note" hidden>, shown from the copy saved in this page</span></p>
+      </div>
+      <aside class="lead" aria-label="Research takeaway">
+        <h2>Who I’d call first</h2>
+        <div class="pick">7AI</div>
+        <p>It had 12 open roles for account executives and six for sales engineers. I’d ask customers what work it handles today and whether they’ve kept paying for it.</p>
+        <div class="actions">
+          <button type="button" class="btn" id="pick-btn" data-company="7AI">See 7AI’s open sales roles</button>
+          <a href="#findings">Read the findings</a>
+        </div>
+      </aside>
+    </div>
+
+    <section id="ranking" aria-labelledby="ranking-title">
+      <div class="toolbar">
+        <div>
+          <h2 id="ranking-title">Company ranking</h2>
+          <ul class="howto">
+            <li><span class="swatch sales" aria-hidden="true"></span>Open sales roles</li>
+            <li><span class="swatch rest" aria-hidden="true"></span>Every other open role</li>
+            <li>Select a company to see its sales roles.</li>
+          </ul>
+        </div>
+        <div class="sort">
+          <span id="sort-label">Sort by</span>
+          <div class="seg" role="group" aria-labelledby="sort-label">
+            <button type="button" data-sort="score" aria-pressed="true">Score</button>
+            <button type="button" data-sort="sales" aria-pressed="false">Sales roles</button>
+            <button type="button" data-sort="share" aria-pressed="false">Sales share</button>
+          </div>
+        </div>
+      </div>
+
+      <table>
+        <caption class="hidden">Companies ranked by score. Select a company to list its open sales roles.</caption>
+        <thead>
+          <tr>
+            <th scope="col" class="c-rank">#</th>
+            <th scope="col" class="c-name">Company</th>
+            <th scope="col" class="c-bar">Open roles</th>
+            <th scope="col" class="c-sales">Sales</th>
+            <th scope="col" class="c-total">All</th>
+            <th scope="col" class="c-share">Sales share</th>
+            <th scope="col" class="c-fund"><a href="#recent-funding">Raised recently</a></th>
+            <th scope="col" class="c-score"><a href="#methodology">Score</a></th>
+            <th scope="col" class="c-open"><span class="hidden">Details</span></th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+
+      <p class="state" id="status">Loading the ranking.</p>
+      <noscript><p class="state">This page needs JavaScript to draw the ranking. The same numbers are in ranked.csv in the repo.</p></noscript>
+    </section>
+
+    <section class="note" aria-labelledby="note-title">
+      <div class="note-head">
+        <h2 id="note-title">Research notes</h2>
+        <p>Snapshot <time id="note-date"></time></p>
+      </div>
+
+      <div class="note-row" id="findings">
+        <h3>Findings</h3>
+        <div class="note-body split">
+          <div>
+            <h4>Observed</h4>
+            <ul>
+              <li>Doppel came first with 18 of its 26 openings in sales (69%), followed by 7AI with 20 of 45.</li>
+              <li>Of the 59 sales openings across Doppel, 7AI, and Cogent, 33 were for account executives, mostly covering U.S. regions, and just one was for an SDR.</li>
+              <li>Cogent had the most sales openings (21) and was the only one of the three hiring for sales ops (3).</li>
+              <li>Halcyon came in 17th out of 28 with six openings, three of them for account executives in Chicago, Boston, and Charlotte.</li>
+              <li>Only 28 of 56 companies could be ranked. The tool couldn't read Upwind's job board, Spur had no public board, and Sublime had nothing posted.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Interpretation</h4>
+            <ul>
+              <li>My guess is the top three already know who they're selling to and have leads coming in, so they need people who can close.</li>
+              <li>Cogent's sales ops hiring suggests its sales team is already big enough to need more support.</li>
+              <li>Halcyon probably already has people covering other cities. A company can rank low even if it already has a big sales team.</li>
+              <li>I'd start with 7AI, which has openings for 12 account executives and six sales engineers, because I think getting AI to do the work of an entire security operations team is harder than it sounds. I'd look at the competition and talk to customers about what they use 7AI for and whether they've kept paying for it.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="note-row" id="rationale">
+        <h3>Rationale</h3>
+        <div class="note-body">
+          <p>Sales hiring is one of the clearest outside signs that a company has product-market fit. Sales reps are expensive, and each one has to bring in more than they cost, so a company hires a lot of them only once its product sells again and again. A company still looking for fit hires mostly engineers. So many open sales roles, especially as a share of all open roles, suggest customers are buying and the company is growing to keep up.</p>
+          <p>I use it as a sourcing signal. It tells me which companies to look at first, not which ones are good.</p>
+          <h4>Assumptions</h4>
+          <ul>
+            <li>A company hires a lot of sales reps only once its product sells again and again.</li>
+            <li>Open roles stand in for hiring. Job postings aren't hires.</li>
+            <li>A job title is enough to tell a sales role from an engineering role.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="note-row" id="methodology">
+        <h3>Methodology</h3>
+        <div class="note-body">
+          <h4>Source</h4>
+          <p>Open roles are read from public Greenhouse, Lever and Ashby job boards.</p>
+          <h4>Tagging</h4>
+          <p>Every role is tagged Sales, Engineering or Other from its job title only (not its department). Sales Engineers, Solutions Engineers and Solutions Architects count as Sales. Sales support roles (Sales Ops, Revenue Ops, Sales Enablement, Revenue Marketing) count as Sales. Customer Success, Technical Account Manager, and brand, content, product or technical marketing roles never count as Sales.</p>
+          <h4>Score</h4>
+          <pre class="formula">sales_share = sales_roles / total_roles
+score       = sales_roles * (1 + sales_share)
+score       = score * 1.25    (only if raised_recently)</pre>
+          <h4 id="recent-funding">Raised recently</h4>
+          <p>A company is marked as raised recently when it filed a Form D with the SEC in the last 12 months. A Form D is the notice a private company files after selling shares, for example in a venture round.</p>
+        </div>
+      </div>
+
+      <div class="note-row" id="limitations">
+        <h3>Limitations</h3>
+        <div class="note-body">
+          <ul>
+            <li>Job postings aren't hires. The tool only sees who is hiring now, not how big a team already is.</li>
+            <li>This tool only reads Greenhouse, Lever and Ashby job boards. 28 of the 56 companies in companies.csv aren't ranked.</li>
+            <li>Tagging is by title only, so a few roles land in the wrong bucket. Halcyon's "Senior Deal Desk Lead" works on pricing and contracts for sales deals, but the title has no Sales word, so it's tagged Other.</li>
+            <li>A blank under Raised recently can mean the Form D wasn't found. Cogent Security shows a blank even though it announced a Series A in February 2026.</li>
+            <li>The score is weighted toward count. A v2 could weight share more heavily, which would move focused companies like HiddenLayer up.</li>
+            <li>This is one snapshot. The next step is rerunning it weekly to see who is ramping up sales hiring.</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="foot">Data files <a href="ranked.csv">ranked.csv</a> and <a href="jobs.csv">jobs.csv</a>. Code and full write-up in the <a href="https://github.com/PrestonTakayama/cyber-sales-signal">GitHub repo</a>. <a href="#top">Back to top</a></p>
+    </section>
+  </main>
+
+</div>
+
+<!-- A copy of ranked.csv, jobs.csv and companies.csv, used only when the files themselves can't be read. -->
+<script type="text/plain" id="saved-ranked">
+company,total_roles,sales_roles,sales_share,score,fde_count,raised_recently
+Doppel,26,18,0.692,38.08,0,True
+7AI,45,20,0.444,36.11,0,True
+Cogent Security,52,21,0.404,29.48,2,False
+HiddenLayer,20,15,0.75,26.25,0,False
+Zafran,31,15,0.484,22.26,0,False
+Endor Labs,36,13,0.361,17.69,0,False
+AegisAI,28,11,0.393,15.32,0,False
+Armadin,26,8,0.308,13.08,1,True
+Socket,26,8,0.308,13.08,1,True
+Neo,20,9,0.45,13.05,0,False
+Obsidian Security,15,5,0.333,8.33,0,True
+Fable Security,8,4,0.5,7.5,0,True
+Nudge Security,5,4,0.8,7.2,0,False
+Daylight Security,15,5,0.333,6.67,0,False
+depthfirst,21,5,0.238,6.19,1,False
+Xage Security,10,3,0.3,4.88,0,True
+Halcyon,6,3,0.5,4.5,0,False
+Empirical Security,3,2,0.667,4.17,0,True
+Prophet Security,8,3,0.375,4.12,0,False
+Adaptive Security,9,3,0.333,4.0,0,False
+Dropzone AI,9,3,0.333,4.0,1,False
+VulnCheck,12,2,0.167,2.33,0,False
+Keycard,6,1,0.167,1.17,0,False
+WitnessAI,7,1,0.143,1.14,0,False
+Overwatch Data,1,0,0.0,0.0,0,True
+Reach Security,6,0,0.0,0.0,0,False
+XBOW,3,0,0.0,0.0,0,True
+Method Security,8,0,0.0,0.0,1,False
+</script>
+<script type="text/plain" id="saved-jobs">
+company,title,department,location,source,category
+7AI,Senior Backend Engineer,R&D,"Boston, MA",ashby,Engineering
+7AI,Senior Security Engineer - AI,R&D,"Boston, MA",ashby,Engineering
+7AI,Senior AI Engineer,R&D,"Boston, MA",ashby,Engineering
+7AI,Sr. Sales Engineer - Cybersecurity,Sales,Remote,ashby,Sales
+7AI,Security Analyst - Tier 3 (West Coast),Security,West Coast,ashby,Other
+7AI,Enterprise Account Executive - Oregon,Sales,Remote,ashby,Sales
+7AI,Senior Platform Engineer,R&D,"Boston, MA",ashby,Engineering
+7AI,Enterprise Account Executive - West,Sales,Remote,ashby,Sales
+7AI,Enterprise Account Executive - NYC,Sales,Remote,ashby,Sales
+7AI,Senior Frontend Engineer,R&D,"Boston, MA",ashby,Engineering
+7AI,Enterprise Account Executive - Washington,Sales,Remote,ashby,Sales
+7AI,Senior Software Architect,R&D,"Boston, MA",ashby,Engineering
+7AI,Security Analyst - Tier 3,Security,"Boston, MA",ashby,Other
+7AI,Enterprise Account Executive - Ohio,Sales,Remote,ashby,Sales
+7AI,Sr. Sales Engineer – Service Providers,Sales,Remote,ashby,Sales
+7AI,Security Analyst - Tier 2,Security,"Boston, MA",ashby,Other
+7AI,AI Product Manager,Product,"Boston, MA",ashby,Other
+7AI,Sales Engineer - Chicago,Sales,Remote,ashby,Sales
+7AI,Enterprise Account Executive - Mid Atlantic,Sales,Remote,ashby,Sales
+7AI,Senior Software Engineer (Product),R&D,"Boston, MA",ashby,Engineering
+7AI,Principal Software Engineer (Cloud),R&D,"Boston, MA",ashby,Engineering
+7AI,Field Marketing Manager - Boston,Marketing,"Boston, MA",ashby,Other
+7AI,Principal Security Engineer - AI,R&D,"Boston, MA",ashby,Engineering
+7AI,AI Solutions Engineer,Product,"Boston, MA",ashby,Sales
+7AI,Channel Sales Engineer,Sales,Remote,ashby,Sales
+7AI,Sr. Visual Designer,Product,"Boston, MA",ashby,Other
+7AI,"Field Marketing Manager - Dallas, TX",Marketing,Remote,ashby,Other
+7AI,"Field Marketing Manager - Chicago, IL",Marketing,Remote,ashby,Other
+7AI,Enterprise Account Executive - Minneapolis,Sales,Remote,ashby,Sales
+7AI,IT Engineer,R&D,"Boston, MA",ashby,Engineering
+7AI,Enterprise Account Executive - Philadelphia,Sales,Remote,ashby,Sales
+7AI,Field Marketing Manager - California,Marketing,Remote,ashby,Other
+7AI,AI Solution Advisor,Product,"Boston, MA",ashby,Other
+7AI,"Director of Sales Engineering, East Coast",Sales,"Boston, MA",ashby,Sales
+7AI,Enterprise Account Executive - Toronto,Sales,Remote,ashby,Sales
+7AI,Sales Enablement Specialist,Sales,"Boston, MA",ashby,Sales
+7AI,Enterprise Account Executive - Austin,Sales,Remote,ashby,Sales
+7AI,HR Operations Specialist,G&A,"Boston, MA",ashby,Other
+7AI,Enterprise Account Executive - Wisconsin,Sales,Remote,ashby,Sales
+7AI,DFIR Alliances Director,Sales,Remote,ashby,Sales
+7AI,Enterprise Account Executive - Utah,Sales,Remote,ashby,Sales
+7AI,GRC Engineer,R&D,"Boston, MA",ashby,Engineering
+7AI,Sr. Product Marketing Manager - Commercial,Marketing,"Boston, MA",ashby,Other
+7AI,Marketing Operations Manager,Marketing,"Boston, MA",ashby,Other
+7AI,PLAID ELITE DFIR Consultant,Security,"Boston, MA",ashby,Other
+Adaptive Security,"Software Engineer, Product & Platform",Engineering,NYC,ashby,Engineering
+Adaptive Security,Business Development Representative,Sales,"NYC, LA, SF",ashby,Sales
+Adaptive Security,Senior Customer Success Manager,Customer Success,NYC,ashby,Other
+Adaptive Security,Senior Account Executive,Sales,"NYC, LA, SF",ashby,Sales
+Adaptive Security,Senior Account Executive (Remote),Sales,Remote,ashby,Sales
+Adaptive Security,Founding Machine Learning Engineer,Engineering,NYC,ashby,Engineering
+Adaptive Security,Customer Success Associate,Customer Success,NYC,ashby,Other
+Adaptive Security,Solutions Consultant,Customer Success,NYC,ashby,Other
+Adaptive Security,GTM Intern - Winter/Spring,Sales,NYC; LA,ashby,Other
+AegisAI,AI Engineer - NYC,Engineering,New York City,ashby,Engineering
+AegisAI,Business Development Representative,Sales,New York City,ashby,Sales
+AegisAI,Strategic Finance Operations Leader,Operations,New York City,ashby,Other
+AegisAI,AI Engineer - SF,Engineering,San Francisco,ashby,Engineering
+AegisAI,AI Architect,Engineering,New York City,ashby,Other
+AegisAI,Director Demand Generation,Sales,United States,ashby,Sales
+AegisAI,Senior Threat Intelligence Researcher,Engineering,New York City,ashby,Other
+AegisAI,AI Product Manager,Engineering,New York City,ashby,Other
+AegisAI,BizOps Lead,Operations,San Francisco,ashby,Other
+AegisAI,AI Alchemist,Operations,San Francisco,ashby,Other
+AegisAI,"Channel Manager, VAR Partnerships",Sales,United States,ashby,Sales
+AegisAI,Vice President of Operations,Operations,San Francisco,ashby,Other
+AegisAI,Account Executive,Sales,United States,ashby,Sales
+AegisAI,"Staff / Senior Staff Engineer, AI Products",Engineering,New York City,ashby,Engineering
+AegisAI,"Enterprise Account Executive, Northeast",Sales,United States,ashby,Sales
+AegisAI,Security Administrator,Engineering,United States,ashby,Other
+AegisAI,"Enterprise Account Executive, Ohio Valley",Sales,United States,ashby,Sales
+AegisAI,"Enterprise Account Executive, North Central",Sales,United States,ashby,Sales
+AegisAI,"Enterprise Account Executive, Northwest",Sales,United States,ashby,Sales
+AegisAI,"Enterprise Account Executive, Southwest",Sales,United States,ashby,Sales
+AegisAI,Customer Engineer/Solutions Engineer,Sales,United States,ashby,Sales
+AegisAI,Technical Recruiter,Operations,United States,ashby,Other
+AegisAI,"Visual Designer (AI-Native, Enterprise Focus)",Product and Design,United States,ashby,Other
+AegisAI,Infrastructure Engineer,Engineering,San Francisco,ashby,Engineering
+AegisAI,Infrastructure Engineer Lead,Engineering,New York City,ashby,Engineering
+AegisAI,Security Engineer,Engineering,United States,ashby,Engineering
+AegisAI,GRC Engineer,Engineering,United States,ashby,Engineering
+AegisAI,Strategic Account Executive,Sales,United States,ashby,Sales
+Armadin,Inside Sales Representative - Central,Go-to-Market,Palo Alto,ashby,Sales
+Armadin,Inside Sales Representative - Palo Alto,Go-to-Market,Palo Alto,ashby,Sales
+Armadin,"Inside Sales Representative - Washington, DC",Go-to-Market,"Washington, DC",ashby,Sales
+Armadin,"Managing Principal, Red Team Operator",Red Team,Palo Alto,ashby,Other
+Armadin,Member of Technical Staff - Research,Engineering,Palo Alto,ashby,Other
+Armadin,Regional Sales Manager | Los Angeles,Go-to-Market,Remote,ashby,Sales
+Armadin,"Red Team Operator, Operational Technology (OT)",Red Team,Remote,ashby,Other
+Armadin,Regional Sales Manager | Florida,Go-to-Market,Remote,ashby,Sales
+Armadin,Regional Sales Manager | New York City,Go-to-Market,Remote,ashby,Sales
+Armadin,Regional Sales Manager | New England,Go-to-Market,Remote,ashby,Sales
+Armadin,Regional Sales Manager | San Francisco,Go-to-Market,Remote,ashby,Sales
+Armadin,"Senior Red Team Operator, AI/LLM",Red Team,Remote,ashby,Other
+Armadin,Member of Technical Staff - Frontend,Engineering,Palo Alto,ashby,Other
+Armadin,Forward Deployed Engineer,Engineering,Palo Alto,ashby,Engineering
+Armadin,Associate Red Team Analyst - Mexico,Red Team,Mexico,ashby,Other
+Armadin,Member of Technical Staff - Platform,Engineering,Palo Alto,ashby,Other
+Armadin,Summer 2027 Internship - Member of Technical Staff - Agent Systems,Engineering,Palo Alto,ashby,Other
+Armadin,Technical Lead Manager - Platform,Engineering,Palo Alto,ashby,Other
+Armadin,Technical Lead Manager - Frontend,Engineering,Palo Alto,ashby,Other
+Armadin,Member of Technical Staff - Distributed Systems,Engineering,Palo Alto,ashby,Other
+Armadin,Member of Technical Staff - Agent,Engineering,Palo Alto,ashby,Other
+Armadin,"Senior FP&A Analyst, Services Finance",General & Administrative,Remote,ashby,Other
+Armadin,"Senior Financial Analyst, GTM Business Partner",General & Administrative,Palo Alto,ashby,Other
+Armadin,Summer 2027 Internship -  Member of Technical Staff -  Frontend,Engineering,Palo Alto,ashby,Other
+Armadin,"Senior Red Team Operator, Applications",Red Team,Remote,ashby,Other
+Armadin,Principal Red Team Operator,Red Team,Palo Alto,ashby,Other
+Cogent Security,Software Engineer - Applied AI,Engineering,"San Francisco, CA",ashby,Engineering
+Cogent Security,Software Engineer - Backend,Engineering,"San Francisco, CA",ashby,Engineering
+Cogent Security,Software Engineer - Fullstack,Engineering,"San Francisco, CA",ashby,Engineering
+Cogent Security,Software Engineer - Data Platform (Staff+),Engineering,"San Francisco, CA",ashby,Engineering
+Cogent Security,Forward Deployed Agent Engineer,Engineering,"San Francisco, CA",ashby,Engineering
+Cogent Security,Senior GTM Recruiter,General & Administrative,"New York, NY",ashby,Other
+Cogent Security,Software Engineer - Frontend (Staff+),Engineering,"San Francisco, CA",ashby,Engineering
+Cogent Security,Solutions Engineer (US West),GTM,"Remote, US",ashby,Sales
+Cogent Security,Regional Sales Manager,GTM,"Remote, US",ashby,Sales
+Cogent Security,Cogent AI Fellowship,Engineering,"San Francisco, CA",ashby,Other
+Cogent Security,AI Research Engineer,Engineering,"San Francisco, CA",ashby,Engineering
+Cogent Security,AI Research Scientist,Engineering,"San Francisco, CA",ashby,Other
+Cogent Security,Solutions Architect (US West),GTM,"Remote, US",ashby,Sales
+Cogent Security,Security Engineer - Application Security (Senior),Engineering,"Remote, US",ashby,Engineering
+Cogent Security,Software Engineer - Infrastructure (Senior+),Engineering,"San Francisco, CA",ashby,Engineering
+Cogent Security,Software Engineer - Developer Experience,Engineering,"San Francisco, CA",ashby,Engineering
+Cogent Security,Software Engineer - Storage Infrastructure (Senior+),Engineering,"San Francisco, CA",ashby,Engineering
+Cogent Security,Head of Demand Generation,GTM,"New York, NY",ashby,Sales
+Cogent Security,Business Operations & Strategy,General & Administrative,"San Francisco, CA",ashby,Other
+Cogent Security,Sales Operations Analyst,GTM,"New York, NY",ashby,Sales
+Cogent Security,Field Marketing Manager,GTM,"New York, NY",ashby,Other
+Cogent Security,"Forward Deployed Agent Engineer, Early Career",Engineering,"New York, NY",ashby,Engineering
+Cogent Security,"Senior Analyst, Strategic Finance",General & Administrative,"New York, NY",ashby,Other
+Cogent Security,Accounting Manager,General & Administrative,"New York, NY",ashby,Other
+Cogent Security,Enterprise Technical Account Manager,GTM,"Remote, US",ashby,Other
+Cogent Security,Performance Marketing Lead,GTM,"New York, NY",ashby,Other
+Cogent Security,Founding IT Engineer,Engineering,"San Francisco, CA",ashby,Engineering
+Cogent Security,Past Founder,General & Administrative,"San Francisco, CA",ashby,Other
+Cogent Security,"Enterprise Account Executive, Mid-Atlantic",GTM,"Remote, US",ashby,Sales
+Cogent Security,"Enterprise Account Executive, South Florida",GTM,"Remote, US",ashby,Sales
+Cogent Security,"Channel Account Manager, East",GTM,"New York, NY",ashby,Sales
+Cogent Security,"Channel Account Manager, Central",GTM,"Remote, US",ashby,Sales
+Cogent Security,"Channel Account Manager, West",GTM,"San Francisco, CA",ashby,Sales
+Cogent Security,"Major Account Executive, Atlanta",GTM,"New York, NY",ashby,Sales
+Cogent Security,"Major Account Executive, Toronto",GTM,"Remote, US",ashby,Sales
+Cogent Security,"Enterprise Account Executive, Mountain / Southwest",GTM,"Remote, US",ashby,Sales
+Cogent Security,"Enterprise Account Executive, Ohio Valley",GTM,"Remote, US",ashby,Sales
+Cogent Security,"Enterprise Account Executive, Pacific Northwest",GTM,"Remote, US",ashby,Sales
+Cogent Security,"Mid-Market Account Executive, New York",GTM,"New York, NY",ashby,Sales
+Cogent Security,"Mid-Market Account Executive, San Francisco",GTM,"San Francisco, CA",ashby,Sales
+Cogent Security,"Enterprise Account Executive, Southern California",GTM,"Remote, US",ashby,Sales
+Cogent Security,"Enterprise Account Executive, TOLA",GTM,"Remote, US",ashby,Sales
+Cogent Security,Executive Assistant to the CEO,General & Administrative,"San Francisco, CA",ashby,Other
+Cogent Security,"Revenue Operations Lead, West",GTM,"San Francisco, CA",ashby,Sales
+Cogent Security,"Revenue Operations Lead, Central",GTM,"San Francisco, CA",ashby,Sales
+Cogent Security,Technical Support Engineer,GTM,"San Francisco, CA",ashby,Engineering
+Cogent Security,AI Security Researcher,Engineering,"Remote, US",ashby,Engineering
+Cogent Security,"Field Marketing Manager, West",GTM,"San Francisco, CA",ashby,Other
+Cogent Security,Sr. Product Marketing Manager,GTM,"Remote, US",ashby,Other
+Cogent Security,Director of Communications,GTM,"Remote, US",ashby,Other
+Cogent Security,Director of Content Marketing,GTM,"Remote, US",ashby,Other
+Cogent Security,"Senior Manager, Content Marketing",GTM,"Remote, US",ashby,Other
+Daylight Security,Account Executive,Sales,London,greenhouse,Sales
+Daylight Security,Cloud FinOps Engineer,R&D,Tel Aviv,greenhouse,Engineering
+Daylight Security,Customer Success Engineer (CSE),R&D,United States,greenhouse,Engineering
+Daylight Security,IT Manager,R&D,Tel Aviv,greenhouse,Other
+Daylight Security,Regional Vice President (RVP) - EMEA,Sales,London,greenhouse,Sales
+Daylight Security,Regional Vice President (RVP) - West,Sales,United States,greenhouse,Sales
+Daylight Security,Sales Engineer,Sales,United States,greenhouse,Sales
+Daylight Security,Senior Backend Engineer,R&D,Tel Aviv,greenhouse,Engineering
+Daylight Security,Senior Frontend Engineer,R&D,Tel Aviv,greenhouse,Engineering
+Daylight Security,Senior Full Stack Engineer,R&D,Tel Aviv,greenhouse,Engineering
+Daylight Security,Senior Product Manager,Product,Tel Aviv,greenhouse,Other
+Daylight Security,"Senior Program Manager, Brand & Marketing",Marketing,United States - Remote,greenhouse,Other
+Daylight Security,Senior Sales Enablement Manager,Sales,United States,greenhouse,Sales
+Daylight Security,Senior Security Engineer,Security Engineering,Tel Aviv,greenhouse,Engineering
+Daylight Security,Senior Security Engineer,Security Engineering,Singapore,greenhouse,Engineering
+depthfirst,Product Engineer,Engineering,San Francisco,ashby,Engineering
+depthfirst,Backend Engineer,Engineering,San Francisco,ashby,Engineering
+depthfirst,Security Researcher,Applied Research,San Francisco,ashby,Engineering
+depthfirst,Research Engineer,Applied Research,San Francisco,ashby,Engineering
+depthfirst,Account Executive,Sales,San Francisco,ashby,Sales
+depthfirst,Recruiter,General & Administrative,San Francisco,ashby,Other
+depthfirst,Forward-Deployed Security Engineer,Engineering,San Francisco,ashby,Engineering
+depthfirst,Sales Development Representative,Sales,San Francisco,ashby,Sales
+depthfirst,Solutions Engineer,Sales,San Francisco,ashby,Sales
+depthfirst,Security Product Engineer,Engineering,San Francisco,ashby,Engineering
+depthfirst,GTM Engineer,Engineering,San Francisco,ashby,Engineering
+depthfirst,Product Manager,Product,San Francisco,ashby,Other
+depthfirst,Technical Account Manager,Sales,San Francisco,ashby,Other
+depthfirst,Field Marketing,Sales,San Francisco,ashby,Other
+depthfirst,"Senior Software Engineer, Corporate Security",Engineering,San Francisco,ashby,Engineering
+depthfirst,"Senior Software Security Engineer, Infrastructure & Identity",Engineering,San Francisco,ashby,Engineering
+depthfirst,Designer (Product + Brand),Product,San Francisco,ashby,Other
+depthfirst,Forward Deployed Engineer,Engineering,San Francisco,ashby,Engineering
+depthfirst,Infrastructure Software Engineer,Engineering,San Francisco,ashby,Engineering
+depthfirst,"Strategic Account Executive, APJ",Sales,Australia,ashby,Sales
+depthfirst,"Senior Solutions Engineer, APJ",Sales,Australia,ashby,Sales
+Doppel,Channel Account Manager - NorCal / Northwest,Channel & Alliances,Northwest,greenhouse,Sales
+Doppel,Channel Account Manager - TOLA,Channel & Alliances,Central,greenhouse,Sales
+Doppel,Director of ABM and Campaigns,Marketing,Remote,greenhouse,Other
+Doppel,Enterprise Account Executive - Canada,Account Executive,Remote - Canada,greenhouse,Sales
+Doppel,Enterprise Account Executive - Los Angeles,Account Executive,"Los Angeles, California",greenhouse,Sales
+Doppel,Enterprise Account Executive - Michigan/Wisconsin,Account Executive,Remote - Michigan/Wisconsin,greenhouse,Sales
+Doppel,Enterprise Account Executive - New England,Account Executive,Remote - New England,greenhouse,Sales
+Doppel,Enterprise Account Executive - NYC/NJ,Account Executive,Remote - NYC/NJ,greenhouse,Sales
+Doppel,Enterprise Account Executive - Texas,Account Executive,Remote - Texas,greenhouse,Sales
+Doppel,Global People Ops Partner,People,Location,greenhouse,Other
+Doppel,Mid-Enterprise Account Executive - Atlanta,Account Executive,Remote - Atlanta,greenhouse,Sales
+Doppel,Mid-Enterprise Account Executive - Bay Area,Account Executive,San Francisco,greenhouse,Sales
+Doppel,Mid-Enterprise Account Executive - Florida,Account Executive,Remote - Florida,greenhouse,Sales
+Doppel,Mid-Enterprise Account Executive - Rockies,Account Executive,"Denver, Colorado",greenhouse,Sales
+Doppel,Mid-Enterprise Customer Success Manager,Customer Success,Remote,greenhouse,Other
+Doppel,Mid-Enterprise Sales Engineer,Sales Engineering,Remote,greenhouse,Sales
+Doppel,Payroll Manager,Finance,"San Francisco, CA",greenhouse,Other
+Doppel,Principal GTM Recruiter,People,Remote,greenhouse,Other
+Doppel,"Program Manager, GTM Enablement",Sales,Remote - United States,greenhouse,Other
+Doppel,"Regional Vice President of Sales - Enterprise, Northeast",Sales,Remote - Northeast,greenhouse,Sales
+Doppel,Renewals Manager,Customer Success,Remote,greenhouse,Other
+Doppel,Sales Engineer - DACH,Sales Engineering,Remote,greenhouse,Sales
+Doppel,Senior Field Marketing Associate - TOLA,Marketing,TOLA US,greenhouse,Other
+Doppel,Senior Sales Engineer - EMEA,Sales Engineering,Remote,greenhouse,Sales
+Doppel,Senior Sales Engineer - NYC,Sales Engineering,Remote,greenhouse,Sales
+Doppel,"Sr. Manager, Sales Development Representative",Business Development,"Austin, Texas",greenhouse,Sales
+Dropzone AI,Account Executive,Sales,Remote - US,greenhouse,Sales
+Dropzone AI,AI Research Engineer,Engineering,Remote - US,greenhouse,Engineering
+Dropzone AI,Federal Regional Sales Manager,Sales,Remote - US,greenhouse,Sales
+Dropzone AI,Forward Deployed Engineer,Customer Support,Remote - US,greenhouse,Engineering
+Dropzone AI,Principal Sales Engineer,Sales,Remote - US,greenhouse,Sales
+Dropzone AI,Senior DevOps Engineer,Engineering,Remote - US,greenhouse,Engineering
+Dropzone AI,"Senior Product Manager, Integrations & Platform",Product,Remote - US,greenhouse,Other
+Dropzone AI,Senior Software Engineer - Integrations,Engineering,Remote - US,greenhouse,Engineering
+Dropzone AI,Senior Technical Writer,Product,Remote - US,greenhouse,Other
+Empirical Security,Commercial Sales Executive,Sales,Remote,ashby,Sales
+Empirical Security,Enterprise Sales Executive,Sales,Remote,ashby,Sales
+Empirical Security,Software Engineer,Engineering,Remote,ashby,Engineering
+Endor Labs,Customer Reliability Engineer,Customer Solutions,"Palo Alto, CA",greenhouse,Engineering
+Endor Labs,Enterprise Account Executive - Bay Area,Sales,SF Bay Area,greenhouse,Sales
+Endor Labs,Enterprise Account Executive - LATAM,Sales,"Miami, FL",greenhouse,Sales
+Endor Labs,Enterprise Account Executive - Northeast,Sales,"Boston, MA",greenhouse,Sales
+Endor Labs,Enterprise Account Executive - NY Tristate,Sales,"New York, NY",greenhouse,Sales
+Endor Labs,Enterprise Account Executive - Southeast,Sales,"Atlanta, GA",greenhouse,Sales
+Endor Labs,Enterprise Account Executive - Southwest,Sales,Los Angeles,greenhouse,Sales
+Endor Labs,Enterprise Account Executive - UK,Sales,"London, UK",greenhouse,Sales
+Endor Labs,Principal/ Sr Principal Backend Engineer,Engineering,"Bengaluru, India",greenhouse,Engineering
+Endor Labs,Program Analysis Engineer,Engineering,"Palo Alto, CA",greenhouse,Engineering
+Endor Labs,Sales Development Representative,Sales,"Austin, TX",greenhouse,Sales
+Endor Labs,Sales Director - Northeast,Sales,"Boston, Massachusetts",greenhouse,Sales
+Endor Labs,Senior Backend Engineer (Golang),Engineering,"Bengaluru, India",greenhouse,Engineering
+Endor Labs,Senior GTM Recruiter,Talent Acquisition,United States,greenhouse,Other
+Endor Labs,Senior Platform Engineer - Infrastructure / MongoDB,Engineering,"Palo Alto, CA",greenhouse,Engineering
+Endor Labs,Senior Product Manager,Product,"Palo Alto, CA",greenhouse,Other
+Endor Labs,Senior Product Security Engineer,Engineering,"Bengaluru, India",greenhouse,Engineering
+Endor Labs,Senior Quality Engineer(SDET),Engineering,"Bengaluru, India",greenhouse,Engineering
+Endor Labs,Senior Sales Development Representative,Sales,"London, UK",greenhouse,Sales
+Endor Labs,Senior Security Engineer - Vulnerability,Engineering,"Bengaluru, India",greenhouse,Engineering
+Endor Labs,Senior Security Researcher,Engineering,"Bengaluru, India",greenhouse,Engineering
+Endor Labs,Senior Security Researcher,Engineering,Remote US,greenhouse,Engineering
+Endor Labs,Solutions Architect - East,Customer Solutions,Remote US (EST),greenhouse,Sales
+Endor Labs,Solutions Architect - EMEA,Customer Solutions,Germany,greenhouse,Sales
+Endor Labs,Solutions Architect - West,Customer Solutions,Remote US (PST),greenhouse,Sales
+Endor Labs,Sr/Staff Backend Engineer (Golang),Engineering,"Bengaluru, India",greenhouse,Engineering
+Endor Labs,Sr Technical Support Engineer,Customer Solutions,"Bengaluru, India",greenhouse,Engineering
+Endor Labs,Staff Backend Engineer (Golang),Engineering,"Bengaluru, India",greenhouse,Engineering
+Endor Labs,Staff Product Security Engineer,Engineering,Remote - US,greenhouse,Engineering
+Endor Labs,Staff UX Designer,Product,"Palo Alto, CA",greenhouse,Other
+Endor Labs,Technical Enablement Manager,Customer Solutions,"Palo Alto, CA",greenhouse,Other
+Endor Labs,Technical Product Marketing Manager,Marketing,"Palo Alto, CA OR Seattle, WA",greenhouse,Other
+Endor Labs,Technical Success Architect,Customer Solutions,"Bengaluru, India",greenhouse,Other
+Endor Labs,Technical Success Architect,Customer Solutions,Remote US,greenhouse,Other
+Endor Labs,Technical Success Engineer,Customer Solutions,Panama,greenhouse,Engineering
+Endor Labs,Technical Writer & Editor (AEO),Engineering,"Bengaluru, India",greenhouse,Other
+Fable Security,Backend Engineer,R&D,"San Francisco, CA (Hybrid)",ashby,Engineering
+Fable Security,Frontend Engineer,R&D,"San Francisco, CA (Hybrid)",ashby,Engineering
+Fable Security,Account Executive (NYC),GTM,Remote: NYC,ashby,Sales
+Fable Security,Account Executive (TOLA),GTM,Remote - Dallas,ashby,Sales
+Fable Security,Full-Stack Product Engineer,R&D,"San Francisco, CA (Hybrid)",ashby,Engineering
+Fable Security,Account Executive (Central),GTM,Remote - Chicago Area,ashby,Sales
+Fable Security,Product Manager,R&D,"San Francisco, CA (Hybrid)",ashby,Other
+Fable Security,Account Executive (Southeast),GTM,Remote: Southeast - Florida/Georgia,ashby,Sales
+Halcyon,Enterprise Account Executive,Sales: Enterprise Sales,"Chicago, IL",greenhouse,Sales
+Halcyon,"Enterprise Account Executive, Northeast",Sales: Enterprise Sales,Boston,greenhouse,Sales
+Halcyon,"Enterprise Account Executive, Southeast",Sales: Enterprise Sales,"Charlotte, NC",greenhouse,Sales
+Halcyon,Field CISO,Sales: Strategy,"Remote,US",greenhouse,Other
+Halcyon,Senior Backend Cloud Engineer,Prod: Cloud Engineering,"Remote, US",greenhouse,Engineering
+Halcyon,Senior Deal Desk Lead,Sales: Revenue Operations,"Remote, US",greenhouse,Other
+HiddenLayer,AI Solutions Architect- Federal,Sales,Remote- US,greenhouse,Sales
+HiddenLayer,AI Solutions Architect- Post-Sales (UK),Sales,Remote- UK,greenhouse,Other
+HiddenLayer,AI Solutions Architect- Pre-sales,Sales,Remote- US,greenhouse,Sales
+HiddenLayer,AI Solutions Architect- Pre-sales (UK),Sales,Remote- UK,greenhouse,Sales
+HiddenLayer,Channel Account Manager,Sales,Remote,greenhouse,Sales
+HiddenLayer,Director of Federal Sales,Sales,"Remote, US-  DC Metro Area",greenhouse,Sales
+HiddenLayer,Enterprise Account Director- Bay Area,Sales,Remote- Bay Area,greenhouse,Sales
+HiddenLayer,Enterprise Account Director- Federal,Sales,"Remote, US-  DC Metro Area",greenhouse,Sales
+HiddenLayer,Enterprise Account Director- Mountain Region,Sales,"Remote- Denver, CO",greenhouse,Sales
+HiddenLayer,Enterprise Account Director- NYC,Sales,"Remote- New York City, NY",greenhouse,Sales
+HiddenLayer,Enterprise Account Director- Pacific Northwest,Sales,Remote- Seattle or Portland,greenhouse,Sales
+HiddenLayer,Enterprise Account Director- SoCal,Sales,Remote- Southern California,greenhouse,Sales
+HiddenLayer,Enterprise Account Director- Southeast,Sales,"Remote- Nashville, Atlanta, or Knoxville",greenhouse,Sales
+HiddenLayer,Head of Channel,Sales,"Remote, US",greenhouse,Sales
+HiddenLayer,Platform Engineer,Engineering,Remote- US,greenhouse,Engineering
+HiddenLayer,Software Engineer (Portugal),Engineering,"Lisbon, Portgual",greenhouse,Engineering
+HiddenLayer,Technical Engineering Lead (Portugal),Engineering,"Lisbon, Portgual",greenhouse,Engineering
+HiddenLayer,Technical Product Manager for AI Security Products (Portugal),Product Management,"Lisbon, Portugal",greenhouse,Other
+HiddenLayer,VP of Sales,Sales,Remote - Within the US,greenhouse,Sales
+HiddenLayer,VP of Sales Engineering (Pre-sales),Sales,"Remote, US",greenhouse,Sales
+Keycard,"Software Engineer, SDK",Engineering,US - Remote,ashby,Engineering
+Keycard,"Product Manager, Growth & Developer Experience",Product,US - Remote,ashby,Engineering
+Keycard,Staff Product Marketing Manager,GTM,US - Remote,ashby,Other
+Keycard,Founding Revenue Marketing Lead,GTM,US - Remote,ashby,Sales
+Keycard,"Software Engineer, Security",Engineering,US - Remote,ashby,Engineering
+Keycard,"Software Engineer, Infrastructure",Engineering,US - Remote,ashby,Engineering
+Method Security,Deployment Strategist,Business Development,New York City Office,ashby,Other
+Method Security,Security Engineer,Product Development,New York City Office,ashby,Engineering
+Method Security,Backend Engineer,Product Development,New York City Office,ashby,Engineering
+Method Security,"Software Engineer, Product",Product Development,New York City Office,ashby,Engineering
+Method Security,Embedded Operator,Business Development,New York City Office,ashby,Other
+Method Security,Forward Deployed Engineer,Business Development,New York City Office,ashby,Engineering
+Method Security,USG Growth Lead,Business Development,Washington DC Office,ashby,Other
+Method Security,Talent,Operations,New York City Office,ashby,Other
+Neo,BDR Manager,Marketing,"Boston, MA",greenhouse,Sales
+Neo,Content Specialist,Marketing,USA,greenhouse,Other
+Neo,Enterprise Sales Representative,Sales,NYC,greenhouse,Sales
+Neo,Federal Sales Engineer,Sales,Washington DC Metro Area,greenhouse,Sales
+Neo,Field Channel Manager - West,Sales,"San Francisco, California",greenhouse,Sales
+Neo,Field CTO - Americas,Sales,USA,greenhouse,Other
+Neo,Finance & Operations Manager,Operations,"Boston, MA",greenhouse,Other
+Neo,GTM Engineer,Marketing,USA,greenhouse,Engineering
+Neo,"Sales Engineer - Chicago, IL",Sales,"Chicago, IL - USA",greenhouse,Sales
+Neo,"Sales Engineer - Denver, CO",Sales,"Denver, CO",greenhouse,Sales
+Neo,Sales Engineer - Northern California,Sales,"San Francisco, CA",greenhouse,Sales
+Neo,Sales Engineer - TOLA,Sales,"TOLA, USA",greenhouse,Sales
+Neo,"Sales Operations Manager - Boston, MA",Operations,"Boston, MA",greenhouse,Sales
+Neo,Senior Full-Stack Engineer,R&D,Tel Aviv,greenhouse,Engineering
+Neo,Senior Low Level Engineer,R&D,Tel Aviv,greenhouse,Engineering
+Neo,Senior Low Level Engineer - Infrastructure,R&D,Tel Aviv,greenhouse,Engineering
+Neo,Social Media Manager,Marketing,Remote - USA,greenhouse,Other
+Neo,Sr. Marketing Operations Manager,Marketing,"Boston, MA",greenhouse,Other
+Neo,Sustaining Engineer,Product,"Boston, MA",greenhouse,Engineering
+Neo,Technical Account Manager,Operations,tel aviv,greenhouse,Other
+Nudge Security,Channel Account Manager - West,Sales,United States,ashby,Sales
+Nudge Security,Strategic Account Executive - Southeast,Sales,Georgia,ashby,Sales
+Nudge Security,Senior Revenue Operations Manager,Sales,United States,ashby,Sales
+Nudge Security,Strategic Product Success Manager,Product Success,United States,ashby,Other
+Nudge Security,Channel Account Manager - East,Sales,United States,ashby,Sales
+Obsidian Security,Agent Security Research Engineer – Taiwan,Engineering (D2010),"Taipei, Taiwan",greenhouse,Engineering
+Obsidian Security,AI Security Engineer - Taiwan,Engineering (D2010),"Taipei, Taiwan",greenhouse,Engineering
+Obsidian Security,Chief Information Security Officer (CISO),Corporate,"Palo Alto, CA",greenhouse,Other
+Obsidian Security,Customer Success Operations Analyst,Support - Customer Success,US Remote (East/Central),greenhouse,Other
+Obsidian Security,Enterprise Account Executive – ANZ,Int'l Sales - Enterprise,"Melbourne, AUS",greenhouse,Sales
+Obsidian Security,Enterprise Account Executive - Central,US Sales - Enterprise,US Remote (Central),greenhouse,Sales
+Obsidian Security,"Enterprise Account Executive – EMEA (UK, London preferred)",Int'l Sales - Enterprise,UK - Remote,greenhouse,Sales
+Obsidian Security,Enterprise Account Executive - San Francisco Bay Area,US Sales - Enterprise,"Palo Alto, CA",greenhouse,Sales
+Obsidian Security,"Field Marketing Manager, West",Marketing,Remote,greenhouse,Other
+Obsidian Security,HR Manager,Human Resources,"Palo Alto, CA",greenhouse,Other
+Obsidian Security,Product Security Engineer (AI & Platform Security) – Taiwan,Engineering (D2010),"Taipei, Taiwan",greenhouse,Engineering
+Obsidian Security,Senior Solutions Engineer - East,US Sales - Solution Engineering,US Remote (East),greenhouse,Sales
+Obsidian Security,Senior Threat Research Engineer – Taiwan,Engineering (D2010),"Taipei, Taiwan",greenhouse,Engineering
+Obsidian Security,Software Engineer - AI Security Product,Engineering (D2010),"Palo Alto, California, USA",greenhouse,Engineering
+Obsidian Security,Sr Technical Marketing Manager - Alliances & Competitive Strategy,Product Marketing,US Remote,greenhouse,Other
+Overwatch Data,Lead Software Engineer,Software,Boston,greenhouse,Engineering
+Prophet Security,"Senior Software Engineer, Backend",R&D,Remote,ashby,Engineering
+Prophet Security,"Regional Sales Director, Minnesota",GTM,Minneapolis-St. Paul Metro (Remote),ashby,Sales
+Prophet Security,"Software Engineer, Frontend",R&D,Remote,ashby,Engineering
+Prophet Security,"Software Engineer, Backend Intern",R&D,Palo Alto (In office),ashby,Engineering
+Prophet Security,Principal Product Manager,Product,US (Remote),ashby,Other
+Prophet Security,"Software Engineer, Backend New Graduate",R&D,Palo Alto (Hybrid),ashby,Engineering
+Prophet Security,"Regional Sales Director, Mid-Atlantic",GTM,"Washington, D.C.",ashby,Sales
+Prophet Security,"Regional Sales Director, NorCal",GTM,San Francisco Bay Area,ashby,Sales
+Reach Security,Staff Software Engineer (Backend),Engineering,San Francisco Bay Area,ashby,Engineering
+Reach Security,Senior Staff Software Engineer (Data Platform),Engineering,San Francisco Bay Area,ashby,Engineering
+Reach Security,Senior Staff Software Engineer (Integrations),Engineering,San Francisco Bay Area,ashby,Engineering
+Reach Security,Senior Staff Security Researcher,IT and Information Security,San Francisco Bay Area,ashby,Engineering
+Reach Security,Principal Support Engineer - Endpoint,Customer Support,Remote,ashby,Engineering
+Reach Security,Principal Support Engineer - Network,Customer Support,Remote,ashby,Engineering
+Socket,Enterprise Account Executive,Go-to-Market,United States,ashby,Sales
+Socket,"Sales Engineer, Enterprise",Go-to-Market,United States,ashby,Sales
+Socket,Vulnerability Research Engineer,Engineering,Remote,ashby,Engineering
+Socket,"Forward Deployed Engineer, Python",Go-to-Market,United States,ashby,Engineering
+Socket,"Sales Engineer, Commercial",Go-to-Market,United States,ashby,Sales
+Socket,"Sales Engineer, EMEA",Go-to-Market,United Kingdom,ashby,Sales
+Socket,Threat Researcher,Engineering,United States,ashby,Other
+Socket,Senior Platform Engineer,Engineering,Remote,ashby,Engineering
+Socket,"Sales Engineer, SMB",Go-to-Market,United States,ashby,Sales
+Socket,"Technical Support Engineer, APAC",Go-to-Market,Australia,ashby,Engineering
+Socket,"Account Executive, EMEA",Go-to-Market,United Kingdom,ashby,Sales
+Socket,Engineering Manager,Engineering,United States,ashby,Engineering
+Socket,Compliance Engineering Lead,Engineering,United States,ashby,Engineering
+Socket,"Technical Account Manager, Enterprise",Go-to-Market,United States,ashby,Other
+Socket,Member of Technical Staff,Engineering,United States,ashby,Other
+Socket,"Technical Account Manager, Commercial",Go-to-Market,United States,ashby,Other
+Socket,"Manager, Technical Account Teams (Enterprise)",Go-to-Market,United States,ashby,Other
+Socket,"Manager, Technical Account Teams (Commercial)",Go-to-Market,United States,ashby,Other
+Socket,"Technical Account Manager (UK, EMEA)",Go-to-Market,United Kingdom,ashby,Other
+Socket,Technical Enablement Manager,Go-to-Market,United States,ashby,Other
+Socket,"Manager, Technical Account Teams (Europe)",Go-to-Market,United Kingdom,ashby,Other
+Socket,Commercial Counsel,G&A,United States,ashby,Other
+Socket,Head of Product,Engineering,United States,ashby,Other
+Socket,Revenue Operations Manager,Go-to-Market,United States,ashby,Sales
+Socket,"Manager, Sales Engineering",Go-to-Market,United States,ashby,Sales
+Socket,Head of Customer Success,Go-to-Market,United States,ashby,Other
+VulnCheck,Director of Field Marketing,Marketing,Remote US,greenhouse,Other
+VulnCheck,"Engineering Manager, Rapid Response Assignment (UK)",Engineering,"Cheltenham, England, United Kingdom",greenhouse,Engineering
+VulnCheck,Enterprise Account Executive (US - West),Sales,"San Francisco, CA",greenhouse,Sales
+VulnCheck,"Product Marketing Lead (Remote, US)",Marketing,"Boston, MA / Austin, TX",greenhouse,Other
+VulnCheck,"Sales Enablement Manager (Austin, TX OR Boston, MA)",Sales,"Austin, TX OR Boston, MA",greenhouse,Sales
+VulnCheck,"Senior Cloud Infrastructure Engineer (Remote, US)",Engineering,Remote US,greenhouse,Engineering
+VulnCheck,Senior Detection and Response Engineer - UK,Engineering,"Cheltenham, UK",greenhouse,Engineering
+VulnCheck,Senior Security Engineer - US,InfoSec,Remote US,greenhouse,Engineering
+VulnCheck,Senior Software Engineer (US),Engineering,"Massachusetts OR Maryland OR Greater Austin, TX.",greenhouse,Engineering
+VulnCheck,"Software Engineer, Rapid Response Assignment  - UK",Engineering,"Cheltenham, UK",greenhouse,Engineering
+VulnCheck,"Sr. Exploit Developer (Cheltenham, UK)",Research,"Cheltenham, United Kingdom",greenhouse,Engineering
+VulnCheck,Sr. Exploit Developer (US),Research,Maryland,greenhouse,Engineering
+WitnessAI,Head of DevOps,Engineering,Bay Area,ashby,Other
+WitnessAI,Technical Account Manager,GTM,Atlanta,ashby,Other
+WitnessAI,Machine Learning Engineer,Engineering,Remote,ashby,Engineering
+WitnessAI,Field Marketing Manager,Marketing,Remote,ashby,Other
+WitnessAI,Staff DevOps Engineer,Engineering,Bay Area,ashby,Engineering
+WitnessAI,Technical Support Engineer,GTM,Atlanta,ashby,Engineering
+WitnessAI,Regional Sales Director,GTM,Remote,ashby,Sales
+Xage Security,Senior Backend Engineer,Engineering,"Palo Alto, CA",lever,Engineering
+Xage Security,Senior Backend Engineer,Engineering,"Lincoln, NE",lever,Engineering
+Xage Security,Senior Director of Partnerships and Business Development,Sales,remote- US,lever,Sales
+Xage Security,Senior Software Engineer - Network Security,Engineering,"Palo Alto, CA",lever,Engineering
+Xage Security,Senior Software Engineer - Network Security,Engineering,"Lincoln, NE",lever,Engineering
+Xage Security,Software Engineer - Full Stack,Engineering,"Palo Alto, CA",lever,Engineering
+Xage Security,"Software Engineer (Lincoln, NE)",Engineering,"Lincoln, NE",lever,Engineering
+Xage Security,Solutions Architect,Engineering,India,lever,Sales
+Xage Security,Solutions Engineer,Sales,Remote- North Eastern Region,lever,Sales
+Xage Security,Sr. Engineer,Engineering,Kuala Lumpur,lever,Engineering
+XBOW,Software Engineer - AI Systems,Engineering,Austria (Remote),ashby,Engineering
+XBOW,Software Engineer - Console,Engineering,Europe (Remote),ashby,Engineering
+XBOW,Legal Operations and Contracts Manager,Legal,United Kingdom (Remote),ashby,Other
+Zafran,Regional Sales Manager (United Kingdom),Sales,EMEA Remote,ashby,Sales
+Zafran,"Regional Sales Manager, Majors (Bay Area)",Sales,USA,ashby,Sales
+Zafran,"Regional Sales Manager, Enterprise (DC, Maryland & Virginia)",Sales,USA,ashby,Sales
+Zafran,"Regional Sales Manager, Majors (NYC)",Sales,New York,ashby,Sales
+Zafran,Backend Developer,R&D,Tel Aviv,ashby,Engineering
+Zafran,Security Researcher,R&D,Tel Aviv,ashby,Engineering
+Zafran,Devops Engineer,R&D,Tel Aviv,ashby,Engineering
+Zafran,Software Engineer – Data Collection Team,R&D,Tel Aviv,ashby,Engineering
+Zafran,Technical Account Manager,Customer Success,USA,ashby,Other
+Zafran,"Sales Engineer, Majors",Sales,USA,ashby,Sales
+Zafran,Senior DevOps Engineer (NYC),R&D,New York,ashby,Engineering
+Zafran,Product Manager,Product,Tel Aviv,ashby,Other
+Zafran,"Regional Sales Manager, Majors (Western Canada)",Sales,Canada,ashby,Sales
+Zafran,Query Infra Team Lead,R&D,Tel Aviv,ashby,Other
+Zafran,Business Development Representative,Marketing,New York,ashby,Sales
+Zafran,DevOps Data Infra Engineer,R&D,Tel Aviv,ashby,Engineering
+Zafran,"Director of Sales, Enterprise",Sales,USA,ashby,Sales
+Zafran,Director of Alliances,Sales,USA,ashby,Sales
+Zafran,"Cyber Security Analyst, Sales Engineering",R&D,USA,ashby,Sales
+Zafran,Senior Field Marketing Manager,Marketing,USA,ashby,Other
+Zafran,"Regional Sales Manager, Enterprise (NYC)",Sales,USA,ashby,Sales
+Zafran,Senior Software Engineer – Remediation Workflows,R&D,Tel Aviv,ashby,Engineering
+Zafran,Channel Account Manager (East),Sales,USA,ashby,Sales
+Zafran,Channel Account Manager (EMEA),Sales,EMEA Remote,ashby,Sales
+Zafran,Senior Bookkeeper,Finance,Tel Aviv,ashby,Other
+Zafran,Regional Sales Manager (PNW),Sales,USA,ashby,Sales
+Zafran,"Senior Manager, Global Corporate & Strategic Events",Marketing,USA,ashby,Other
+Zafran,Backend Engineer – Discover Team,R&D,Tel Aviv,ashby,Engineering
+Zafran,Senior Field Marketing Manager,Marketing,USA,ashby,Other
+Zafran,Senior DevOps Engineer (NYC),R&D,USA,ashby,Engineering
+Zafran,"Sales Engineer, Enterprise",Sales,USA,ashby,Sales
+</script>
+<script type="text/plain" id="saved-companies">
+name,website,board_type,slug
+7AI,7ai.com,ashby,sevenai
+Adaptive Security,adaptivesecurity.com,ashby,adaptivesecurity
+AegisAI,aegisai.ai,ashby,aegis-ai
+Armadin,armadin.com,ashby,armadin
+Aurascape,aurascape.ai,,
+Bedrock Data,bedrockdata.ai,,
+BlueFlag Security,blueflagsecurity.com,,
+Cogent Security,cogent.com,ashby,cogent-security
+Daylight Security,daylight.ai,greenhouse,daylightsecurity
+depthfirst,depthfirst.com,ashby,depthfirst
+Discern Security,discernsecurity.com,,
+Doppel,doppel.com,greenhouse,doppel
+Dropzone AI,dropzone.ai,greenhouse,dropzoneai
+Empirical Security,empiricalsecurity.com,ashby,empirical-security
+Endor Labs,endorlabs.com,greenhouse,endorlabs
+Exaforce,exaforce.com,,
+Fable Security,fablesecurity.com,ashby,fable
+Fleet,fleetdm.com,none,
+GetReal Security,getrealsecurity.com,,
+Halcyon,halcyon.ai,greenhouse,halcyon
+Helmet Security,helmetsecurity.com,,
+HiddenLayer,hiddenlayer.com,greenhouse,hiddenlayer
+Keycard,keycard.ai,ashby,keycard-labs
+Linx Security,linx.security,,
+Method Security,method.security,ashby,method.security
+MIND,mind.io,,
+Neo,neo.ai,greenhouse,neosecurityinc
+Noma Security,noma.security,,
+Nucleus Security,nucleussec.com,,
+Nudge Security,nudgesecurity.com,ashby,nudgesecurity
+Obsidian Security,obsidiansecurity.com,greenhouse,obsidiansecurity
+Oleria,oleria.com,lever,oleria-security
+Oligo Security,oligo.security,none,
+Onyx Security,onyx.security,none,
+Overwatch Data,overwatchdata.ai,greenhouse,overwatch
+Phin Security,phinsecurity.com,,
+Prophet Security,prophetsecurity.ai,ashby,prophet-security
+RAD Security,radsecurity.ai,,
+Reach Security,reach.security,ashby,reach
+Realm Security,realm.security,,
+Reco,reco.ai,,
+Rein Security,reinsec.io,,
+Sentra,sentra.io,none,
+Silent Push,silentpush.com,,
+Socket,socket.dev,ashby,socket
+Spur,spur.us,none,
+Straiker,straiker.ai,,
+Sublime Security,sublime.security,ashby,sublime-security
+Upwind,upwind.io,,
+Vega,vega.io,none,
+VulnCheck,vulncheck.com,greenhouse,vulncheck
+WitnessAI,witness.ai,ashby,witnessai
+Xage Security,xage.com,lever,xage-security
+XBOW,xbow.com,ashby,xbowcareers
+Zafran,zafran.io,ashby,zafran-security
+Zip Security,zipsec.com,,
+</script>
+
+<script>
+// This page draws the ranking from the same CSV files the Python tool writes.
+// After rerunning the tool, change this date and push. The saved copy of the
+// data above is only used when the CSV files can't be read.
+const SNAPSHOT_DATE = "2026-11-09";
+
+const rowsEl = document.getElementById("rows");
+const statusEl = document.getElementById("status");
+const pickBtn = document.getElementById("pick-btn");
+
+let companies = [];     // one entry per ranked company
+let sortKey = "score";
+let selected = null;    // name of the company whose sales roles are showing
+
+// Turn CSV text into a list of objects, one per row, keyed by the header row.
+// Handles quoted fields, since locations like "Boston, MA" contain commas.
+function parseCsv(text) {
+  const rows = [];
+  let row = [], field = "", quoted = false;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (quoted) {
+      if (ch === '"' && text[i + 1] === '"') { field += '"'; i++; }
+      else if (ch === '"') quoted = false;
+      else field += ch;
+    } else if (ch === '"') {
+      quoted = true;
+    } else if (ch === ",") {
+      row.push(field); field = "";
+    } else if (ch === "\n") {
+      row.push(field); rows.push(row); row = []; field = "";
+    } else if (ch !== "\r") {
+      field += ch;
+    }
+  }
+  if (field !== "" || row.length) { row.push(field); rows.push(row); }
+
+  const header = rows.shift();
+  return rows
+    .filter(r => r.length === header.length)
+    .map(r => Object.fromEntries(header.map((name, i) => [name, r[i]])));
+}
+
+async function loadCsv(name) {
+  const response = await fetch(name);
+  if (!response.ok) throw new Error(name + " returned " + response.status);
+  return parseCsv(await response.text());
+}
+
+// Read the three CSV files. A browser won't read them when the page is
+// opened straight from a folder, so in that case use the copy of the same
+// data saved at the bottom of this page.
+const FILES = ["ranked", "jobs", "companies"];
+let usedSavedCopy = false;
+
+async function loadData() {
+  try {
+    return await Promise.all(FILES.map(name => loadCsv(name + ".csv")));
+  } catch (error) {
+    const saved = FILES.map(name => document.getElementById("saved-" + name));
+    if (saved.some(block => !block)) throw error;
+    usedSavedCopy = true;
+    return saved.map(block => parseCsv(block.textContent.trim() + "\n"));
+  }
+}
+
+// Small helper for building elements without writing HTML strings,
+// so job titles from outside sources can't inject markup.
+function el(tag, className, text) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (text !== undefined) node.textContent = text;
+  return node;
+}
+
+function percent(share) { return Math.round(share * 100) + "%"; }
+
+function sorted() {
+  const list = companies.slice();
+  if (sortKey === "sales") list.sort((a, b) => b.sales - a.sales || a.rank - b.rank);
+  else if (sortKey === "share") list.sort((a, b) => b.share - a.share || a.rank - b.rank);
+  else list.sort((a, b) => a.rank - b.rank);
+  return list;
+}
+
+function renderRows() {
+  const mostRoles = Math.max(...companies.map(c => c.total));
+  rowsEl.replaceChildren();
+
+  for (const c of sorted()) {
+    const isOpen = c.name === selected;
+    const detailId = "detail-" + c.rank;
+    const tr = el("tr", "row" + (isOpen ? " is-open" : ""));
+    tr.dataset.name = c.name;
+    tr.addEventListener("click", () => toggle(c.name));
+
+    tr.append(el("td", "c-rank", String(c.rank)));
+
+    const nameCell = el("td", "c-name", c.name);
+    nameCell.append(el("span", "sub",
+      c.sales + " of " + c.total + " roles in sales (" + percent(c.share) + ")"
+      + (c.raised ? ", raised recently" : "")));
+    tr.append(nameCell);
+
+    const barCell = el("td", "c-bar");
+    const bar = el("div", "bar");
+    bar.style.width = (c.total / mostRoles * 100) + "%";
+    bar.setAttribute("role", "img");
+    bar.setAttribute("aria-label", c.sales + " of " + c.total + " open roles are in sales");
+    const fill = el("span");
+    fill.style.width = (c.share * 100) + "%";
+    bar.append(fill);
+    barCell.append(bar);
+    tr.append(barCell);
+
+    tr.append(el("td", "c-sales", String(c.sales)));
+    tr.append(el("td", "c-total", String(c.total)));
+    tr.append(el("td", "c-share", percent(c.share)));
+
+    const fundCell = el("td", "c-fund");
+    if (c.raised) {
+      const yes = el("span", "", "Yes");
+      yes.title = "Filed a Form D with the SEC in the last 12 months";
+      fundCell.append(yes);
+    } else {
+      fundCell.append(el("span", "hidden", "No filing found"));
+    }
+    tr.append(fundCell);
+
+    tr.append(el("td", "c-score", c.score.toFixed(2)));
+
+    const openCell = el("td", "c-open");
+    const button = el("button", "btn ghost small", isOpen ? "Hide roles" : "See roles");
+    button.type = "button";
+    button.setAttribute("aria-expanded", String(isOpen));
+    button.setAttribute("aria-controls", detailId);
+    button.setAttribute("aria-label", (isOpen ? "Hide " : "See ") + c.name + " sales roles");
+    button.addEventListener("click", event => { event.stopPropagation(); toggle(c.name); });
+    openCell.append(button);
+    tr.append(openCell);
+
+    rowsEl.append(tr);
+    if (isOpen) rowsEl.append(detailRow(c, detailId));
+  }
+}
+
+// The panel that opens under a company: who it is, the key numbers,
+// and every open sales role with its location.
+function detailRow(c, id) {
+  const tr = el("tr", "detail");
+  tr.id = id;
+  const td = el("td");
+  td.colSpan = 9;
+  const grid = el("div", "detail-grid");
+
+  const about = el("div");
+  about.append(el("h3", "", c.name));
+  about.append(el("p", "sum", c.sales === 0
+    ? "None of its " + c.total + " open roles are in sales."
+    : c.sales + " of its " + c.total + " open roles are in sales (" + percent(c.share) + ")."));
+  const facts = el("dl", "facts");
+  for (const [label, value] of [
+    ["Rank", c.rank + " of " + companies.length],
+    ["Score", c.score.toFixed(2)],
+    ["Raised recently", c.raised ? "Yes, Form D filed" : "No filing found"],
+  ]) {
+    facts.append(el("dt", "", label));
+    facts.append(el("dd", "", value));
+  }
+  about.append(facts);
+  if (c.website) {
+    const link = el("a", "btn ghost small", "Visit " + c.website);
+    link.href = "https://" + c.website;
+    about.append(link);
+  }
+  grid.append(about);
+
+  const roles = el("div");
+  if (c.salesRoles.length) {
+    roles.append(el("h4", "roles-title", "Open sales roles (" + c.salesRoles.length + ")"));
+    const list = el("ul", "roles");
+    for (const role of c.salesRoles) {
+      const item = el("li", "", role.title);
+      if (role.location) item.append(el("span", "where", role.location));
+      list.append(item);
+    }
+    roles.append(list);
+  } else {
+    roles.append(el("p", "state", "No open sales roles to list."));
+  }
+  grid.append(roles);
+
+  td.append(grid);
+  tr.append(td);
+  return tr;
+}
+
+function buttonFor(name) {
+  for (const tr of rowsEl.querySelectorAll("tr.row")) {
+    if (tr.dataset.name === name) return tr.querySelector("button");
+  }
+  return null;
+}
+
+// Open a company's roles, or close them if they are already open.
+function toggle(name) {
+  selected = selected === name ? null : name;
+  renderRows();
+  const button = buttonFor(name);
+  if (button) button.focus({ preventScroll: true });
+}
+
+// Used by the button at the top of the page: open one company and go to it.
+function openCompany(name) {
+  selected = name;
+  renderRows();
+  const button = buttonFor(name);
+  if (!button) return;
+  button.closest("tr").scrollIntoView({ block: "start" });
+  button.focus({ preventScroll: true });
+}
+
+for (const button of document.querySelectorAll(".seg button")) {
+  button.addEventListener("click", () => {
+    sortKey = button.dataset.sort;
+    for (const other of document.querySelectorAll(".seg button")) {
+      other.setAttribute("aria-pressed", String(other === button));
+    }
+    renderRows();
+  });
+}
+
+pickBtn.addEventListener("click", () => openCompany(pickBtn.dataset.company));
+
+async function start() {
+  document.getElementById("m-date").textContent = SNAPSHOT_DATE;
+  document.getElementById("note-date").textContent = SNAPSHOT_DATE;
+
+  try {
+    const [ranked, jobs, list] = await loadData();
+    document.getElementById("saved-note").hidden = !usedSavedCopy;
+
+    const websites = Object.fromEntries(list.map(c => [c.name, c.website]));
+
+    // ranked.csv is already sorted by score, so its row order is the rank.
+    companies = ranked.map((r, i) => ({
+      rank: i + 1,
+      name: r.company,
+      total: Number(r.total_roles),
+      sales: Number(r.sales_roles),
+      share: Number(r.sales_share),
+      score: Number(r.score),
+      raised: r.raised_recently === "True",
+      website: websites[r.company] || "",
+      salesRoles: jobs.filter(j => j.company === r.company && j.category === "Sales"),
+    }));
+
+    document.getElementById("m-total").textContent = String(jobs.length);
+    document.getElementById("m-sales").textContent = String(jobs.filter(j => j.category === "Sales").length);
+    document.getElementById("m-companies").textContent = companies.length + " of " + list.length;
+
+    // The button at the top only makes sense if that company is in the data.
+    pickBtn.hidden = !companies.some(c => c.name === pickBtn.dataset.company);
+
+    if (!companies.length) {
+      statusEl.textContent = "ranked.csv has no companies yet. Run the tool to fill it.";
+      return;
+    }
+
+    statusEl.hidden = true;
+    renderRows();
+  } catch (error) {
+    statusEl.replaceChildren(
+      el("strong", "", "The ranking didn't load. "),
+      "Open this page from the project site, or serve it locally alongside ranked.csv, jobs.csv and companies.csv."
+    );
+    pickBtn.hidden = true;
+    for (const id of ["m-total", "m-sales", "m-companies"]) {
+      document.getElementById(id).textContent = "n/a";
+    }
+    console.error(error);
+  }
+}
+
+start();
+</script>
+</body>
+</html>
