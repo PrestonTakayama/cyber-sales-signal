@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cyber Sales Signal</title>
-<meta name="description" content="A look at which private cybersecurity companies are hiring for sales.">
+<meta name="description" content="Which private cybersecurity companies are hiring for sales right now, ranked from their public job boards.">
 <link rel="icon" href="data:,">
 <style>
   :root {
@@ -26,7 +26,7 @@
   }
 
   * { box-sizing: border-box; }
-  html { scroll-padding-top: 16px; }
+  html { scroll-padding-top: 72px; }
   body {
     margin: 0;
     background: var(--paper);
@@ -75,19 +75,6 @@
     border-bottom: 1px solid var(--rule-strong);
   }
   .brand { font-weight: 650; }
-  .app-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 4px; }
-  .app-nav a.link {
-    display: inline-flex;
-    align-items: center;
-    min-height: 40px;
-    padding: 0 12px;
-    color: var(--ink);
-    font-size: 15px;
-    text-decoration: none;
-  }
-  .app-nav a.link:hover { background: var(--hover); text-decoration: underline; }
-  .app-nav .btn { margin-left: 8px; }
-
   /* Top of the page: what this is, the headline numbers, and the pick */
 
   .intro {
@@ -95,14 +82,15 @@
     grid-template-columns: minmax(0, 1.25fr) minmax(300px, .75fr);
     align-items: stretch;
     gap: 28px 48px;
-    padding: 40px 0 40px;
+    padding: 40px 0 36px;
   }
   h1 {
     margin: 0;
     font: 400 clamp(40px, 5.4vw, 68px)/1 var(--serif);
     letter-spacing: -.045em;
   }
-  .desc { max-width: 44ch; margin: 14px 0 0; color: var(--muted); font-size: 19px; line-height: 1.45; }
+  .desc { max-width: 50ch; margin: 16px 0 0; font-size: 20px; line-height: 1.4; }
+  .why { max-width: 58ch; margin: 12px 0 0; color: var(--muted); font-size: 16px; }
   .stats { display: flex; flex-wrap: wrap; gap: 14px 44px; margin: 30px 0 0; }
   .stats div { display: flex; flex-direction: column; }
   .stats dd { order: -1; margin: 0; font: 400 40px/1.05 var(--serif); letter-spacing: -.03em; }
@@ -115,9 +103,60 @@
   .lead p { margin: 0 0 18px; }
   .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; }
 
+  /* Tabs. The bar stays at the top of the window while you scroll a tab. */
+
+  .tabs {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    gap: 2px;
+    overflow-x: auto;
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule-strong);
+  }
+  .tabs button {
+    min-height: 54px;
+    padding: 0 20px;
+    border: 0;
+    border-bottom: 3px solid transparent;
+    background: none;
+    color: var(--muted);
+    font: 600 16px/1.2 var(--sans);
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .tabs button:hover { background: var(--hover); color: var(--ink); }
+  .tabs button[aria-selected="true"] { border-bottom-color: var(--blue); color: var(--ink); }
+  .tabs button:focus-visible { outline-offset: -3px; }
+  .panel { padding-top: 34px; }
+
   /* Ranking */
 
-  .toolbar { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 14px 28px; padding-bottom: 16px; }
+  .read h3 { margin: 0 0 8px; font: 400 21px/1.15 var(--serif); letter-spacing: -.03em; }
+  .read { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 48px; margin: 4px 0 26px; padding: 20px 24px; background: var(--hover); }
+  .read p { margin: 0 0 8px; font-size: 15px; }
+  .read p:last-child { margin-bottom: 0; }
+  .example { font: 14px/1.5 var(--mono); }
+
+  .controls { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 14px 28px; padding-bottom: 12px; }
+  .control { display: flex; flex-direction: column; gap: 5px; color: var(--muted); font-size: 14px; }
+  .control.push { margin-left: auto; }
+  select {
+    min-height: 40px;
+    padding: 0 12px;
+    border: 1px solid var(--rule-strong);
+    border-radius: 6px;
+    background: #fff;
+    color: var(--ink);
+    font: 500 14px/1.2 var(--sans);
+  }
+  .seg button:disabled { color: #8a909b; background: var(--hover); cursor: default; }
+  .showing { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; min-height: 38px; margin: 0 0 8px; color: var(--muted); font-size: 14px; }
+  .linkbtn { padding: 0; border: 0; background: none; color: var(--blue); font: inherit; text-decoration: underline; text-underline-offset: .2em; cursor: pointer; }
+  .linkbtn:hover { color: var(--blue-dark); }
+
+  .toolbar { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 14px 28px; padding-bottom: 14px; }
   .toolbar h2 { margin: 0; font: 400 34px/1.1 var(--serif); letter-spacing: -.035em; }
   .howto { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 18px; margin: 8px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: 15px; }
   .howto li { display: flex; align-items: center; gap: 8px; }
@@ -125,7 +164,6 @@
   .swatch.sales { background: var(--blue); }
   .swatch.rest { background: var(--bar-rest); }
 
-  .sort { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; color: var(--muted); font-size: 14px; }
   .seg { display: inline-flex; border: 1px solid var(--rule-strong); border-radius: 6px; overflow: hidden; }
   .seg button {
     min-height: 40px;
@@ -154,11 +192,15 @@
   }
   thead th a { color: inherit; }
   thead th a:hover { color: var(--blue); }
-  tbody td { height: 54px; padding: 0 12px; border-bottom: 1px solid var(--rule); font-size: 15px; text-align: right; white-space: nowrap; }
+  tbody td { height: 54px; padding: 8px 12px; border-bottom: 1px solid var(--rule); font-size: 15px; text-align: right; white-space: nowrap; }
   .c-rank { width: 44px; color: var(--muted); }
   .c-name, .c-bar, .c-fund { text-align: left; }
   td.c-name { font-size: 16px; font-weight: 600; white-space: normal; }
-  td.c-bar { width: 30%; min-width: 140px; }
+  td.c-bar { width: 20%; min-width: 120px; }
+  td.c-fund { color: var(--ink); font-size: 14px; }
+  td.c-fund .none { color: var(--muted); }
+  .what { display: block; max-width: 46ch; color: var(--muted); font-size: 13px; font-weight: 400; line-height: 1.35; }
+  .match { display: block; color: var(--blue-dark); font-size: 13px; font-weight: 600; }
   td.c-sales { color: var(--blue); font-weight: 700; }
   td.c-total { color: var(--muted); }
   td.c-score { font-family: var(--mono); font-size: 14px; }
@@ -173,21 +215,30 @@
   tr.row.is-open td { background: var(--soft); border-bottom-color: var(--soft); }
 
   tr.detail td { height: auto; padding: 6px 16px 28px 56px; border-bottom: 1px solid var(--rule-strong); background: var(--soft); text-align: left; white-space: normal; }
-  .detail-grid { display: grid; grid-template-columns: minmax(220px, 300px) minmax(0, 1fr); gap: 20px 44px; }
+  .detail-grid { display: grid; grid-template-columns: minmax(260px, 380px) minmax(0, 1fr); gap: 20px 44px; }
   .detail h3 { margin: 0; font: 400 30px/1.1 var(--serif); letter-spacing: -.035em; overflow-wrap: anywhere; }
-  .sum { margin: 6px 0 12px; }
-  .facts { display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; margin: 0 0 16px; font-size: 14px; }
+  .about-what { margin: 8px 0 0; }
+  .sum { margin: 6px 0 12px; color: var(--muted); }
+  .flag { margin: 0 0 16px; padding: 10px 12px; border-left: 3px solid var(--blue); background: #fff; font-size: 14px; }
+  .facts { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; margin: 0 0 16px; font-size: 14px; line-height: 1.4; }
   .facts dt { color: var(--muted); }
-  .facts dd { margin: 0; font-weight: 600; }
+  .facts dd { margin: 0; }
+  .mix { margin: 0 0 6px; padding: 0; list-style: none; font-size: 14px; }
+  .mix li { display: grid; grid-template-columns: minmax(0, 250px) 26px minmax(40px, 1fr); align-items: center; gap: 0 10px; padding: 4px 0; }
+  .mix .n { font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; }
+  .mix .bar { height: 8px; background: none; }
+  .mix-note { margin: 0 0 18px; color: var(--muted); font-size: 13px; }
+  .role-groups { columns: 2; column-gap: 40px; }
+  .role-groups h5 { margin: 0; padding: 12px 0 4px; font: 600 13px/1.3 var(--sans); color: var(--muted); break-after: avoid; }
+  .role-groups section:first-child h5 { padding-top: 0; }
   .roles-title { margin: 4px 0 6px; color: var(--muted); font: 600 14px/1.3 var(--sans); }
-  .roles { margin: 0; padding: 0; list-style: none; columns: 2; column-gap: 40px; font-size: 14px; line-height: 1.35; }
+  .roles { margin: 0; padding: 0; list-style: none; font-size: 14px; line-height: 1.35; }
   .roles li { break-inside: avoid; padding: 7px 0; border-bottom: 1px solid var(--soft-rule); overflow-wrap: anywhere; }
   .where { display: block; color: var(--muted); font-size: 13px; }
   .state { padding: 14px 12px; color: var(--muted); }
 
   /* Research notes */
 
-  .note { margin-top: 56px; }
   .note-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 20px; padding-bottom: 10px; border-bottom: 2px solid var(--ink); }
   .note-head h2 { margin: 0; font: 400 34px/1.1 var(--serif); letter-spacing: -.035em; }
   .note-head p { margin: 0; color: var(--muted); font-size: 13px; }
@@ -199,24 +250,34 @@
   .note-body ul { max-width: 72ch; margin: 0; padding-left: 20px; }
   .note-body li { margin-bottom: 8px; }
   .note-body li:last-child { margin-bottom: 0; }
-  .split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 36px; }
   .note-body h4 { margin: 0 0 6px; color: var(--muted); font-size: 14px; }
   .note-body h4:not(:first-child) { margin-top: 16px; }
   .formula { max-width: 69ch; margin: 0 0 10px; padding: 10px 14px; background: var(--hover); border: 1px solid var(--rule); font: 13px/1.65 var(--mono); overflow-x: auto; }
+  .note-body .cos { max-width: 860px; margin: 0; padding: 0; list-style: none; }
+  .note-body .cos li { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 2px 20px; margin: 0; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+  .note-body .cos li:first-child { padding-top: 0; }
+  .note-body .cos li:last-child { border-bottom: 0; padding-bottom: 0; }
+  .cos strong { font-weight: 600; }
+  .cos span { display: block; }
+  .cos .round { color: var(--muted); font-size: 14px; }
+  .solo { padding: 22px 0 0; }
+  .solo > p { margin-bottom: 18px; }
   .foot { margin-top: 20px; color: var(--muted); font-size: 14px; }
 
   @media (max-width: 900px) {
     .intro { grid-template-columns: minmax(0, 1fr); padding: 28px 0 32px; }
-    td.c-bar { width: 22%; min-width: 90px; }
+    td.c-bar { width: 16%; min-width: 80px; }
     .detail-grid { grid-template-columns: minmax(0, 1fr); }
+    .read { grid-template-columns: minmax(0, 1fr); }
+    .control.push { margin-left: 0; }
     tr.detail td { padding-left: 16px; }
   }
 
   /* Phones: each company becomes a block with its bar underneath */
 
   @media (max-width: 700px) {
-    .app-nav { margin-left: -12px; }
-    .app-nav .btn { margin-left: 12px; }
+    .tabs button { min-height: 50px; padding: 0 13px; font-size: 15px; }
+    .panel { padding-top: 26px; }
     .desc { font-size: 17px; }
     .stats { gap: 12px 28px; }
     .stats dd { font-size: 32px; }
@@ -237,8 +298,10 @@
     .sub { display: block; }
     tr.detail, tr.detail td { display: block; }
     tr.detail td { padding: 4px 12px 22px; }
-    .roles { columns: 1; }
-    .note-row, .split { grid-template-columns: minmax(0, 1fr); }
+    .role-groups { columns: 1; }
+    .read { padding: 16px; }
+    .mix li { grid-template-columns: minmax(0, 1fr) 26px 60px; }
+    .note-row, .note-body .cos li { grid-template-columns: minmax(0, 1fr); }
   }
 </style>
 </head>
@@ -247,19 +310,15 @@
 <div class="wrap" id="top">
   <header class="app-header">
     <div class="brand">Preston Takayama</div>
-    <nav class="app-nav" aria-label="Sections">
-      <a class="link" href="#ranking">Ranking</a>
-      <a class="link" href="#findings">Findings</a>
-      <a class="link" href="#methodology">Method</a>
-      <a class="btn ghost small" href="https://github.com/PrestonTakayama/cyber-sales-signal">Code on GitHub</a>
-    </nav>
+    <a class="btn ghost small" href="https://github.com/PrestonTakayama/cyber-sales-signal">Code on GitHub</a>
   </header>
 
   <main>
     <div class="intro">
       <div>
         <h1>Cyber Sales Signal</h1>
-        <p class="desc">A look at which private cybersecurity companies are hiring for sales.</p>
+        <p class="desc">I built this for a growth equity analyst who wants a read on which private cybersecurity companies are hiring for sales positions right now.</p>
+        <p class="why">Sales hiring is one of the clearest outside signs that a company has product-market fit. Pick a company in the ranking to see what it does, what it last raised and which sales roles it has open.</p>
         <dl class="stats" id="meta">
           <div><dt>open roles counted</dt><dd id="m-total">...</dd></div>
           <div><dt>of them in sales</dt><dd id="m-sales">...</dd></div>
@@ -270,33 +329,74 @@
       <aside class="lead" aria-label="Research takeaway">
         <h2>Who I’d call first</h2>
         <div class="pick">7AI</div>
-        <p>It had 12 open roles for account executives and six for sales engineers. I’d ask customers what work it handles today and whether they’ve kept paying for it.</p>
+        <p>I’d call 7AI first because it’s the bigger bet. Based on what’s public, Doppel looks like the safer pick because it’s further along and already has some big customers.</p>
         <div class="actions">
           <button type="button" class="btn" id="pick-btn" data-company="7AI">See 7AI’s open sales roles</button>
-          <a href="#findings">Read the findings</a>
+          <a href="#why-7ai">Read why</a>
         </div>
       </aside>
     </div>
 
-    <section id="ranking" aria-labelledby="ranking-title">
+
+    <div class="tabs" id="tabs" role="tablist" aria-label="Sections of this page">
+      <button type="button" role="tab" id="tab-ranking" aria-controls="ranking" aria-selected="true">Ranking</button>
+      <button type="button" role="tab" id="tab-findings" aria-controls="findings" aria-selected="false">Findings</button>
+      <button type="button" role="tab" id="tab-top10" aria-controls="top10" aria-selected="false">Top 10</button>
+      <button type="button" role="tab" id="tab-method" aria-controls="method" aria-selected="false">Method</button>
+    </div>
+
+    <div id="panels">
+    <section class="panel" id="ranking" role="tabpanel" aria-labelledby="tab-ranking">
       <div class="toolbar">
         <div>
-          <h2 id="ranking-title">Company ranking</h2>
+          <h2>Company ranking</h2>
           <ul class="howto">
             <li><span class="swatch sales" aria-hidden="true"></span>Open sales roles</li>
             <li><span class="swatch rest" aria-hidden="true"></span>Every other open role</li>
             <li>Select a company to see its sales roles.</li>
           </ul>
         </div>
-        <div class="sort">
+      </div>
+
+      <div class="read">
+        <div>
+          <h3>How the score works</h3>
+          <p>The score is a company's open sales roles times (1 + sales share). Sales share is the part of all its open roles that are in sales. A company with an SEC Form D filing in the last 12 months gets a 25% bonus.</p>
+          <p class="example" id="example"></p>
+          <p>A higher score means more sales openings, and more of the company's hiring going to sales.</p>
+        </div>
+        <div>
+          <h3>What a Form D filing is</h3>
+          <p>A Form D is the notice a private company files after selling shares, for example in a venture round. The column shows the amount sold and the month it was filed.</p>
+          <p>The amount can differ from the round a company announced, and the search misses some raises. See <a href="#limitations">limitations</a>.</p>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="control">
+          <span id="fund-label">Form D filing</span>
+          <div class="seg" id="fund-seg" role="group" aria-labelledby="fund-label">
+            <button type="button" data-fund="all" aria-pressed="true">All</button>
+            <button type="button" data-fund="found" aria-pressed="false">Filing found</button>
+            <button type="button" data-fund="none" aria-pressed="false">None found</button>
+          </div>
+        </div>
+        <div class="control">
+          <label for="role-select">Hiring for</label>
+          <select id="role-select">
+            <option value="">Any sales role</option>
+          </select>
+        </div>
+        <div class="control push">
           <span id="sort-label">Sort by</span>
-          <div class="seg" role="group" aria-labelledby="sort-label">
+          <div class="seg" id="sort-seg" role="group" aria-labelledby="sort-label">
             <button type="button" data-sort="score" aria-pressed="true">Score</button>
             <button type="button" data-sort="sales" aria-pressed="false">Sales roles</button>
             <button type="button" data-sort="share" aria-pressed="false">Sales share</button>
           </div>
         </div>
       </div>
+      <p class="showing" id="showing" aria-live="polite"></p>
 
       <table>
         <caption class="hidden">Companies ranked by score. Select a company to list its open sales roles.</caption>
@@ -308,7 +408,7 @@
             <th scope="col" class="c-sales">Sales</th>
             <th scope="col" class="c-total">All</th>
             <th scope="col" class="c-share">Sales share</th>
-            <th scope="col" class="c-fund"><a href="#recent-funding">Raised recently</a></th>
+            <th scope="col" class="c-fund"><a href="#recent-funding">Form D filing</a></th>
             <th scope="col" class="c-score"><a href="#methodology">Score</a></th>
             <th scope="col" class="c-open"><span class="hidden">Details</span></th>
           </tr>
@@ -320,35 +420,61 @@
       <noscript><p class="state">This page needs JavaScript to draw the ranking. The same numbers are in ranked.csv in the repo.</p></noscript>
     </section>
 
-    <section class="note" aria-labelledby="note-title">
+    <section class="panel" id="findings" role="tabpanel" aria-labelledby="tab-findings">
       <div class="note-head">
-        <h2 id="note-title">Research notes</h2>
-        <p>Snapshot <time id="note-date"></time></p>
+        <h2>Findings</h2>
+        <p>What the ranking showed, and what I make of it</p>
       </div>
 
-      <div class="note-row" id="findings">
-        <h3>Findings</h3>
-        <div class="note-body split">
-          <div>
-            <h4>Observed</h4>
-            <ul>
-              <li>Doppel came first with 18 of its 26 openings in sales (69%), followed by 7AI with 20 of 45.</li>
-              <li>Of the 59 sales openings across Doppel, 7AI, and Cogent, 33 were for account executives, mostly covering U.S. regions, and just one was for an SDR.</li>
-              <li>Cogent had the most sales openings (21) and was the only one of the three hiring for sales ops (3).</li>
-              <li>Halcyon came in 17th out of 28 with six openings, three of them for account executives in Chicago, Boston, and Charlotte.</li>
-              <li>Only 28 of 56 companies could be ranked. The tool couldn't read Upwind's job board, Spur had no public board, and Sublime had nothing posted.</li>
-            </ul>
-          </div>
-          <div>
-            <h4>Interpretation</h4>
-            <ul>
-              <li>My guess is the top three already know who they're selling to and have leads coming in, so they need people who can close.</li>
-              <li>Cogent's sales ops hiring suggests its sales team is already big enough to need more support.</li>
-              <li>Halcyon probably already has people covering other cities. A company can rank low even if it already has a big sales team.</li>
-              <li>I'd start with 7AI, which has openings for 12 account executives and six sales engineers, because I think getting AI to do the work of an entire security operations team is harder than it sounds. I'd look at the competition and talk to customers about what they use 7AI for and whether they've kept paying for it.</li>
-            </ul>
-          </div>
+      <div class="note-row">
+        <h3>Observed</h3>
+        <div class="note-body">
+          <ul>
+            <li>Doppel came first with 18 of its 26 openings in sales (69%), followed by 7AI with 20 of 45.</li>
+            <li>Of the 59 sales openings across Doppel, 7AI, and Cogent, 33 were for account executives, mostly covering U.S. regions, and just one was for an SDR.</li>
+            <li>Cogent had the most sales openings (21) and was the only one of the three hiring for sales ops (3).</li>
+            <li>Halcyon came in 17th out of 28 with six openings, three of them for account executives in Chicago, Boston, and Charlotte.</li>
+            <li>Only 28 of 56 companies could be ranked. The tool couldn't read Upwind's job board, Spur had no public board, and Sublime had nothing posted.</li>
+          </ul>
         </div>
+      </div>
+
+      <div class="note-row">
+        <h3>Interpretation</h3>
+        <div class="note-body">
+          <ul>
+            <li>My guess is the top three already know who they're selling to and have leads coming in, so they need people who can close.</li>
+            <li>Cogent's sales ops hiring suggests its sales team is already big enough to need more support.</li>
+            <li>Halcyon probably already has people covering other cities. A company can rank low even if it already has a big sales team.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="note-row" id="why-7ai">
+        <h3>Why I'd call 7AI first</h3>
+        <div class="note-body">
+          <p>Based on what's public, Doppel looks like the safer pick. It's further along, having raised a Series C, and already has some big customers.</p>
+          <p>I'd still call 7AI first because it's the bigger bet. I'd want them to walk me through a real customer and show me what security work the AI handles on its own, where people still step in, and whether that customer renewed.</p>
+          <p>My tool also found 12 open account executive roles and three partner roles. Since 7AI says it's growing by selling through partners, I'd ask how those new reps would work with partners and how much selling they'd do directly. Source <a href="https://www.securityweek.com/agentic-security-firm-7ai-raises-130-million/">SecurityWeek</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="top10" role="tabpanel" aria-labelledby="tab-top10">
+      <div class="note-head">
+        <h2>The top 10</h2>
+        <p>From news coverage, not from the tool</p>
+      </div>
+      <div class="note-body solo">
+        <p>One line on what each of the top 10 does and the last round it announced.</p>
+        <ul class="cos" id="cos"></ul>
+      </div>
+    </section>
+
+    <section class="panel" id="method" role="tabpanel" aria-labelledby="tab-method">
+      <div class="note-head">
+        <h2>Method</h2>
+        <p>Data snapshot <time id="note-date"></time></p>
       </div>
 
       <div class="note-row" id="rationale">
@@ -368,6 +494,8 @@
       <div class="note-row" id="methodology">
         <h3>Methodology</h3>
         <div class="note-body">
+          <h4>Companies</h4>
+          <p>The list is 56 private, venture-backed cybersecurity companies, mostly US-based, most of which announced a Series A, B or C between November 2024 and November 2026. I used an AI assistant to draft the first 50 and check them against news reports. I cut 4, added Spur, Oligo and Daylight, and added 7 more from the Form D search, which were picked for filing a raise of $5M or more in the last 12 months.</p>
           <h4>Source</h4>
           <p>Open roles are read from public Greenhouse, Lever and Ashby job boards.</p>
           <h4>Tagging</h4>
@@ -376,8 +504,10 @@
           <pre class="formula">sales_share = sales_roles / total_roles
 score       = sales_roles * (1 + sales_share)
 score       = score * 1.25    (only if raised_recently)</pre>
-          <h4 id="recent-funding">Raised recently</h4>
-          <p>A company is marked as raised recently when it filed a Form D with the SEC in the last 12 months. A Form D is the notice a private company files after selling shares, for example in a venture round.</p>
+          <h4 id="recent-funding">Form D filing</h4>
+          <p>A company gets the 25% bonus when it filed a Form D with the SEC in the last 12 months. A Form D is the notice a private company files after selling shares, for example in a venture round. The ranking shows the amount sold and the filing month from the latest filing.</p>
+          <h4>Role types</h4>
+          <p>Inside a company's panel, its sales roles are split by job title into account executives and sales reps, regional sales managers and directors, sales engineers, partners and channel, SDR and BDR, sales support and demand gen, and sales leadership. Each role is counted once, so a sales engineer who works with partners counts under partners and channel. This page does that split. The Python tool only tags Sales, Engineering or Other.</p>
         </div>
       </div>
 
@@ -388,20 +518,22 @@ score       = score * 1.25    (only if raised_recently)</pre>
             <li>Job postings aren't hires. The tool only sees who is hiring now, not how big a team already is.</li>
             <li>This tool only reads Greenhouse, Lever and Ashby job boards. 28 of the 56 companies in companies.csv aren't ranked.</li>
             <li>Tagging is by title only, so a few roles land in the wrong bucket. Halcyon's "Senior Deal Desk Lead" works on pricing and contracts for sales deals, but the title has no Sales word, so it's tagged Other.</li>
-            <li>A blank under Raised recently can mean the Form D wasn't found. Cogent Security shows a blank even though it announced a Series A in February 2026.</li>
+            <li>"None found" under Form D filing can mean the search missed it. Cogent Security, HiddenLayer, Zafran, AegisAI and Neo all announced funding in the last 12 months, but no Form D turned up under the names I searched, so none of them got the 25% bonus. With the bonus, Cogent would move up to second, ahead of 7AI.</li>
+            <li>I only checked announced rounds for the top 10. Companies further down could have the same gap.</li>
             <li>The score is weighted toward count. A v2 could weight share more heavily, which would move focused companies like HiddenLayer up.</li>
             <li>This is one snapshot. The next step is rerunning it weekly to see who is ramping up sales hiring.</li>
           </ul>
         </div>
       </div>
 
-      <p class="foot">Data files <a href="ranked.csv">ranked.csv</a> and <a href="jobs.csv">jobs.csv</a>. Code and full write-up in the <a href="https://github.com/PrestonTakayama/cyber-sales-signal">GitHub repo</a>. <a href="#top">Back to top</a></p>
+      <p class="foot">Data files <a href="ranked.csv">ranked.csv</a>, <a href="jobs.csv">jobs.csv</a> and <a href="form_d.csv">form_d.csv</a>. Code and full write-up in the <a href="https://github.com/PrestonTakayama/cyber-sales-signal">GitHub repo</a>. <a href="#top">Back to top</a></p>
     </section>
+    </div>
   </main>
 
 </div>
 
-<!-- A copy of ranked.csv, jobs.csv and companies.csv, used only when the files themselves can't be read. -->
+<!-- A copy of ranked.csv, jobs.csv, companies.csv and form_d.csv, used only when the files themselves can't be read. -->
 <script type="text/plain" id="saved-ranked">
 company,total_roles,sales_roles,sales_share,score,fde_count,raised_recently
 Doppel,26,18,0.692,38.08,0,True
@@ -957,6 +1089,49 @@ XBOW,xbow.com,ashby,xbowcareers
 Zafran,zafran.io,ashby,zafran-security
 Zip Security,zipsec.com,,
 </script>
+<script type="text/plain" id="saved-form_d">
+searched_name,match,issuer_name,filing_date,form,state,industry_group,total_offering_amount,total_amount_sold,cik,accession
+7AI,exact,"7AI, Inc.",2025-12-04,D,MA,Other Technology,130599988,130599988,1997387,0001997387-25-000003
+Armadin,exact,"Armadin, Inc.",2026-01-14,D,CA,Other Technology,165199989,165199989,2094470,0002094470-26-000001
+Armadin,exact,"Armadin, Inc.",2026-10-15,D,CA,Other Technology,264999494,264999494,2094470,0002094470-26-000002
+BlueFlag Security,exact,BlueFlag Security Inc.,2026-02-19,D,CA,Other Technology,9999999,7499999,2112160,0002112160-26-000001
+Doppel,exact,Doppel Inc.,2025-11-21,D,CA,Other Technology,61518382,61220305,2006522,0002006522-25-000002
+Empirical Security,exact,"Empirical Security, Inc.",2026-08-03,D,IL,Other Technology,24999938,20818947,2049036,0001231919-26-000819
+Fable Security,exact,"Fable Security, Inc.",2025-11-25,D,CA,Other Technology,24499998,23999998,2090386,0002090386-25-000002
+Fable Security,exact,"Fable Security, Inc.",2025-11-25,D,CA,Other Technology,7500000,6796991,2090386,0002090386-25-000001
+Fleet,none,"POSITION IMAGING, INC",2026-02-12,D,NH,Other Technology,20000000,14353090,1380725,0001380725-26-000003
+Fleet,partial,Fleet Response Ultimate Parent LLC,2026-04-10,D,TX,Other,10000000,10000000,2126985,0002126985-26-000001
+Fleet,partial,"Fleet Robotics, Inc.",2026-07-01,D,MA,Other Technology,4244376,2443355,1937538,0001104659-26-079771
+Fleet,none,"Layu, Inc.",2026-08-12,D,NY,Other,Indefinite,8784000,2145835,0002145835-26-000001
+Fleet,partial,"Floating Fleet AI, Inc.",2026-08-13,D,NY,Other Technology,2500000,100000,2149164,0002149164-26-000001
+Fleet,none,Aponia Laboratories Inc,2026-09-24,D,NH,Other,Indefinite,0,1497705,0001497705-26-000003
+Fleet,partial,"Fleet Defender, Inc.",2026-10-21,D/A,NE,Other Technology,1746000,1246000,1938409,0001938409-26-000001
+Fleet,partial,"Oncology AI Fleet, Inc.",2026-10-28,D,DE,Other Health Care,500000,0,2161717,0002161717-26-000001
+Halcyon,partial,"Halcyon Carbon, Inc.",2026-03-11,D,CA,Other Technology,21027237,21027237,2118358,0002118358-26-000001
+Halcyon,partial,Gaingels Halcyon LLC,2026-03-17,D,VT,Other,176067,176067,2113919,0002113919-26-000001
+Halcyon,partial,Halcyon Wellness Inc.,2026-03-23,D,DE,Biotechnology,12000000,8000000,2123636,0002123636-26-000001
+Halcyon,partial,Halcyon Robotics Corp,2026-07-10,D,CA,Other Technology,8382659,6387665,2144337,0002144337-26-000002
+Halcyon,none,Three Bucks Two Bags One LLC,2026-09-25,D,NY,Other,22000000,250000,2157032,0002157032-26-000001
+Helmet Security,exact,"Helmet Security, Inc.",2025-12-30,D,DC,Other Technology,6700000,6700000,2102626,0001231919-25-000677
+MIND,partial,Doro Mind Inc.,2026-03-17,D,NY,Other Technology,4674990,4674990,2008487,0002008487-26-000003
+MIND,partial,Gentle Caring Mind Healthcare LLC,2026-08-03,D,MN,Other Health Care,200000,50000,2147822,0002147822-26-000001
+MIND,partial,"Optimize Mind Performance, Inc.",2026-09-22,D/A,NY,Other,Indefinite,2645883,1998001,0001998001-26-000001
+MIND,partial,"Mind Rhythms, Inc.",2026-10-09,D,VA,Other Technology,200000,110000,2155340,0002155340-26-000001
+Neo,partial,"NEO RE Investment III, LLC",2026-07-09,D,OH,Other,2500000,1750000,2142886,0002142886-26-000011
+Neo,partial,Neo Agent Inc.,2026-09-01,D,X0,Other Technology,2744996,2744996,2152778,0002152778-26-000001
+Obsidian Security,exact,"Obsidian Security, Inc.",2026-08-18,D,CA,Other Technology,109868667,81463045,2149647,0002149647-26-000001
+Overwatch Data,exact,"Overwatch Data, Inc.",2026-10-26,D,NY,Other Technology,15199984,14959986,2054765,0002054765-26-000003
+Phin Security,exact,"PHIN SECURITY, INC.",2026-04-21,D,DE,Other Technology,5974999,5974999,2018716,0002018716-26-000004
+Socket,partial,"SOCKET MOBILE, INC.",2026-04-23,D,CA,Manufacturing,500000,500000,944075,0000944075-26-000032
+Socket,exact,"Socket, Inc.",2026-05-29,D,DE,Other Technology,60003954,59371976,2127421,0001231919-26-000544
+Spur,none,"Granite Peak Holdings, LLC",2026-04-09,D,CO,Other,5000000,4545000,2127656,0002127656-26-000001
+Spur,partial,"Iron Spur Estate & Stables, LLC",2026-10-13,D,NE,Other,125000,0,2160045,0002160045-26-000001
+Vega,partial,Vega Health Inc.,2025-12-31,D/A,NC,Other,5000000,5000000,2083872,0002083872-25-000002
+Vega,none,"Salt Athletic, Inc.",2026-05-22,D,CO,Other,1000000,365000,2021463,0002021463-26-000003
+Vega,none,"Tagup, Inc.",2026-07-02,D,MA,Other Technology,14801363,14801288,2123153,0002123153-26-000003
+XBOW,partial,XBow Holding Inc.,2026-03-19,D,WA,Other Technology,180000400,120905123,2074263,0002074263-26-000001
+Xage Security,exact,"Xage Security, Inc.",2026-03-18,D,CA,Other,15072520,14847323,1749043,0001749043-26-000003
+</script>
 
 <script>
 // This page draws the ranking from the same CSV files the Python tool writes.
@@ -964,12 +1139,204 @@ Zip Security,zipsec.com,,
 // data above is only used when the CSV files can't be read.
 const SNAPSHOT_DATE = "2026-11-09";
 
+// One line on each of the top 10 and the last round it announced, taken from
+// news coverage. The Python tool doesn't produce any of this. "recent" means
+// the round was announced in the 12 months before the snapshot date.
+const COMPANY_NOTES = {
+  "Doppel": {
+    short: "Social engineering defense",
+    what: "Protects companies from phishing, impersonation and other social engineering attacks.",
+    round: "$70M Series C, Nov 2025",
+    more: "Led by Bessemer Venture Partners. Valued above $600M.",
+    recent: true,
+    source: "SecurityWeek",
+    url: "https://www.securityweek.com/doppel-raises-70-million-at-600-million-valuation/",
+  },
+  "7AI": {
+    short: "AI agents for security operations",
+    what: "Builds AI agents that investigate security alerts for a company's security team. Founded in 2024.",
+    round: "$130M Series A, Dec 2025",
+    more: "Led by Index Ventures.",
+    recent: true,
+    source: "SecurityWeek",
+    url: "https://www.securityweek.com/agentic-security-firm-7ai-raises-130-million/",
+  },
+  "Cogent Security": {
+    short: "AI agents for vulnerability management",
+    what: "Builds AI agents that sort and fix software vulnerabilities for large companies.",
+    round: "$42M Series A, Feb 2026",
+    more: "Led by Bain Capital Ventures.",
+    recent: true,
+    source: "SecurityWeek",
+    url: "https://www.securityweek.com/cogent-security-raises-42-million-for-ai-driven-vulnerability-management/",
+  },
+  "HiddenLayer": {
+    short: "Security for AI models and agents",
+    what: "Protects the AI models and AI agents that companies run.",
+    round: "$100M Series B, Sep 2026",
+    more: "Led by Delta-v Capital.",
+    recent: true,
+    source: "HiddenLayer",
+    url: "https://hiddenlayer.com/news/hiddenlayer-100m-series-b-ai-security",
+  },
+  "Zafran": {
+    short: "Vulnerability and exposure management",
+    what: "Finds which vulnerabilities attackers could really use against a company and helps fix them.",
+    round: "$60M Series C, Dec 2025",
+    more: "Led by Menlo Ventures.",
+    recent: true,
+    source: "SecurityWeek",
+    url: "https://www.securityweek.com/zafran-security-raises-60-million-in-series-c-funding/",
+  },
+  "Endor Labs": {
+    short: "Application security",
+    what: "Checks the code a company ships, including open source and AI-written code, for security problems.",
+    round: "$93M Series B, Apr 2025",
+    more: "Led by DFJ Growth.",
+    recent: false,
+    source: "SecurityWeek",
+    url: "https://www.securityweek.com/endor-labs-raises-93-million-for-appsec-platform/",
+  },
+  "AegisAI": {
+    short: "AI email security",
+    what: "Uses AI agents to catch phishing and other email attacks.",
+    round: "$36M Series A, Jul 2026",
+    more: "Led by Battery Ventures.",
+    recent: true,
+    source: "SecurityWeek",
+    url: "https://securityweek.com/aegisai-raises-36-million-for-ai-powered-email-security",
+  },
+  "Armadin": {
+    short: "AI-run attack testing",
+    what: "Uses AI to attack a company's own systems and find the weak points first. Started by Mandiant founder Kevin Mandia.",
+    round: "$255.5M Series B, Oct 2026",
+    more: "Co-led by Andreessen Horowitz and Accel. Valued above $2.5B.",
+    recent: true,
+    source: "SecurityWeek",
+    url: "https://securityweek.com/kevin-mandias-armadin-raises-255-million-at-2-5-billion-valuation",
+  },
+  "Socket": {
+    short: "Open source supply chain security",
+    what: "Blocks malicious open source packages before they get into a company's code.",
+    round: "$60M Series C, May 2026",
+    more: "Led by Thrive Capital. Valued at $1B.",
+    recent: true,
+    source: "Socket",
+    url: "https://socket.dev/blog/series-c",
+  },
+  "Neo": {
+    short: "Security for AI agents on work computers",
+    what: "Lets a company see and control the AI agents running on its employees' computers.",
+    round: "$100M seed and Series A, Jul 2026",
+    more: "Led by Andreessen Horowitz and Bessemer Venture Partners.",
+    recent: true,
+    source: "SecurityWeek",
+    url: "https://securityweek.com/neo-emerges-from-stealth-with-100m-to-control-and-secure-enterprise-ai-software",
+  },
+};
+
+// Sales roles are split into types by job title. A title is checked against
+// these lists from top to bottom and lands in the first one that matches, so
+// "Channel Sales Engineer" counts as partners and channel, not sales engineers.
+// "show" is the order the types are listed on the page.
+const ROLE_TYPES = [
+  { name: "Partners and channel", show: 4,
+    words: ["channel", "partner", "alliance", "service provider", " var "] },
+  { name: "SDR and BDR", show: 5,
+    words: ["sdr", "bdr", "sales development", "business development rep"] },
+  { name: "Sales engineers", show: 3,
+    words: ["sales engineer", "solutions engineer", "solution engineer", "solutions architect",
+            "solution architect", "sales engineering", "pre-sales", "presales", "customer engineer"] },
+  { name: "Sales support and demand gen", show: 6,
+    words: ["operations", "sales ops", "revenue ops", "enablement", "revenue marketing",
+            "demand generation", "deal desk"] },
+  { name: "Regional sales managers and directors", show: 2,
+    words: ["regional sales manager", "regional sales director", "account director",
+            "sales director", "sales manager", "area sales", "territory"] },
+  { name: "Account executives and sales reps", show: 1,
+    words: ["account executive", "sales executive", "sales representative", "account manager"] },
+  { name: "Sales leadership", show: 7,
+    words: ["vp", "vice president", "head of", "director", "chief", "cro"] },
+];
+const OTHER_TYPE = "Other sales roles";
+const TYPES_IN_ORDER = ROLE_TYPES.slice().sort((a, b) => a.show - b.show).map(t => t.name).concat(OTHER_TYPE);
+
+function roleType(title) {
+  const text = " " + title.toLowerCase() + " ";
+  for (const type of ROLE_TYPES) {
+    if (type.words.some(word => text.includes(word))) return type.name;
+  }
+  return OTHER_TYPE;
+}
+
+// Tabs. Each tab button names the section it opens in aria-controls.
+const tabsEl = document.getElementById("tabs");
+const panelsEl = document.getElementById("panels");
+const tabButtons = Array.from(tabsEl.querySelectorAll('[role="tab"]'));
+
+function showTab(id) {
+  for (const button of tabButtons) {
+    const on = button.getAttribute("aria-controls") === id;
+    button.setAttribute("aria-selected", String(on));
+    button.tabIndex = on ? 0 : -1;
+    document.getElementById(button.getAttribute("aria-controls")).hidden = !on;
+  }
+  // If the page is scrolled down inside a long tab, start the new one at its top.
+  const top = panelsEl.getBoundingClientRect().top + window.scrollY - tabsEl.offsetHeight;
+  if (window.scrollY > top) window.scrollTo(0, top);
+}
+
+// Go to any spot on the page by its id, opening the tab it sits in first.
+// Used for links like "limitations" that point into another tab.
+function goTo(id) {
+  const target = document.getElementById(id);
+  if (!target) return false;
+  const panel = target.closest('[role="tabpanel"]');
+  if (panel) showTab(panel.id);
+  if (target !== panel) target.scrollIntoView({ block: "start" });
+  return true;
+}
+
+for (const button of tabButtons) {
+  button.addEventListener("click", () => {
+    const id = button.getAttribute("aria-controls");
+    showTab(id);
+    history.pushState(null, "", "#" + id);
+  });
+  // Left and right arrow keys move between tabs.
+  button.addEventListener("keydown", event => {
+    const step = { ArrowRight: 1, ArrowLeft: -1 }[event.key];
+    if (!step) return;
+    const next = tabButtons[(tabButtons.indexOf(button) + step + tabButtons.length) % tabButtons.length];
+    next.focus();
+    next.click();
+  });
+}
+
+// Links inside the page open the right tab instead of just jumping.
+document.addEventListener("click", event => {
+  const link = event.target.closest('a[href^="#"]');
+  if (!link) return;
+  const id = link.getAttribute("href").slice(1);
+  if (!goTo(id)) return;
+  event.preventDefault();
+  history.pushState(null, "", "#" + id);
+});
+
+// The back button, or a link someone shared with a tab name on the end.
+window.addEventListener("popstate", () => { goTo(location.hash.slice(1)) || showTab("ranking"); });
+goTo(location.hash.slice(1)) || showTab("ranking");
+
 const rowsEl = document.getElementById("rows");
 const statusEl = document.getElementById("status");
+const showingEl = document.getElementById("showing");
 const pickBtn = document.getElementById("pick-btn");
+const roleSelect = document.getElementById("role-select");
 
 let companies = [];     // one entry per ranked company
 let sortKey = "score";
+let fundFilter = "all"; // "all", "found" or "none"
+let roleFilter = "";    // a role type name, or "" for any sales role
 let selected = null;    // name of the company whose sales roles are showing
 
 // Turn CSV text into a list of objects, one per row, keyed by the header row.
@@ -1007,10 +1374,10 @@ async function loadCsv(name) {
   return parseCsv(await response.text());
 }
 
-// Read the three CSV files. A browser won't read them when the page is
+// Read the four CSV files. A browser won't read them when the page is
 // opened straight from a folder, so in that case use the copy of the same
 // data saved at the bottom of this page.
-const FILES = ["ranked", "jobs", "companies"];
+const FILES = ["ranked", "jobs", "companies", "form_d"];
 let usedSavedCopy = false;
 
 async function loadData() {
@@ -1035,19 +1402,93 @@ function el(tag, className, text) {
 
 function percent(share) { return Math.round(share * 100) + "%"; }
 
-function sorted() {
-  const list = companies.slice();
-  if (sortKey === "sales") list.sort((a, b) => b.sales - a.sales || a.rank - b.rank);
-  else if (sortKey === "share") list.sort((a, b) => b.share - a.share || a.rank - b.rank);
-  else list.sort((a, b) => a.rank - b.rank);
+// 61220305 becomes "$61.2M"
+function money(amount) {
+  if (amount >= 1e9) return "$" + (amount / 1e9).toFixed(1) + "B";
+  return "$" + (amount / 1e6).toFixed(1) + "M";
+}
+
+// "2025-11-21" becomes "Nov 2025"
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+function monthYear(date) {
+  const [year, month] = date.split("-");
+  return MONTHS[Number(month) - 1] + " " + year;
+}
+
+// The latest Form D for a company the tool marked as raised recently.
+// Exact name matches come first. A partial match is only used when there is
+// no exact one, which is the case rank.py confirms by hand (XBOW).
+function latestFiling(name, filings) {
+  const mine = filings.filter(f => f.searched_name === name && f.match !== "none");
+  const exact = mine.filter(f => f.match === "exact");
+  const pool = exact.length ? exact : mine;
+  if (!pool.length) return null;
+  pool.sort((a, b) => b.filing_date.localeCompare(a.filing_date)
+    || Number(b.total_amount_sold) - Number(a.total_amount_sold));
+  return { amount: Number(pool[0].total_amount_sold), date: pool[0].filing_date };
+}
+
+function filingText(c) {
+  if (!c.raised) return "None found";
+  if (!c.filing) return "Filing found";
+  return money(c.filing.amount) + ", " + monthYear(c.filing.date);
+}
+
+// How a company's score was worked out, written as the sum itself.
+function scoreSum(c) {
+  return c.sales + " × (1 + " + c.sales + "/" + c.total + ")" + (c.raised ? " × 1.25" : "");
+}
+
+function typeCount(c, type) { return c.types[type] ? c.types[type].length : 0; }
+
+// The companies to show, after both filters, in the order to show them.
+function visible() {
+  let list = companies.slice();
+  if (fundFilter === "found") list = list.filter(c => c.raised);
+  if (fundFilter === "none") list = list.filter(c => !c.raised);
+
+  if (roleFilter) {
+    list = list.filter(c => typeCount(c, roleFilter) > 0);
+    list.sort((a, b) => typeCount(b, roleFilter) - typeCount(a, roleFilter) || a.rank - b.rank);
+  } else if (sortKey === "sales") {
+    list.sort((a, b) => b.sales - a.sales || a.rank - b.rank);
+  } else if (sortKey === "share") {
+    list.sort((a, b) => b.share - a.share || a.rank - b.rank);
+  } else {
+    list.sort((a, b) => a.rank - b.rank);
+  }
   return list;
+}
+
+function renderShowing(count) {
+  showingEl.replaceChildren();
+  const filtered = fundFilter !== "all" || roleFilter !== "";
+  let text = filtered
+    ? "Showing " + count + " of " + companies.length + " companies."
+    : "Showing all " + companies.length + " companies.";
+  if (roleFilter) text += " Ordered by open roles of this type, most first.";
+  showingEl.append(el("span", "", text));
+  if (filtered) {
+    const clear = el("button", "linkbtn", "Clear filters");
+    clear.type = "button";
+    clear.addEventListener("click", clearFilters);
+    showingEl.append(clear);
+  }
 }
 
 function renderRows() {
   const mostRoles = Math.max(...companies.map(c => c.total));
+  const list = visible();
   rowsEl.replaceChildren();
+  renderShowing(list.length);
 
-  for (const c of sorted()) {
+  // Sorting doesn't apply while the list is ordered by one role type.
+  for (const button of document.querySelectorAll("#sort-seg button")) button.disabled = roleFilter !== "";
+
+  statusEl.hidden = list.length > 0;
+  if (!list.length) statusEl.textContent = "No companies match both filters.";
+
+  for (const c of list) {
     const isOpen = c.name === selected;
     const detailId = "detail-" + c.rank;
     const tr = el("tr", "row" + (isOpen ? " is-open" : ""));
@@ -1057,9 +1498,14 @@ function renderRows() {
     tr.append(el("td", "c-rank", String(c.rank)));
 
     const nameCell = el("td", "c-name", c.name);
+    if (c.note) nameCell.append(el("span", "what", c.note.short + ". Last round " + c.note.round + "."));
+    if (roleFilter) {
+      const n = typeCount(c, roleFilter);
+      nameCell.append(el("span", "match", n + (n === 1 ? " open role" : " open roles") + " of this type"));
+    }
     nameCell.append(el("span", "sub",
       c.sales + " of " + c.total + " roles in sales (" + percent(c.share) + ")"
-      + (c.raised ? ", raised recently" : "")));
+      + (c.raised ? ", Form D " + filingText(c) : "")));
     tr.append(nameCell);
 
     const barCell = el("td", "c-bar");
@@ -1078,13 +1524,7 @@ function renderRows() {
     tr.append(el("td", "c-share", percent(c.share)));
 
     const fundCell = el("td", "c-fund");
-    if (c.raised) {
-      const yes = el("span", "", "Yes");
-      yes.title = "Filed a Form D with the SEC in the last 12 months";
-      fundCell.append(yes);
-    } else {
-      fundCell.append(el("span", "hidden", "No filing found"));
-    }
+    fundCell.append(el("span", c.raised ? "" : "none", filingText(c)));
     tr.append(fundCell);
 
     tr.append(el("td", "c-score", c.score.toFixed(2)));
@@ -1104,8 +1544,8 @@ function renderRows() {
   }
 }
 
-// The panel that opens under a company: who it is, the key numbers,
-// and every open sales role with its location.
+// The panel that opens under a company: what it does, how its score was
+// worked out, what it raised, and its open sales roles split by type.
 function detailRow(c, id) {
   const tr = el("tr", "detail");
   tr.id = id;
@@ -1115,19 +1555,33 @@ function detailRow(c, id) {
 
   const about = el("div");
   about.append(el("h3", "", c.name));
+  if (c.note) about.append(el("p", "about-what", c.note.what));
   about.append(el("p", "sum", c.sales === 0
     ? "None of its " + c.total + " open roles are in sales."
     : c.sales + " of its " + c.total + " open roles are in sales (" + percent(c.share) + ")."));
+
   const facts = el("dl", "facts");
-  for (const [label, value] of [
-    ["Rank", c.rank + " of " + companies.length],
-    ["Score", c.score.toFixed(2)],
-    ["Raised recently", c.raised ? "Yes, Form D filed" : "No filing found"],
-  ]) {
+  const addFact = (label, value) => {
     facts.append(el("dt", "", label));
-    facts.append(el("dd", "", value));
+    const dd = el("dd", "", typeof value === "string" ? value : undefined);
+    if (typeof value !== "string") dd.append(...value);
+    facts.append(dd);
+  };
+  addFact("Rank", c.rank + " of " + companies.length);
+  addFact("Score", c.score.toFixed(2) + " = " + scoreSum(c));
+  addFact("Form D filing", c.raised && c.filing
+    ? money(c.filing.amount) + " sold, filed " + monthYear(c.filing.date)
+    : filingText(c));
+  if (c.note) {
+    const link = el("a", "", c.note.source);
+    link.href = c.note.url;
+    addFact("Last announced round", [c.note.round + ". " + c.note.more + " Source ", link]);
   }
   about.append(facts);
+
+  if (c.note && c.note.recent && !c.raised) {
+    about.append(el("p", "flag", "The Form D search found nothing for this round, so the score has no 25% bonus."));
+  }
   if (c.website) {
     const link = el("a", "btn ghost small", "Visit " + c.website);
     link.href = "https://" + c.website;
@@ -1137,14 +1591,40 @@ function detailRow(c, id) {
 
   const roles = el("div");
   if (c.salesRoles.length) {
-    roles.append(el("h4", "roles-title", "Open sales roles (" + c.salesRoles.length + ")"));
-    const list = el("ul", "roles");
-    for (const role of c.salesRoles) {
-      const item = el("li", "", role.title);
-      if (role.location) item.append(el("span", "where", role.location));
-      list.append(item);
+    roles.append(el("h4", "roles-title", "Open sales roles by type (" + c.salesRoles.length + ")"));
+
+    const present = TYPES_IN_ORDER.filter(type => typeCount(c, type) > 0);
+    const most = Math.max(...present.map(type => typeCount(c, type)));
+    const mix = el("ul", "mix");
+    for (const type of present) {
+      const n = typeCount(c, type);
+      const item = el("li");
+      item.append(el("span", "", type), el("span", "n", String(n)));
+      const bar = el("div", "bar");
+      bar.setAttribute("aria-hidden", "true");
+      const fill = el("span");
+      fill.style.width = (n / most * 100) + "%";
+      bar.append(fill);
+      item.append(bar);
+      mix.append(item);
     }
-    roles.append(list);
+    roles.append(mix);
+    roles.append(el("p", "mix-note", "Each role is counted once. A sales engineer who works with partners counts under partners and channel."));
+
+    const groups = el("div", "role-groups");
+    for (const type of present) {
+      const section = el("section");
+      section.append(el("h5", "", type));
+      const list = el("ul", "roles");
+      for (const role of c.types[type]) {
+        const item = el("li", "", role.title);
+        if (role.location) item.append(el("span", "where", role.location));
+        list.append(item);
+      }
+      section.append(list);
+      groups.append(section);
+    }
+    roles.append(groups);
   } else {
     roles.append(el("p", "state", "No open sales roles to list."));
   }
@@ -1153,6 +1633,27 @@ function detailRow(c, id) {
   td.append(grid);
   tr.append(td);
   return tr;
+}
+
+// The list of the top 10 in the research notes, built from the same notes
+// the ranking uses so the two can't drift apart.
+function renderTopTen() {
+  const list = document.getElementById("cos");
+  list.replaceChildren();
+  for (const c of companies) {
+    if (!c.note) continue;
+    const item = el("li");
+    item.append(el("strong", "", c.rank + ". " + c.name));
+    const body = el("div");
+    body.append(el("span", "", c.note.what));
+    const round = el("span", "round", "Last announced round " + c.note.round + ". " + c.note.more + " Source ");
+    const link = el("a", "", c.note.source);
+    link.href = c.note.url;
+    round.append(link);
+    body.append(round);
+    item.append(body);
+    list.append(item);
+  }
 }
 
 function buttonFor(name) {
@@ -1170,8 +1671,27 @@ function toggle(name) {
   if (button) button.focus({ preventScroll: true });
 }
 
-// Used by the button at the top of the page: open one company and go to it.
+function setFund(value) {
+  fundFilter = value;
+  for (const button of document.querySelectorAll("#fund-seg button")) {
+    button.setAttribute("aria-pressed", String(button.dataset.fund === value));
+  }
+}
+
+function clearFilters() {
+  setFund("all");
+  roleFilter = "";
+  roleSelect.value = "";
+  renderRows();
+}
+
+// Used by the button at the top of the page: open the ranking tab, then one
+// company, and go to it. Filters are cleared first so the company is in the list.
 function openCompany(name) {
+  showTab("ranking");
+  setFund("all");
+  roleFilter = "";
+  roleSelect.value = "";
   selected = name;
   renderRows();
   const button = buttonFor(name);
@@ -1180,15 +1700,21 @@ function openCompany(name) {
   button.focus({ preventScroll: true });
 }
 
-for (const button of document.querySelectorAll(".seg button")) {
+for (const button of document.querySelectorAll("#sort-seg button")) {
   button.addEventListener("click", () => {
     sortKey = button.dataset.sort;
-    for (const other of document.querySelectorAll(".seg button")) {
+    for (const other of document.querySelectorAll("#sort-seg button")) {
       other.setAttribute("aria-pressed", String(other === button));
     }
     renderRows();
   });
 }
+
+for (const button of document.querySelectorAll("#fund-seg button")) {
+  button.addEventListener("click", () => { setFund(button.dataset.fund); renderRows(); });
+}
+
+roleSelect.addEventListener("change", () => { roleFilter = roleSelect.value; renderRows(); });
 
 pickBtn.addEventListener("click", () => openCompany(pickBtn.dataset.company));
 
@@ -1197,23 +1723,35 @@ async function start() {
   document.getElementById("note-date").textContent = SNAPSHOT_DATE;
 
   try {
-    const [ranked, jobs, list] = await loadData();
+    const [ranked, jobs, list, filings] = await loadData();
     document.getElementById("saved-note").hidden = !usedSavedCopy;
 
     const websites = Object.fromEntries(list.map(c => [c.name, c.website]));
 
     // ranked.csv is already sorted by score, so its row order is the rank.
-    companies = ranked.map((r, i) => ({
-      rank: i + 1,
-      name: r.company,
-      total: Number(r.total_roles),
-      sales: Number(r.sales_roles),
-      share: Number(r.sales_share),
-      score: Number(r.score),
-      raised: r.raised_recently === "True",
-      website: websites[r.company] || "",
-      salesRoles: jobs.filter(j => j.company === r.company && j.category === "Sales"),
-    }));
+    companies = ranked.map((r, i) => {
+      const raised = r.raised_recently === "True";
+      const salesRoles = jobs.filter(j => j.company === r.company && j.category === "Sales");
+      const types = {};
+      for (const role of salesRoles) {
+        const type = roleType(role.title);
+        (types[type] = types[type] || []).push(role);
+      }
+      return {
+        rank: i + 1,
+        name: r.company,
+        total: Number(r.total_roles),
+        sales: Number(r.sales_roles),
+        share: Number(r.sales_share),
+        score: Number(r.score),
+        raised,
+        filing: raised ? latestFiling(r.company, filings) : null,
+        website: websites[r.company] || "",
+        note: COMPANY_NOTES[r.company] || null,
+        salesRoles,
+        types,
+      };
+    });
 
     document.getElementById("m-total").textContent = String(jobs.length);
     document.getElementById("m-sales").textContent = String(jobs.filter(j => j.category === "Sales").length);
@@ -1227,12 +1765,31 @@ async function start() {
       return;
     }
 
-    statusEl.hidden = true;
+    // Worked example of the score, using whichever company is ranked first.
+    const first = companies[0];
+    document.getElementById("example").textContent =
+      first.name + " " + scoreSum(first) + " = " + first.score.toFixed(2);
+
+    // Offer only the role types that at least one company is hiring for.
+    for (const type of TYPES_IN_ORDER) {
+      const count = companies.filter(c => typeCount(c, type) > 0).length;
+      if (!count) continue;
+      const option = el("option", "", type + " (" + count + ")");
+      option.value = type;
+      roleSelect.append(option);
+    }
+
     renderRows();
+    renderTopTen();
+
+    // The page is taller now that the table is drawn, so line up again with
+    // whatever spot the link asked for.
+    if (location.hash) goTo(location.hash.slice(1));
   } catch (error) {
+    statusEl.hidden = false;
     statusEl.replaceChildren(
       el("strong", "", "The ranking didn't load. "),
-      "Open this page from the project site, or serve it locally alongside ranked.csv, jobs.csv and companies.csv."
+      "Open this page from the project site, or serve it locally alongside ranked.csv, jobs.csv, companies.csv and form_d.csv."
     );
     pickBtn.hidden = true;
     for (const id of ["m-total", "m-sales", "m-companies"]) {
