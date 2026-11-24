@@ -1,0 +1,29 @@
+company,sales_roles_before,sales_roles_now,sales_change,total_roles_before,total_roles_now,rank_before,rank_now,new_sales_roles,closed_sales_roles
+Daylight Security,5,21,16,15,34,14,2,Mid-Market Account Executive - Mid-Atlantic (United States - Remote); Mid-Market Account Executive - New York (United States - Remote); Mid-Market Account Executive - NorCal (United States - Remote); Mid-Market Account Executive - PNW (United States - Remote); Mid-Market Account Executive - Southeast (United States - Remote); Mid-Market Account Executive - Southwest (United States - Remote); Regional Channel Manager - Central (United States - Remote); Regional Channel Manager - East (United States - Remote); Regional Channel Manager - West (United States - Remote); Sales Engineer - Great Lakes (United States - Remote); Sales Engineer - Midwest (United States - Remote); Sales Engineer - Pacific Northwest (United States - Remote); Sales Engineer - TOLA (United States - Remote); Senior Account Executive - Boston (United States - Remote); Senior Account Executive - New York (United States - Remote); Senior Account Executive - PNW (United States - Remote); Senior Account Executive - Texas (United States - Remote); Senior Account Executive - UK (United Kingdom - Remote),Account Executive (London); Sales Engineer (United States)
+Endor Labs,13,16,3,36,43,6,6,"Enterprise Account Executive - Twin Cities (Minneapolis, MN); Head of Channels, Americas (United States); Solutions Architect - Central (Remote US (CST)); Solutions Architect Manager (First Line) (Remote US (EST))","Senior Sales Development Representative (London, UK)"
+Adaptive Security,3,5,2,9,12,20,16,"Channel Account Manager, West (Remote); Sales Engineer (NYC)",
+Dropzone AI,3,5,2,9,10,21,13,"Account Executive-N. Central (Remote - US); Account Executive-Southeast (Remote - US); Director of Sales, West (Remote - San Francisco Bay Area); Sr. Channel Manager (Remote)",Account Executive (Remote - US); Principal Sales Engineer (Remote - US)
+7AI,20,21,1,45,45,2,1,"Director, Public Sector Alliances (Remote); Enterprise Account Executive - North Carolina (Remote); Federal Sales Leader (Remote); RVP, Enterprise Sales - Mid Atlantic (Remote); Sales Enablement Manager (Boston, MA); Sr. Director, EMEA Alliances (Remote)","Enterprise Account Executive - Minneapolis (Remote); Enterprise Account Executive - Utah (Remote); Enterprise Account Executive - Wisconsin (Remote); Sales Enablement Specialist (Boston, MA); Sr. Sales Engineer – Service Providers (Remote)"
+Obsidian Security,5,6,1,15,15,11,12,"Channel Director, APAC (Sydney, Australia)",
+Halcyon,3,4,1,6,10,17,19,"VP Sales, UK & Europe (Remote)",
+Prophet Security,3,4,1,8,10,19,18,"Regional Sales Director, Upstate NY/NJ (New Jersey)",
+Cogent Security,21,21,0,52,54,3,3,,
+Zafran,15,15,0,31,36,5,7,"Director of Product Partnerships (Tel Aviv); Regional Sales Manager, SLED (East) (USA)","Channel Account Manager (East) (USA); Regional Sales Manager, Majors (Bay Area) (USA)"
+AegisAI,11,11,0,28,24,7,8,,
+Neo,9,9,0,20,19,10,9,"Enterprise Sales Representative (Denver, CO)","BDR Manager (Boston, MA)"
+depthfirst,5,5,0,21,24,15,17,,
+Fable Security,4,4,0,8,8,12,14,,
+Nudge Security,4,4,0,5,5,13,15,,
+Xage Security,3,3,0,10,10,16,20,,
+Empirical Security,2,2,0,3,3,18,21,,
+WitnessAI,1,1,0,7,8,24,22,,
+Method Security,0,0,0,8,11,28,28,,
+Overwatch Data,0,0,0,1,2,25,25,,
+Reach Security,0,0,0,6,6,26,26,,
+XBOW,0,0,0,3,3,27,27,,
+HiddenLayer,15,14,-1,20,19,4,5,"Solutions Engineer- Pre-sales (Remote- US); Solutions Engineer- Pre-sales (UK) (Remote- UK); VP, Sales Engineering (Pre-sales) (Remote, US)","AI Solutions Architect- Federal (Remote- US); AI Solutions Architect- Pre-sales (Remote- US); AI Solutions Architect- Pre-sales (UK) (Remote- UK); VP of Sales Engineering (Pre-sales) (Remote, US)"
+Armadin,8,7,-1,26,24,8,11,,Regional Sales Manager | Florida (Remote)
+Socket,8,7,-1,26,23,9,10,"Account Executive, SMB (United States)",Enterprise Account Executive (United States); Revenue Operations Manager (United States)
+VulnCheck,2,1,-1,12,10,22,23,,"Sales Enablement Manager (Austin, TX OR Boston, MA) (Austin, TX OR Boston, MA)"
+Keycard,1,0,-1,6,7,23,24,,Founding Revenue Marketing Lead (US - Remote)
+Doppel,18,15,-3,26,23,1,4,Enterprise Account Executive - Chicago (Remote - Chicago); Enterprise Account Executive - Minnesota (Remote - Minnesota); Mid-Enterprise Account Executive - Minnesota/Wisconsin (Remote - Minnesota); Strategic Business Development (New York City or San Francisco),"Channel Account Manager - TOLA (Central); Enterprise Account Executive - Canada (Remote - Canada); Enterprise Account Executive - Michigan/Wisconsin (Remote - Michigan/Wisconsin); Mid-Enterprise Account Executive - Florida (Remote - Florida); Mid-Enterprise Account Executive - Rockies (Denver, Colorado); Senior Sales Engineer - EMEA (Remote); Sr. Manager, Sales Development Representative (Austin, Texas)"

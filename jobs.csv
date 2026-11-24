@@ -5,15 +5,14 @@ company,title,department,location,source,category
 7AI,Sr. Sales Engineer - Cybersecurity,Sales,Remote,ashby,Sales
 7AI,Security Analyst - Tier 3 (West Coast),Security,West Coast,ashby,Other
 7AI,Enterprise Account Executive - Oregon,Sales,Remote,ashby,Sales
-7AI,Senior Platform Engineer,R&D,"Boston, MA",ashby,Engineering
 7AI,Enterprise Account Executive - West,Sales,Remote,ashby,Sales
 7AI,Enterprise Account Executive - NYC,Sales,Remote,ashby,Sales
 7AI,Senior Frontend Engineer,R&D,"Boston, MA",ashby,Engineering
 7AI,Enterprise Account Executive - Washington,Sales,Remote,ashby,Sales
 7AI,Senior Software Architect,R&D,"Boston, MA",ashby,Engineering
 7AI,Security Analyst - Tier 3,Security,"Boston, MA",ashby,Other
+7AI,GTM Recruiter,G&A,"Boston, MA",ashby,Other
 7AI,Enterprise Account Executive - Ohio,Sales,Remote,ashby,Sales
-7AI,Sr. Sales Engineer – Service Providers,Sales,Remote,ashby,Sales
 7AI,Security Analyst - Tier 2,Security,"Boston, MA",ashby,Other
 7AI,AI Product Manager,Product,"Boston, MA",ashby,Other
 7AI,Sales Engineer - Chicago,Sales,Remote,ashby,Sales
@@ -27,23 +26,24 @@ company,title,department,location,source,category
 7AI,Sr. Visual Designer,Product,"Boston, MA",ashby,Other
 7AI,"Field Marketing Manager - Dallas, TX",Marketing,Remote,ashby,Other
 7AI,"Field Marketing Manager - Chicago, IL",Marketing,Remote,ashby,Other
-7AI,Enterprise Account Executive - Minneapolis,Sales,Remote,ashby,Sales
 7AI,IT Engineer,R&D,"Boston, MA",ashby,Engineering
 7AI,Enterprise Account Executive - Philadelphia,Sales,Remote,ashby,Sales
 7AI,Field Marketing Manager - California,Marketing,Remote,ashby,Other
-7AI,AI Solution Advisor,Product,"Boston, MA",ashby,Other
 7AI,"Director of Sales Engineering, East Coast",Sales,"Boston, MA",ashby,Sales
 7AI,Enterprise Account Executive - Toronto,Sales,Remote,ashby,Sales
-7AI,Sales Enablement Specialist,Sales,"Boston, MA",ashby,Sales
+7AI,Sales Enablement Manager,Sales,"Boston, MA",ashby,Sales
 7AI,Enterprise Account Executive - Austin,Sales,Remote,ashby,Sales
 7AI,HR Operations Specialist,G&A,"Boston, MA",ashby,Other
-7AI,Enterprise Account Executive - Wisconsin,Sales,Remote,ashby,Sales
 7AI,DFIR Alliances Director,Sales,Remote,ashby,Sales
-7AI,Enterprise Account Executive - Utah,Sales,Remote,ashby,Sales
 7AI,GRC Engineer,R&D,"Boston, MA",ashby,Engineering
 7AI,Sr. Product Marketing Manager - Commercial,Marketing,"Boston, MA",ashby,Other
 7AI,Marketing Operations Manager,Marketing,"Boston, MA",ashby,Other
 7AI,PLAID ELITE DFIR Consultant,Security,"Boston, MA",ashby,Other
+7AI,"RVP, Enterprise Sales - Mid Atlantic",Sales,Remote,ashby,Sales
+7AI,Enterprise Account Executive - North Carolina,Sales,Remote,ashby,Sales
+7AI,Federal Sales Leader,Sales,Remote,ashby,Sales
+7AI,"Director, Public Sector Alliances",Sales,Remote,ashby,Sales
+7AI,"Sr. Director, EMEA Alliances",Sales,Remote,ashby,Sales
 Adaptive Security,"Software Engineer, Product & Platform",Engineering,NYC,ashby,Engineering
 Adaptive Security,Business Development Representative,Sales,"NYC, LA, SF",ashby,Sales
 Adaptive Security,Senior Customer Success Manager,Customer Success,NYC,ashby,Other
@@ -51,17 +51,18 @@ Adaptive Security,Senior Account Executive,Sales,"NYC, LA, SF",ashby,Sales
 Adaptive Security,Senior Account Executive (Remote),Sales,Remote,ashby,Sales
 Adaptive Security,Founding Machine Learning Engineer,Engineering,NYC,ashby,Engineering
 Adaptive Security,Customer Success Associate,Customer Success,NYC,ashby,Other
-Adaptive Security,Solutions Consultant,Customer Success,NYC,ashby,Other
-Adaptive Security,GTM Intern - Winter/Spring,Sales,NYC; LA,ashby,Other
+Adaptive Security,Sales Engineer,Customer Success,NYC,ashby,Sales
+Adaptive Security,GTM Intern - Winter/Spring,Sales,LA,ashby,Other
+Adaptive Security,"Channel Account Manager, West",Partnerships,Remote,ashby,Sales
+Adaptive Security,"Senior National Account Manager, CDW",Partnerships,Chicago,ashby,Other
+Adaptive Security,"Senior National Account Manager, SHI",Partnerships,Austin,ashby,Other
 AegisAI,AI Engineer - NYC,Engineering,New York City,ashby,Engineering
 AegisAI,Business Development Representative,Sales,New York City,ashby,Sales
-AegisAI,Strategic Finance Operations Leader,Operations,New York City,ashby,Other
 AegisAI,AI Engineer - SF,Engineering,San Francisco,ashby,Engineering
 AegisAI,AI Architect,Engineering,New York City,ashby,Other
 AegisAI,Director Demand Generation,Sales,United States,ashby,Sales
 AegisAI,Senior Threat Intelligence Researcher,Engineering,New York City,ashby,Other
 AegisAI,AI Product Manager,Engineering,New York City,ashby,Other
-AegisAI,BizOps Lead,Operations,San Francisco,ashby,Other
 AegisAI,AI Alchemist,Operations,San Francisco,ashby,Other
 AegisAI,"Channel Manager, VAR Partnerships",Sales,United States,ashby,Sales
 AegisAI,Vice President of Operations,Operations,San Francisco,ashby,Other
@@ -78,24 +79,20 @@ AegisAI,Technical Recruiter,Operations,United States,ashby,Other
 AegisAI,"Visual Designer (AI-Native, Enterprise Focus)",Product and Design,United States,ashby,Other
 AegisAI,Infrastructure Engineer,Engineering,San Francisco,ashby,Engineering
 AegisAI,Infrastructure Engineer Lead,Engineering,New York City,ashby,Engineering
-AegisAI,Security Engineer,Engineering,United States,ashby,Engineering
-AegisAI,GRC Engineer,Engineering,United States,ashby,Engineering
 AegisAI,Strategic Account Executive,Sales,United States,ashby,Sales
 Armadin,Inside Sales Representative - Central,Go-to-Market,Palo Alto,ashby,Sales
 Armadin,Inside Sales Representative - Palo Alto,Go-to-Market,Palo Alto,ashby,Sales
 Armadin,"Inside Sales Representative - Washington, DC",Go-to-Market,"Washington, DC",ashby,Sales
-Armadin,"Managing Principal, Red Team Operator",Red Team,Palo Alto,ashby,Other
 Armadin,Member of Technical Staff - Research,Engineering,Palo Alto,ashby,Other
+Armadin,"Senior Red Team Operator, Applications",Red Team,Palo Alto,ashby,Other
 Armadin,Regional Sales Manager | Los Angeles,Go-to-Market,Remote,ashby,Sales
 Armadin,"Red Team Operator, Operational Technology (OT)",Red Team,Remote,ashby,Other
-Armadin,Regional Sales Manager | Florida,Go-to-Market,Remote,ashby,Sales
 Armadin,Regional Sales Manager | New York City,Go-to-Market,Remote,ashby,Sales
 Armadin,Regional Sales Manager | New England,Go-to-Market,Remote,ashby,Sales
 Armadin,Regional Sales Manager | San Francisco,Go-to-Market,Remote,ashby,Sales
 Armadin,"Senior Red Team Operator, AI/LLM",Red Team,Remote,ashby,Other
 Armadin,Member of Technical Staff - Frontend,Engineering,Palo Alto,ashby,Other
 Armadin,Forward Deployed Engineer,Engineering,Palo Alto,ashby,Engineering
-Armadin,Associate Red Team Analyst - Mexico,Red Team,Mexico,ashby,Other
 Armadin,Member of Technical Staff - Platform,Engineering,Palo Alto,ashby,Other
 Armadin,Summer 2027 Internship - Member of Technical Staff - Agent Systems,Engineering,Palo Alto,ashby,Other
 Armadin,Technical Lead Manager - Platform,Engineering,Palo Alto,ashby,Other
@@ -105,8 +102,8 @@ Armadin,Member of Technical Staff - Agent,Engineering,Palo Alto,ashby,Other
 Armadin,"Senior FP&A Analyst, Services Finance",General & Administrative,Remote,ashby,Other
 Armadin,"Senior Financial Analyst, GTM Business Partner",General & Administrative,Palo Alto,ashby,Other
 Armadin,Summer 2027 Internship -  Member of Technical Staff -  Frontend,Engineering,Palo Alto,ashby,Other
-Armadin,"Senior Red Team Operator, Applications",Red Team,Remote,ashby,Other
-Armadin,Principal Red Team Operator,Red Team,Palo Alto,ashby,Other
+Armadin,Attack Operations Center Analyst (Nights/Weekends),Red Team,Remote,ashby,Other
+Armadin,"Senior Red Team Operator, Network",Red Team,Palo Alto,ashby,Other
 Cogent Security,Software Engineer - Applied AI,Engineering,"San Francisco, CA",ashby,Engineering
 Cogent Security,Software Engineer - Backend,Engineering,"San Francisco, CA",ashby,Engineering
 Cogent Security,Software Engineer - Fullstack,Engineering,"San Francisco, CA",ashby,Engineering
@@ -149,7 +146,6 @@ Cogent Security,"Mid-Market Account Executive, New York",GTM,"New York, NY",ashb
 Cogent Security,"Mid-Market Account Executive, San Francisco",GTM,"San Francisco, CA",ashby,Sales
 Cogent Security,"Enterprise Account Executive, Southern California",GTM,"Remote, US",ashby,Sales
 Cogent Security,"Enterprise Account Executive, TOLA",GTM,"Remote, US",ashby,Sales
-Cogent Security,Executive Assistant to the CEO,General & Administrative,"San Francisco, CA",ashby,Other
 Cogent Security,"Revenue Operations Lead, West",GTM,"San Francisco, CA",ashby,Sales
 Cogent Security,"Revenue Operations Lead, Central",GTM,"San Francisco, CA",ashby,Sales
 Cogent Security,Technical Support Engineer,GTM,"San Francisco, CA",ashby,Engineering
@@ -159,27 +155,49 @@ Cogent Security,Sr. Product Marketing Manager,GTM,"Remote, US",ashby,Other
 Cogent Security,Director of Communications,GTM,"Remote, US",ashby,Other
 Cogent Security,Director of Content Marketing,GTM,"Remote, US",ashby,Other
 Cogent Security,"Senior Manager, Content Marketing",GTM,"Remote, US",ashby,Other
-Daylight Security,Account Executive,Sales,London,greenhouse,Sales
+Cogent Security,"Senior Product Manager, AI Platform",Product,"New York, NY",ashby,Other
+Cogent Security,"Senior Product Manager, Enterprise",Product,"New York, NY",ashby,Other
+Cogent Security,Technical Program Manager - POVs & Deployments,Product,"New York, NY",ashby,Other
 Daylight Security,Cloud FinOps Engineer,R&D,Tel Aviv,greenhouse,Engineering
-Daylight Security,Customer Success Engineer (CSE),R&D,United States,greenhouse,Engineering
+Daylight Security,Customer Success Engineer (CSE),R&D,United States - Remote,greenhouse,Engineering
 Daylight Security,IT Manager,R&D,Tel Aviv,greenhouse,Other
-Daylight Security,Regional Vice President (RVP) - EMEA,Sales,London,greenhouse,Sales
-Daylight Security,Regional Vice President (RVP) - West,Sales,United States,greenhouse,Sales
-Daylight Security,Sales Engineer,Sales,United States,greenhouse,Sales
+Daylight Security,Mid-Market Account Executive - Mid-Atlantic,Sales,United States - Remote,greenhouse,Sales
+Daylight Security,Mid-Market Account Executive - New York,Sales,United States - Remote,greenhouse,Sales
+Daylight Security,Mid-Market Account Executive - NorCal,Sales,United States - Remote,greenhouse,Sales
+Daylight Security,Mid-Market Account Executive - PNW,Sales,United States - Remote,greenhouse,Sales
+Daylight Security,Mid-Market Account Executive - Southeast,Sales,United States - Remote,greenhouse,Sales
+Daylight Security,Mid-Market Account Executive - Southwest,Sales,United States - Remote,greenhouse,Sales
+Daylight Security,Regional Channel Manager - Central,Sales,United States - Remote,greenhouse,Sales
+Daylight Security,Regional Channel Manager - East,Sales,United States - Remote,greenhouse,Sales
+Daylight Security,Regional Channel Manager - West,Sales,United States - Remote,greenhouse,Sales
+Daylight Security,Regional Vice President (RVP) - EMEA,Sales,United Kingdom - Remote,greenhouse,Sales
+Daylight Security,Regional Vice President (RVP) - West,Sales,United States - Remote,greenhouse,Sales
+Daylight Security,Sales Engineer - Great Lakes,Sales,United States - Remote,greenhouse,Sales
+Daylight Security,Sales Engineer - Midwest,Sales,United States - Remote,greenhouse,Sales
+Daylight Security,Sales Engineer - Pacific Northwest,Sales,United States - Remote,greenhouse,Sales
+Daylight Security,Sales Engineer - TOLA,Sales,United States - Remote,greenhouse,Sales
+Daylight Security,Senior Account Executive - Boston,Sales,United States - Remote,greenhouse,Sales
+Daylight Security,Senior Account Executive - New York,Sales,United States - Remote,greenhouse,Sales
+Daylight Security,Senior Account Executive - PNW,Sales,United States - Remote,greenhouse,Sales
+Daylight Security,Senior Account Executive - Texas,Sales,United States - Remote,greenhouse,Sales
+Daylight Security,Senior Account Executive - UK,Sales,United Kingdom - Remote,greenhouse,Sales
 Daylight Security,Senior Backend Engineer,R&D,Tel Aviv,greenhouse,Engineering
 Daylight Security,Senior Frontend Engineer,R&D,Tel Aviv,greenhouse,Engineering
 Daylight Security,Senior Full Stack Engineer,R&D,Tel Aviv,greenhouse,Engineering
+Daylight Security,Senior Product Designer,Product,Tel Aviv,greenhouse,Other
 Daylight Security,Senior Product Manager,Product,Tel Aviv,greenhouse,Other
 Daylight Security,"Senior Program Manager, Brand & Marketing",Marketing,United States - Remote,greenhouse,Other
-Daylight Security,Senior Sales Enablement Manager,Sales,United States,greenhouse,Sales
-Daylight Security,Senior Security Engineer,Security Engineering,Tel Aviv,greenhouse,Engineering
+Daylight Security,Senior Sales Enablement Manager,Sales,United States - Remote,greenhouse,Sales
 Daylight Security,Senior Security Engineer,Security Engineering,Singapore,greenhouse,Engineering
+Daylight Security,Senior Security Engineer,Security Engineering,United States,greenhouse,Engineering
+Daylight Security,Senior Security Engineer,Security Engineering,Tel Aviv,greenhouse,Engineering
+Daylight Security,Talent Acquisition Partner,G&A,New York,greenhouse,Other
 depthfirst,Product Engineer,Engineering,San Francisco,ashby,Engineering
 depthfirst,Backend Engineer,Engineering,San Francisco,ashby,Engineering
 depthfirst,Security Researcher,Applied Research,San Francisco,ashby,Engineering
 depthfirst,Research Engineer,Applied Research,San Francisco,ashby,Engineering
 depthfirst,Account Executive,Sales,San Francisco,ashby,Sales
-depthfirst,Recruiter,General & Administrative,San Francisco,ashby,Other
+depthfirst,"Recruiter, Technical",General & Administrative,San Francisco,ashby,Other
 depthfirst,Forward-Deployed Security Engineer,Engineering,San Francisco,ashby,Engineering
 depthfirst,Sales Development Representative,Sales,San Francisco,ashby,Sales
 depthfirst,Solutions Engineer,Sales,San Francisco,ashby,Sales
@@ -187,6 +205,7 @@ depthfirst,Security Product Engineer,Engineering,San Francisco,ashby,Engineering
 depthfirst,GTM Engineer,Engineering,San Francisco,ashby,Engineering
 depthfirst,Product Manager,Product,San Francisco,ashby,Other
 depthfirst,Technical Account Manager,Sales,San Francisco,ashby,Other
+depthfirst,Executive Assistant,General & Administrative,San Francisco,ashby,Other
 depthfirst,Field Marketing,Sales,San Francisco,ashby,Other
 depthfirst,"Senior Software Engineer, Corporate Security",Engineering,San Francisco,ashby,Engineering
 depthfirst,"Senior Software Security Engineer, Infrastructure & Identity",Engineering,San Francisco,ashby,Engineering
@@ -195,52 +214,59 @@ depthfirst,Forward Deployed Engineer,Engineering,San Francisco,ashby,Engineering
 depthfirst,Infrastructure Software Engineer,Engineering,San Francisco,ashby,Engineering
 depthfirst,"Strategic Account Executive, APJ",Sales,Australia,ashby,Sales
 depthfirst,"Senior Solutions Engineer, APJ",Sales,Australia,ashby,Sales
+depthfirst,"Recruiter, GTM",General & Administrative,San Francisco,ashby,Other
+depthfirst,IT Support Specialist,General & Administrative,San Francisco,ashby,Other
 Doppel,Channel Account Manager - NorCal / Northwest,Channel & Alliances,Northwest,greenhouse,Sales
-Doppel,Channel Account Manager - TOLA,Channel & Alliances,Central,greenhouse,Sales
 Doppel,Director of ABM and Campaigns,Marketing,Remote,greenhouse,Other
-Doppel,Enterprise Account Executive - Canada,Account Executive,Remote - Canada,greenhouse,Sales
+Doppel,Enterprise Account Executive - Chicago,Account Executive,Remote - Chicago,greenhouse,Sales
 Doppel,Enterprise Account Executive - Los Angeles,Account Executive,"Los Angeles, California",greenhouse,Sales
-Doppel,Enterprise Account Executive - Michigan/Wisconsin,Account Executive,Remote - Michigan/Wisconsin,greenhouse,Sales
+Doppel,Enterprise Account Executive - Minnesota,Account Executive,Remote - Minnesota,greenhouse,Sales
 Doppel,Enterprise Account Executive - New England,Account Executive,Remote - New England,greenhouse,Sales
 Doppel,Enterprise Account Executive - NYC/NJ,Account Executive,Remote - NYC/NJ,greenhouse,Sales
 Doppel,Enterprise Account Executive - Texas,Account Executive,Remote - Texas,greenhouse,Sales
 Doppel,Global People Ops Partner,People,Location,greenhouse,Other
 Doppel,Mid-Enterprise Account Executive - Atlanta,Account Executive,Remote - Atlanta,greenhouse,Sales
 Doppel,Mid-Enterprise Account Executive - Bay Area,Account Executive,San Francisco,greenhouse,Sales
-Doppel,Mid-Enterprise Account Executive - Florida,Account Executive,Remote - Florida,greenhouse,Sales
-Doppel,Mid-Enterprise Account Executive - Rockies,Account Executive,"Denver, Colorado",greenhouse,Sales
+Doppel,Mid-Enterprise Account Executive - Minnesota/Wisconsin,Account Executive,Remote - Minnesota,greenhouse,Sales
 Doppel,Mid-Enterprise Customer Success Manager,Customer Success,Remote,greenhouse,Other
 Doppel,Mid-Enterprise Sales Engineer,Sales Engineering,Remote,greenhouse,Sales
-Doppel,Payroll Manager,Finance,"San Francisco, CA",greenhouse,Other
+Doppel,Payroll Accounting Manager,Finance,Remote,greenhouse,Other
 Doppel,Principal GTM Recruiter,People,Remote,greenhouse,Other
-Doppel,"Program Manager, GTM Enablement",Sales,Remote - United States,greenhouse,Other
 Doppel,"Regional Vice President of Sales - Enterprise, Northeast",Sales,Remote - Northeast,greenhouse,Sales
 Doppel,Renewals Manager,Customer Success,Remote,greenhouse,Other
 Doppel,Sales Engineer - DACH,Sales Engineering,Remote,greenhouse,Sales
-Doppel,Senior Field Marketing Associate - TOLA,Marketing,TOLA US,greenhouse,Other
-Doppel,Senior Sales Engineer - EMEA,Sales Engineering,Remote,greenhouse,Sales
 Doppel,Senior Sales Engineer - NYC,Sales Engineering,Remote,greenhouse,Sales
-Doppel,"Sr. Manager, Sales Development Representative",Business Development,"Austin, Texas",greenhouse,Sales
-Dropzone AI,Account Executive,Sales,Remote - US,greenhouse,Sales
-Dropzone AI,AI Research Engineer,Engineering,Remote - US,greenhouse,Engineering
+Doppel,Strategic Business Development,Sales,New York City or San Francisco,greenhouse,Sales
+Doppel,Strategic Customer Success Manager - East,Customer Success,Remote,greenhouse,Other
+Doppel,Strategic Customer Success Manager - West Coast,Customer Success,Remote,greenhouse,Other
+Dropzone AI,Account Executive-N. Central,Sales,Remote - US,greenhouse,Sales
+Dropzone AI,Account Executive-Southeast,Sales,Remote - US,greenhouse,Sales
+Dropzone AI,"Director of Sales, West",Sales,Remote - San Francisco Bay Area,greenhouse,Sales
 Dropzone AI,Federal Regional Sales Manager,Sales,Remote - US,greenhouse,Sales
-Dropzone AI,Forward Deployed Engineer,Customer Support,Remote - US,greenhouse,Engineering
-Dropzone AI,Principal Sales Engineer,Sales,Remote - US,greenhouse,Sales
 Dropzone AI,Senior DevOps Engineer,Engineering,Remote - US,greenhouse,Engineering
 Dropzone AI,"Senior Product Manager, Integrations & Platform",Product,Remote - US,greenhouse,Other
 Dropzone AI,Senior Software Engineer - Integrations,Engineering,Remote - US,greenhouse,Engineering
 Dropzone AI,Senior Technical Writer,Product,Remote - US,greenhouse,Other
+Dropzone AI,Sr. Channel Manager,Sales,Remote,greenhouse,Sales
+Dropzone AI,Threat Hunting Lead,Engineering,Remote - US,greenhouse,Other
 Empirical Security,Commercial Sales Executive,Sales,Remote,ashby,Sales
 Empirical Security,Enterprise Sales Executive,Sales,Remote,ashby,Sales
 Empirical Security,Software Engineer,Engineering,Remote,ashby,Engineering
-Endor Labs,Customer Reliability Engineer,Customer Solutions,"Palo Alto, CA",greenhouse,Engineering
+Endor Labs,Customer Marketing Manager,Marketing,"Palo Alto, CA",greenhouse,Other
+Endor Labs,Director of Engineering,Engineering,"Palo Alto, CA",greenhouse,Engineering
+Endor Labs,Director of Field Marketing,Marketing,"Palo Alto, CA",greenhouse,Other
+Endor Labs,EMEA Enablement Program Manager,RevOps,"London, UK",greenhouse,Other
 Endor Labs,Enterprise Account Executive - Bay Area,Sales,SF Bay Area,greenhouse,Sales
 Endor Labs,Enterprise Account Executive - LATAM,Sales,"Miami, FL",greenhouse,Sales
 Endor Labs,Enterprise Account Executive - Northeast,Sales,"Boston, MA",greenhouse,Sales
 Endor Labs,Enterprise Account Executive - NY Tristate,Sales,"New York, NY",greenhouse,Sales
 Endor Labs,Enterprise Account Executive - Southeast,Sales,"Atlanta, GA",greenhouse,Sales
 Endor Labs,Enterprise Account Executive - Southwest,Sales,Los Angeles,greenhouse,Sales
+Endor Labs,Enterprise Account Executive - Twin Cities,Sales,"Minneapolis, MN",greenhouse,Sales
 Endor Labs,Enterprise Account Executive - UK,Sales,"London, UK",greenhouse,Sales
+Endor Labs,GTM Engineer,RevOps,Remote US,greenhouse,Engineering
+Endor Labs,"Head of Channels, Americas",Biz Dev,United States,greenhouse,Sales
+Endor Labs,Onboarding & Ramp Manager,RevOps,"Remote, US East Coast",greenhouse,Other
 Endor Labs,Principal/ Sr Principal Backend Engineer,Engineering,"Bengaluru, India",greenhouse,Engineering
 Endor Labs,Program Analysis Engineer,Engineering,"Palo Alto, CA",greenhouse,Engineering
 Endor Labs,Sales Development Representative,Sales,"Austin, TX",greenhouse,Sales
@@ -248,25 +274,25 @@ Endor Labs,Sales Director - Northeast,Sales,"Boston, Massachusetts",greenhouse,S
 Endor Labs,Senior Backend Engineer (Golang),Engineering,"Bengaluru, India",greenhouse,Engineering
 Endor Labs,Senior GTM Recruiter,Talent Acquisition,United States,greenhouse,Other
 Endor Labs,Senior Platform Engineer - Infrastructure / MongoDB,Engineering,"Palo Alto, CA",greenhouse,Engineering
-Endor Labs,Senior Product Manager,Product,"Palo Alto, CA",greenhouse,Other
 Endor Labs,Senior Product Security Engineer,Engineering,"Bengaluru, India",greenhouse,Engineering
 Endor Labs,Senior Quality Engineer(SDET),Engineering,"Bengaluru, India",greenhouse,Engineering
-Endor Labs,Senior Sales Development Representative,Sales,"London, UK",greenhouse,Sales
 Endor Labs,Senior Security Engineer - Vulnerability,Engineering,"Bengaluru, India",greenhouse,Engineering
-Endor Labs,Senior Security Researcher,Engineering,"Bengaluru, India",greenhouse,Engineering
 Endor Labs,Senior Security Researcher,Engineering,Remote US,greenhouse,Engineering
+Endor Labs,Senior / Staff Backend Software Engineer,Engineering,"Palo Alto, CA",greenhouse,Engineering
+Endor Labs,Solutions Architect - Central,Customer Solutions,Remote US (CST),greenhouse,Sales
 Endor Labs,Solutions Architect - East,Customer Solutions,Remote US (EST),greenhouse,Sales
 Endor Labs,Solutions Architect - EMEA,Customer Solutions,Germany,greenhouse,Sales
+Endor Labs,Solutions Architect Manager (First Line),Customer Solutions,Remote US (EST),greenhouse,Sales
 Endor Labs,Solutions Architect - West,Customer Solutions,Remote US (PST),greenhouse,Sales
 Endor Labs,Sr/Staff Backend Engineer (Golang),Engineering,"Bengaluru, India",greenhouse,Engineering
 Endor Labs,Sr Technical Support Engineer,Customer Solutions,"Bengaluru, India",greenhouse,Engineering
 Endor Labs,Staff Backend Engineer (Golang),Engineering,"Bengaluru, India",greenhouse,Engineering
 Endor Labs,Staff Product Security Engineer,Engineering,Remote - US,greenhouse,Engineering
-Endor Labs,Staff UX Designer,Product,"Palo Alto, CA",greenhouse,Other
+Endor Labs,Staff Product (UX) Designer,Product,"Palo Alto, CA",greenhouse,Other
 Endor Labs,Technical Enablement Manager,Customer Solutions,"Palo Alto, CA",greenhouse,Other
 Endor Labs,Technical Product Marketing Manager,Marketing,"Palo Alto, CA OR Seattle, WA",greenhouse,Other
-Endor Labs,Technical Success Architect,Customer Solutions,"Bengaluru, India",greenhouse,Other
 Endor Labs,Technical Success Architect,Customer Solutions,Remote US,greenhouse,Other
+Endor Labs,Technical Success Architect,Customer Solutions,"Bengaluru, India",greenhouse,Other
 Endor Labs,Technical Success Engineer,Customer Solutions,Panama,greenhouse,Engineering
 Endor Labs,Technical Writer & Editor (AEO),Engineering,"Bengaluru, India",greenhouse,Other
 Fable Security,Backend Engineer,R&D,"San Francisco, CA (Hybrid)",ashby,Engineering
@@ -279,14 +305,14 @@ Fable Security,Product Manager,R&D,"San Francisco, CA (Hybrid)",ashby,Other
 Fable Security,Account Executive (Southeast),GTM,Remote: Southeast - Florida/Georgia,ashby,Sales
 Halcyon,Enterprise Account Executive,Sales: Enterprise Sales,"Chicago, IL",greenhouse,Sales
 Halcyon,"Enterprise Account Executive, Northeast",Sales: Enterprise Sales,Boston,greenhouse,Sales
-Halcyon,"Enterprise Account Executive, Southeast",Sales: Enterprise Sales,"Charlotte, NC",greenhouse,Sales
+Halcyon,"Enterprise Account Executive, Southeast",Sales: Enterprise Sales,"Atlanta, GA",greenhouse,Sales
 Halcyon,Field CISO,Sales: Strategy,"Remote,US",greenhouse,Other
+Halcyon,Senior Backend Cloud Engineer,Prod: Cloud Engineering,"Austin, TX",greenhouse,Engineering
 Halcyon,Senior Backend Cloud Engineer,Prod: Cloud Engineering,"Remote, US",greenhouse,Engineering
-Halcyon,Senior Deal Desk Lead,Sales: Revenue Operations,"Remote, US",greenhouse,Other
-HiddenLayer,AI Solutions Architect- Federal,Sales,Remote- US,greenhouse,Sales
-HiddenLayer,AI Solutions Architect- Post-Sales (UK),Sales,Remote- UK,greenhouse,Other
-HiddenLayer,AI Solutions Architect- Pre-sales,Sales,Remote- US,greenhouse,Sales
-HiddenLayer,AI Solutions Architect- Pre-sales (UK),Sales,Remote- UK,greenhouse,Sales
+Halcyon,Senior Information Security Specialist,G&A: Security - CISO,"Remote, US",greenhouse,Other
+Halcyon,Senior Product Manager,Product,"Remote, US",greenhouse,Other
+Halcyon,Senior Security Compliance Engineer (GRC / SOC 2),G&A: Security - CISO,"Remote, US",greenhouse,Engineering
+Halcyon,"VP Sales, UK & Europe",Sales,Remote,greenhouse,Sales
 HiddenLayer,Channel Account Manager,Sales,Remote,greenhouse,Sales
 HiddenLayer,Director of Federal Sales,Sales,"Remote, US-  DC Metro Area",greenhouse,Sales
 HiddenLayer,Enterprise Account Director- Bay Area,Sales,Remote- Bay Area,greenhouse,Sales
@@ -299,32 +325,39 @@ HiddenLayer,Enterprise Account Director- Southeast,Sales,"Remote- Nashville, Atl
 HiddenLayer,Head of Channel,Sales,"Remote, US",greenhouse,Sales
 HiddenLayer,Platform Engineer,Engineering,Remote- US,greenhouse,Engineering
 HiddenLayer,Software Engineer (Portugal),Engineering,"Lisbon, Portgual",greenhouse,Engineering
+HiddenLayer,Solutions Engineer- Post-Sales (UK),Sales,Remote- UK,greenhouse,Other
+HiddenLayer,Solutions Engineer- Pre-sales,Sales,Remote- US,greenhouse,Sales
+HiddenLayer,Solutions Engineer- Pre-sales (UK),Sales,Remote- UK,greenhouse,Sales
 HiddenLayer,Technical Engineering Lead (Portugal),Engineering,"Lisbon, Portgual",greenhouse,Engineering
 HiddenLayer,Technical Product Manager for AI Security Products (Portugal),Product Management,"Lisbon, Portugal",greenhouse,Other
 HiddenLayer,VP of Sales,Sales,Remote - Within the US,greenhouse,Sales
-HiddenLayer,VP of Sales Engineering (Pre-sales),Sales,"Remote, US",greenhouse,Sales
+HiddenLayer,"VP, Sales Engineering (Pre-sales)",Sales,"Remote, US",greenhouse,Sales
 Keycard,"Software Engineer, SDK",Engineering,US - Remote,ashby,Engineering
 Keycard,"Product Manager, Growth & Developer Experience",Product,US - Remote,ashby,Engineering
-Keycard,Staff Product Marketing Manager,GTM,US - Remote,ashby,Other
-Keycard,Founding Revenue Marketing Lead,GTM,US - Remote,ashby,Sales
+Keycard,Product Marketer,GTM,US - Remote,ashby,Other
 Keycard,"Software Engineer, Security",Engineering,US - Remote,ashby,Engineering
 Keycard,"Software Engineer, Infrastructure",Engineering,US - Remote,ashby,Engineering
+Keycard,Developer Advocate,GTM,US - Remote,ashby,Engineering
+Keycard,Events Marketer,GTM,San Francisco,ashby,Other
+Method Security,Business Operations,Operations,New York City Office,ashby,Other
 Method Security,Deployment Strategist,Business Development,New York City Office,ashby,Other
-Method Security,Security Engineer,Product Development,New York City Office,ashby,Engineering
+Method Security,Security Engineer,Business Development,New York City Office,ashby,Engineering
 Method Security,Backend Engineer,Product Development,New York City Office,ashby,Engineering
 Method Security,"Software Engineer, Product",Product Development,New York City Office,ashby,Engineering
 Method Security,Embedded Operator,Business Development,New York City Office,ashby,Other
 Method Security,Forward Deployed Engineer,Business Development,New York City Office,ashby,Engineering
+Method Security,Recruiting Coordinator,Operations,New York City Office,ashby,Other
 Method Security,USG Growth Lead,Business Development,Washington DC Office,ashby,Other
-Method Security,Talent,Operations,New York City Office,ashby,Other
-Neo,BDR Manager,Marketing,"Boston, MA",greenhouse,Sales
+Method Security,Recruiter,Operations,New York City Office,ashby,Other
+Method Security,Commercial Growth Lead,Business Development,New York City Office,ashby,Other
 Neo,Content Specialist,Marketing,USA,greenhouse,Other
+Neo,Enterprise Sales Representative,Sales,"Denver, CO",greenhouse,Sales
 Neo,Enterprise Sales Representative,Sales,NYC,greenhouse,Sales
 Neo,Federal Sales Engineer,Sales,Washington DC Metro Area,greenhouse,Sales
 Neo,Field Channel Manager - West,Sales,"San Francisco, California",greenhouse,Sales
 Neo,Field CTO - Americas,Sales,USA,greenhouse,Other
 Neo,Finance & Operations Manager,Operations,"Boston, MA",greenhouse,Other
-Neo,GTM Engineer,Marketing,USA,greenhouse,Engineering
+Neo,Head of MSSP,Sales,USA,greenhouse,Other
 Neo,"Sales Engineer - Chicago, IL",Sales,"Chicago, IL - USA",greenhouse,Sales
 Neo,"Sales Engineer - Denver, CO",Sales,"Denver, CO",greenhouse,Sales
 Neo,Sales Engineer - Northern California,Sales,"San Francisco, CA",greenhouse,Sales
@@ -333,30 +366,30 @@ Neo,"Sales Operations Manager - Boston, MA",Operations,"Boston, MA",greenhouse,S
 Neo,Senior Full-Stack Engineer,R&D,Tel Aviv,greenhouse,Engineering
 Neo,Senior Low Level Engineer,R&D,Tel Aviv,greenhouse,Engineering
 Neo,Senior Low Level Engineer - Infrastructure,R&D,Tel Aviv,greenhouse,Engineering
-Neo,Social Media Manager,Marketing,Remote - USA,greenhouse,Other
 Neo,Sr. Marketing Operations Manager,Marketing,"Boston, MA",greenhouse,Other
 Neo,Sustaining Engineer,Product,"Boston, MA",greenhouse,Engineering
 Neo,Technical Account Manager,Operations,tel aviv,greenhouse,Other
-Nudge Security,Channel Account Manager - West,Sales,United States,ashby,Sales
+Nudge Security,Channel Account Manager - West,Sales,Northern California,ashby,Sales
 Nudge Security,Strategic Account Executive - Southeast,Sales,Georgia,ashby,Sales
 Nudge Security,Senior Revenue Operations Manager,Sales,United States,ashby,Sales
 Nudge Security,Strategic Product Success Manager,Product Success,United States,ashby,Other
 Nudge Security,Channel Account Manager - East,Sales,United States,ashby,Sales
 Obsidian Security,Agent Security Research Engineer – Taiwan,Engineering (D2010),"Taipei, Taiwan",greenhouse,Engineering
 Obsidian Security,AI Security Engineer - Taiwan,Engineering (D2010),"Taipei, Taiwan",greenhouse,Engineering
+Obsidian Security,"Channel Director, APAC",Int'l Sales - Enterprise,"Sydney, Australia",greenhouse,Sales
 Obsidian Security,Chief Information Security Officer (CISO),Corporate,"Palo Alto, CA",greenhouse,Other
 Obsidian Security,Customer Success Operations Analyst,Support - Customer Success,US Remote (East/Central),greenhouse,Other
 Obsidian Security,Enterprise Account Executive – ANZ,Int'l Sales - Enterprise,"Melbourne, AUS",greenhouse,Sales
 Obsidian Security,Enterprise Account Executive - Central,US Sales - Enterprise,US Remote (Central),greenhouse,Sales
 Obsidian Security,"Enterprise Account Executive – EMEA (UK, London preferred)",Int'l Sales - Enterprise,UK - Remote,greenhouse,Sales
 Obsidian Security,Enterprise Account Executive - San Francisco Bay Area,US Sales - Enterprise,"Palo Alto, CA",greenhouse,Sales
-Obsidian Security,"Field Marketing Manager, West",Marketing,Remote,greenhouse,Other
 Obsidian Security,HR Manager,Human Resources,"Palo Alto, CA",greenhouse,Other
 Obsidian Security,Product Security Engineer (AI & Platform Security) – Taiwan,Engineering (D2010),"Taipei, Taiwan",greenhouse,Engineering
 Obsidian Security,Senior Solutions Engineer - East,US Sales - Solution Engineering,US Remote (East),greenhouse,Sales
 Obsidian Security,Senior Threat Research Engineer – Taiwan,Engineering (D2010),"Taipei, Taiwan",greenhouse,Engineering
 Obsidian Security,Software Engineer - AI Security Product,Engineering (D2010),"Palo Alto, California, USA",greenhouse,Engineering
 Obsidian Security,Sr Technical Marketing Manager - Alliances & Competitive Strategy,Product Marketing,US Remote,greenhouse,Other
+Overwatch Data,Head of Product,Software,"Boston (preferred), New York",greenhouse,Other
 Overwatch Data,Lead Software Engineer,Software,Boston,greenhouse,Engineering
 Prophet Security,"Senior Software Engineer, Backend",R&D,Remote,ashby,Engineering
 Prophet Security,"Regional Sales Director, Minnesota",GTM,Minneapolis-St. Paul Metro (Remote),ashby,Sales
@@ -366,46 +399,43 @@ Prophet Security,Principal Product Manager,Product,US (Remote),ashby,Other
 Prophet Security,"Software Engineer, Backend New Graduate",R&D,Palo Alto (Hybrid),ashby,Engineering
 Prophet Security,"Regional Sales Director, Mid-Atlantic",GTM,"Washington, D.C.",ashby,Sales
 Prophet Security,"Regional Sales Director, NorCal",GTM,San Francisco Bay Area,ashby,Sales
+Prophet Security,Principal Product Designer,Product,Remote,ashby,Other
+Prophet Security,"Regional Sales Director, Upstate NY/NJ",GTM,New Jersey,ashby,Sales
 Reach Security,Staff Software Engineer (Backend),Engineering,San Francisco Bay Area,ashby,Engineering
 Reach Security,Senior Staff Software Engineer (Data Platform),Engineering,San Francisco Bay Area,ashby,Engineering
 Reach Security,Senior Staff Software Engineer (Integrations),Engineering,San Francisco Bay Area,ashby,Engineering
 Reach Security,Senior Staff Security Researcher,IT and Information Security,San Francisco Bay Area,ashby,Engineering
 Reach Security,Principal Support Engineer - Endpoint,Customer Support,Remote,ashby,Engineering
 Reach Security,Principal Support Engineer - Network,Customer Support,Remote,ashby,Engineering
-Socket,Enterprise Account Executive,Go-to-Market,United States,ashby,Sales
 Socket,"Sales Engineer, Enterprise",Go-to-Market,United States,ashby,Sales
-Socket,Vulnerability Research Engineer,Engineering,Remote,ashby,Engineering
+Socket,Vulnerability Research Engineer,Technology,Remote,ashby,Engineering
 Socket,"Forward Deployed Engineer, Python",Go-to-Market,United States,ashby,Engineering
 Socket,"Sales Engineer, Commercial",Go-to-Market,United States,ashby,Sales
 Socket,"Sales Engineer, EMEA",Go-to-Market,United Kingdom,ashby,Sales
-Socket,Threat Researcher,Engineering,United States,ashby,Other
-Socket,Senior Platform Engineer,Engineering,Remote,ashby,Engineering
+Socket,Threat Researcher,Technology,United States,ashby,Other
+Socket,Senior Platform Engineer,Technology,Remote,ashby,Engineering
 Socket,"Sales Engineer, SMB",Go-to-Market,United States,ashby,Sales
 Socket,"Technical Support Engineer, APAC",Go-to-Market,Australia,ashby,Engineering
 Socket,"Account Executive, EMEA",Go-to-Market,United Kingdom,ashby,Sales
-Socket,Engineering Manager,Engineering,United States,ashby,Engineering
-Socket,Compliance Engineering Lead,Engineering,United States,ashby,Engineering
+Socket,Engineering Manager,Technology,United States,ashby,Engineering
 Socket,"Technical Account Manager, Enterprise",Go-to-Market,United States,ashby,Other
-Socket,Member of Technical Staff,Engineering,United States,ashby,Other
 Socket,"Technical Account Manager, Commercial",Go-to-Market,United States,ashby,Other
 Socket,"Manager, Technical Account Teams (Enterprise)",Go-to-Market,United States,ashby,Other
 Socket,"Manager, Technical Account Teams (Commercial)",Go-to-Market,United States,ashby,Other
-Socket,"Technical Account Manager (UK, EMEA)",Go-to-Market,United Kingdom,ashby,Other
+Socket,"Account Executive, SMB",Go-to-Market,United States,ashby,Sales
 Socket,Technical Enablement Manager,Go-to-Market,United States,ashby,Other
 Socket,"Manager, Technical Account Teams (Europe)",Go-to-Market,United Kingdom,ashby,Other
 Socket,Commercial Counsel,G&A,United States,ashby,Other
-Socket,Head of Product,Engineering,United States,ashby,Other
-Socket,Revenue Operations Manager,Go-to-Market,United States,ashby,Sales
 Socket,"Manager, Sales Engineering",Go-to-Market,United States,ashby,Sales
 Socket,Head of Customer Success,Go-to-Market,United States,ashby,Other
-VulnCheck,Director of Field Marketing,Marketing,Remote US,greenhouse,Other
+Socket,Technical Account Manager (EMEA),Go-to-Market,United Kingdom,ashby,Other
+Socket,Research Intern,Technology,United States,ashby,Other
+VulnCheck,Director of Field Marketing (US),Marketing,Remote US,greenhouse,Other
 VulnCheck,"Engineering Manager, Rapid Response Assignment (UK)",Engineering,"Cheltenham, England, United Kingdom",greenhouse,Engineering
 VulnCheck,Enterprise Account Executive (US - West),Sales,"San Francisco, CA",greenhouse,Sales
 VulnCheck,"Product Marketing Lead (Remote, US)",Marketing,"Boston, MA / Austin, TX",greenhouse,Other
-VulnCheck,"Sales Enablement Manager (Austin, TX OR Boston, MA)",Sales,"Austin, TX OR Boston, MA",greenhouse,Sales
-VulnCheck,"Senior Cloud Infrastructure Engineer (Remote, US)",Engineering,Remote US,greenhouse,Engineering
-VulnCheck,Senior Detection and Response Engineer - UK,Engineering,"Cheltenham, UK",greenhouse,Engineering
 VulnCheck,Senior Security Engineer - US,InfoSec,Remote US,greenhouse,Engineering
+VulnCheck,Senior Software Engineer - Threat Intelligence - UK,Engineering,"Cheltenham, UK",greenhouse,Engineering
 VulnCheck,Senior Software Engineer (US),Engineering,"Massachusetts OR Maryland OR Greater Austin, TX.",greenhouse,Engineering
 VulnCheck,"Software Engineer, Rapid Response Assignment  - UK",Engineering,"Cheltenham, UK",greenhouse,Engineering
 VulnCheck,"Sr. Exploit Developer (Cheltenham, UK)",Research,"Cheltenham, United Kingdom",greenhouse,Engineering
@@ -417,6 +447,7 @@ WitnessAI,Field Marketing Manager,Marketing,Remote,ashby,Other
 WitnessAI,Staff DevOps Engineer,Engineering,Bay Area,ashby,Engineering
 WitnessAI,Technical Support Engineer,GTM,Atlanta,ashby,Engineering
 WitnessAI,Regional Sales Director,GTM,Remote,ashby,Sales
+WitnessAI,Staff/Principal Fullstack Software Engineer,Engineering,Bay Area,ashby,Engineering
 Xage Security,Senior Backend Engineer,Engineering,"Palo Alto, CA",lever,Engineering
 Xage Security,Senior Backend Engineer,Engineering,"Lincoln, NE",lever,Engineering
 Xage Security,Senior Director of Partnerships and Business Development,Sales,remote- US,lever,Sales
@@ -431,33 +462,38 @@ XBOW,Software Engineer - AI Systems,Engineering,Austria (Remote),ashby,Engineeri
 XBOW,Software Engineer - Console,Engineering,Europe (Remote),ashby,Engineering
 XBOW,Legal Operations and Contracts Manager,Legal,United Kingdom (Remote),ashby,Other
 Zafran,Regional Sales Manager (United Kingdom),Sales,EMEA Remote,ashby,Sales
-Zafran,"Regional Sales Manager, Majors (Bay Area)",Sales,USA,ashby,Sales
 Zafran,"Regional Sales Manager, Enterprise (DC, Maryland & Virginia)",Sales,USA,ashby,Sales
 Zafran,"Regional Sales Manager, Majors (NYC)",Sales,New York,ashby,Sales
 Zafran,Backend Developer,R&D,Tel Aviv,ashby,Engineering
 Zafran,Security Researcher,R&D,Tel Aviv,ashby,Engineering
 Zafran,Devops Engineer,R&D,Tel Aviv,ashby,Engineering
-Zafran,Software Engineer – Data Collection Team,R&D,Tel Aviv,ashby,Engineering
+Zafran,Business Operations Manager,G&A,Tel Aviv,ashby,Other
 Zafran,Technical Account Manager,Customer Success,USA,ashby,Other
 Zafran,"Sales Engineer, Majors",Sales,USA,ashby,Sales
 Zafran,Senior DevOps Engineer (NYC),R&D,New York,ashby,Engineering
-Zafran,Product Manager,Product,Tel Aviv,ashby,Other
+Zafran,Senior Product Manager,Product,Tel Aviv,ashby,Other
 Zafran,"Regional Sales Manager, Majors (Western Canada)",Sales,Canada,ashby,Sales
 Zafran,Query Infra Team Lead,R&D,Tel Aviv,ashby,Other
 Zafran,Business Development Representative,Marketing,New York,ashby,Sales
 Zafran,DevOps Data Infra Engineer,R&D,Tel Aviv,ashby,Engineering
 Zafran,"Director of Sales, Enterprise",Sales,USA,ashby,Sales
 Zafran,Director of Alliances,Sales,USA,ashby,Sales
-Zafran,"Cyber Security Analyst, Sales Engineering",R&D,USA,ashby,Sales
-Zafran,Senior Field Marketing Manager,Marketing,USA,ashby,Other
+Zafran,"Cyber Security Analyst, Sales Engineering",Sales,USA,ashby,Sales
+Zafran,Senior Field Marketing Manager,Marketing,Chicago Remote,ashby,Other
+Zafran,AI Team Lead,R&D,Tel Aviv,ashby,Other
 Zafran,"Regional Sales Manager, Enterprise (NYC)",Sales,USA,ashby,Sales
+Zafran,Director of Product Partnerships,G&A,Tel Aviv,ashby,Sales
+Zafran,"Regional Sales Manager, SLED (East)",Sales,USA,ashby,Sales
 Zafran,Senior Software Engineer – Remediation Workflows,R&D,Tel Aviv,ashby,Engineering
-Zafran,Channel Account Manager (East),Sales,USA,ashby,Sales
 Zafran,Channel Account Manager (EMEA),Sales,EMEA Remote,ashby,Sales
 Zafran,Senior Bookkeeper,Finance,Tel Aviv,ashby,Other
 Zafran,Regional Sales Manager (PNW),Sales,USA,ashby,Sales
 Zafran,"Senior Manager, Global Corporate & Strategic Events",Marketing,USA,ashby,Other
+Zafran,Senior AI Engineer,R&D,Tel Aviv,ashby,Engineering
 Zafran,Backend Engineer – Discover Team,R&D,Tel Aviv,ashby,Engineering
 Zafran,Senior Field Marketing Manager,Marketing,USA,ashby,Other
-Zafran,Senior DevOps Engineer (NYC),R&D,USA,ashby,Engineering
+Zafran,Senior DevOps Engineer (DC),R&D,USA,ashby,Engineering
+Zafran,Security Analyst – Customer Trust & GRC,G&A,Tel Aviv,ashby,Other
 Zafran,"Sales Engineer, Enterprise",Sales,USA,ashby,Sales
+Zafran,Director of Digital Marketing,Marketing,USA,ashby,Other
+Zafran,Senior Product Manager,Product,New York,ashby,Other

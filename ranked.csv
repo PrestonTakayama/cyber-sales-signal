@@ -1,29 +1,29 @@
 company,total_roles,sales_roles,sales_share,score,fde_count,raised_recently
-Doppel,26,18,0.692,38.08,0,True
-7AI,45,20,0.444,36.11,0,True
-Cogent Security,52,21,0.404,29.48,2,False
-HiddenLayer,20,15,0.75,26.25,0,False
-Zafran,31,15,0.484,22.26,0,False
-Endor Labs,36,13,0.361,17.69,0,False
-AegisAI,28,11,0.393,15.32,0,False
-Armadin,26,8,0.308,13.08,1,True
-Socket,26,8,0.308,13.08,1,True
-Neo,20,9,0.45,13.05,0,False
-Obsidian Security,15,5,0.333,8.33,0,True
+7AI,45,21,0.467,38.5,0,True
+Daylight Security,34,21,0.618,33.97,0,False
+Cogent Security,54,21,0.389,29.17,2,False
+Doppel,23,15,0.652,24.78,0,False
+HiddenLayer,19,14,0.737,24.32,0,False
+Endor Labs,43,16,0.372,21.95,0,False
+Zafran,36,15,0.417,21.25,0,False
+AegisAI,24,11,0.458,16.04,0,False
+Neo,19,9,0.474,13.26,0,False
+Socket,23,7,0.304,11.41,1,True
+Armadin,24,7,0.292,11.3,1,True
+Obsidian Security,15,6,0.4,10.5,0,True
+Dropzone AI,10,5,0.5,7.5,0,False
 Fable Security,8,4,0.5,7.5,0,True
 Nudge Security,5,4,0.8,7.2,0,False
-Daylight Security,15,5,0.333,6.67,0,False
-depthfirst,21,5,0.238,6.19,1,False
+Adaptive Security,12,5,0.417,7.08,0,False
+depthfirst,24,5,0.208,6.04,1,False
+Prophet Security,10,4,0.4,5.6,0,False
+Halcyon,10,4,0.4,5.6,0,False
 Xage Security,10,3,0.3,4.88,0,True
-Halcyon,6,3,0.5,4.5,0,False
 Empirical Security,3,2,0.667,4.17,0,True
-Prophet Security,8,3,0.375,4.12,0,False
-Adaptive Security,9,3,0.333,4.0,0,False
-Dropzone AI,9,3,0.333,4.0,1,False
-VulnCheck,12,2,0.167,2.33,0,False
-Keycard,6,1,0.167,1.17,0,False
-WitnessAI,7,1,0.143,1.14,0,False
-Overwatch Data,1,0,0.0,0.0,0,True
+WitnessAI,8,1,0.125,1.12,0,False
+VulnCheck,10,1,0.1,1.1,0,False
+Keycard,7,0,0.0,0.0,0,False
+Overwatch Data,2,0,0.0,0.0,0,True
 Reach Security,6,0,0.0,0.0,0,False
 XBOW,3,0,0.0,0.0,0,True
-Method Security,8,0,0.0,0.0,1,False
+Method Security,11,0,0.0,0.0,1,False
