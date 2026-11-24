@@ -101,15 +101,6 @@ python3 form_d.py            # search SEC Form D filings into form_d.csv and can
 python3 rank.py              # tag each role and write ranked.csv (prints the top 10)
 ```
 
-To see what changed since the last pull, save the current files before you rerun the commands above, then compare:
-
-```bash
-python3 compare.py save 2026-11-23   # copy jobs.csv and ranked.csv into snapshots/2026-11-23/
-python3 compare.py                   # after rerunning, compare with the newest snapshot and write changes.csv
-```
-
-A sales role counts as new when its title wasn't posted in the snapshot. Roles are matched on title only, because companies sometimes reword a posting's location without it being a new job.
-
 The first command is only needed after you add companies. To add one, put a new `name,website` row in `companies.csv` and run all four. The finder looks for job board links on the company's homepage, `/careers` and `/jobs` pages first, then tries guessing the slug from the name and domain. A guessed slug can belong to a different company with the same name. If that happens, set `board_type` to `none` for that row, or fill in the correct `board_type` (`greenhouse`, `lever` or `ashby`) and `slug` by hand.
 
 `form_d.py` searches SEC EDGAR for Form D filings from the last 12 months, once for each company name and once for the keyword "security". The SEC requires a name and email in every request. `form_d.py` reads them from an environment variable, so they aren't saved in the code. Set it in your terminal before running `form_d.py` (add the line to `~/.zshrc` to keep it for every new terminal):
@@ -119,6 +110,15 @@ export SEC_USER_AGENT="Your Name your.email@example.com"
 ```
 
 Each filing's issuer name is marked as an `exact`, `partial` or `none` match for the company name searched. Only exact matches count toward `raised_recently`. A partial match counts only after you check it by hand and add it to `CONFIRMED_PARTIAL_MATCHES` in `rank.py`.
+
+To see what changed since the last pull, save the current files before you rerun the commands above, then compare:
+
+```bash
+python3 compare.py save 2026-11-23   # copy jobs.csv and ranked.csv into snapshots/2026-11-23/
+python3 compare.py                   # after rerunning, compare with the newest snapshot and write changes.csv
+```
+
+A sales role counts as new when its title wasn't posted in the snapshot. Roles are matched on title only, because companies sometimes reword a posting's location without it being a new job.
 
 | File | What's in it |
 |---|---|
