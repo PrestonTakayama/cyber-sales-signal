@@ -1,6 +1,6 @@
 # cyber-sales-signal
 
-A small sourcing tool for growth equity that ranks private cybersecurity companies by how much sales hiring they're doing right now. It reads open roles from public job boards (Greenhouse, Lever and Ashby) and currently ranks 28 of the 56 companies in `companies.csv`.
+A small sourcing tool that ranks private cybersecurity companies by how much sales hiring they're doing right now. It reads open roles from public job boards (Greenhouse, Lever and Ashby) and currently ranks 28 of the 56 companies in `companies.csv`.
 
 ## What it found on November 9
 Doppel came first with 18 of its 26 openings in sales (69%), followed by 7AI with 20 of 45. I didn't know much about Doppel going in, but once I read up on it and saw it had raised a Series C a year ago, the result made sense. Of the 59 sales openings across Doppel, 7AI, and Cogent, 33 were for account executives, mostly covering U.S. regions, and just one was for an SDR. My guess is they already know who they're selling to and have leads coming in, so they need people who can close. Cogent had the most sales openings (21) and was the only one of the three hiring for sales ops (3), which suggests its sales team is already big enough to need more support.
